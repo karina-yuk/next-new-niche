@@ -1,26 +1,26 @@
-import './App.css';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import { Outlet } from 'react-router-dom';
+// src/App.jsx
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-
-const client = new ApolloClient({
-  uri: '/graphql',
-  cache: new InMemoryCache(),
-});
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import Header from "./components/Header";
+import WrapperComponent from "./components/WrapperComponent";
 
 function App() {
+
+      // Define the function to handle navigation click
+      const handleNavClick = (elementId) => {
+        // This will scroll to the Element with the corresponding 'name' prop
+        document.getElementById(elementId).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      };
   return (
-    <ApolloProvider client={client}>
-      <div className="flex-column justify-flex-start min-100-vh">
-        <Header />
-        <div className="container">
-          <Outlet />
-        </div>
-        <Footer />
-      </div>
-    </ApolloProvider>
+  
+    <Router>
+      <Header handleNavClick={handleNavClick}/>
+      <WrapperComponent handleNavClick={handleNavClick}/>
+    </Router>
   );
 }
 
