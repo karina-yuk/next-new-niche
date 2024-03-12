@@ -1,0 +1,34 @@
+/* Footer.css */
+.footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem; /* Ensure there's space before the footer */
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer span {
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 1.5rem; /* Adjust the size of the icons */
+}
+
+.social-links a:hover {
+    color: #64ffda; /* Highlight color on hover */
+}

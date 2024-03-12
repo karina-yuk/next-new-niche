@@ -1,0 +1,81 @@
+/* Global settings for the wrapper */
+.wrapper-component {
+    margin-left: 20vw;
+    width: 80vw;
+    overflow-y: auto;
+    height: 100vh;
+    position: relative;
+    background-image: url('https://www.greatspeechwriting.co.uk/wp-content/uploads/2020/09/man-working-on-laptop-2210x1473-1.jpg');
+    background-attachment: fixed; /* Keeps the background image fixed during scroll */
+    background-size: cover; /* Ensure it covers the entire component */
+    color:white; /* Light text for contrast */
+  }
+  
+  .wrapper-component::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(22, 24, 24, 0.7); /* Dark overlay; adjust opacity as needed */
+    z-index: -1;
+  }
+  
+  /* Consistent spacing and alignment for all sections */
+  .wrapper-component .w-full {
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Adjust if you want content to be centered vertically as well */
+  }
+  
+  /* Specific styles for alternating section backgrounds to add visual interest */
+  .wrapper-component .w-full:nth-child(odd) {
+    background-color: #343a40; /* Darker shade for odd sections */
+  }
+  
+  .wrapper-component .w-full:nth-child(even) {
+    background-color: #212529; /* Lighter shade for even sections */
+  }
+  
+  /* Styling for text and headings within each section for readability */
+  .wrapper-component h1, .wrapper-component h2, .wrapper-component h3 {
+    color: white; /* White text for headings */
+    margin: 0.5rem 0; /* Consistent margin for headings */
+  }
+  
+  .wrapper-component p {
+    color: white; /* Light grey text for paragraphs */
+    line-height: 1.6; /* Improved readability for text */
+  }
+  
+  /* Style for buttons or links within sections */
+  .wrapper-component .btn-primary {
+    background-color: #375e6d;; /* Bootstrap primary button color */
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-top: 2rem; /* Spacing above buttons */
+    border-radius: 0.45rem; /* Rounded corners for buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .wrapper-component .btn-primary:hover {
+    background-color:  #375e6d;; /* Darker shade on hover */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .wrapper-component {
+      margin-left: 0;
+      width: 100vw; /* Full width on smaller screens */
+    }
+  
+    .wrapper-component .w-full > div {
+      padding: 2rem 1rem; /* Adjusted padding for smaller screens */
+    }
+  }
+  
