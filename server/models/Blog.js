@@ -17,3 +17,4 @@ const blog = new Schema({
     ]
 })
 
+const Blog = mongoose.model('Blog', blog); // becomes 'blogs' collection
