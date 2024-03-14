@@ -25,13 +25,10 @@ const blogpostSchema = new Schema({
         immutable: true,
     },
     updatedAt: Date,
-    comments: [
-        {
-            user: String,
-            content: String,
-            votes: Number,
-        }
-    ]
+    comments: [{
+     type: Schema.Types.ObjectId,
+     ref: 'Comment'
+    }]
 })
 
 const Blogpost = model('Blogpost', blogpostSchema); // becomes 'blogposts' collection
