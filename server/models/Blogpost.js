@@ -3,13 +3,27 @@ const { Schema, model } = require('mongoose');
 
 
 const blogpostSchema = new Schema({
-    title: String,
-    slug: String,
-    published: Boolean,
+    title: {
+        type: String,
+        required: true,
+    },
+    slug: {
+        type: String,
+        required: true,
+        lowercase: true,
+    },
+    published: {
+        type: Boolean,
+        default: false,
+    },
     author: String,
     content: String,
     tags: [String],
-    createdAt: Date,
+    createdAt: {
+        type: Date,
+        default: () => Date.now(),
+        immutable: true,
+    },
     updatedAt: Date,
     comments: [
         {
@@ -20,7 +34,7 @@ const blogpostSchema = new Schema({
     ]
 })
 
-const Blogpost = model('Blogpost', blogpostSchema); // becomes 'blogs' collection
+const Blogpost = model('Blogpost', blogpostSchema); // becomes 'blogposts' collection
 
 
 module.exports = Blogpost;
