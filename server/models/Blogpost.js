@@ -2,7 +2,7 @@
 const { Schema, model } = require('mongoose');
 
 
-const blog = new Schema({
+const blogpostSchema = new Schema({
     title: String,
     slug: String,
     published: Boolean,
@@ -20,7 +20,7 @@ const blog = new Schema({
     ]
 })
 
-const Blog = model('Blog', blog); // becomes 'blogs' collection
+const Blogpost = model('Blogpost', blogpostSchema); // becomes 'blogs' collection
 
 
-module.exports = Blog;
+module.exports = Blogpost;
