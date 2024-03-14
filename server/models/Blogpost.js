@@ -27,7 +27,7 @@ const blogpostSchema = new Schema({
     updatedAt: Date,
     comments: [{
      type: Schema.Types.ObjectId,
-     ref: 'Comment'
+     ref: 'Comment',
     }]
 })
 
