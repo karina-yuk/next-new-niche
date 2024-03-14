@@ -1,0 +1,85 @@
+/* ProjectDetailsModal.css */
+
+/* Base styles for the modal */
+.modal-content {
+    background: #fff; /* Adjust the background as needed */
+    color: #333; /* Adjust text color as needed */
+    border-radius: 8px;
+  }
+  
+  /* Specific styles for the dark theme */
+  .modal-content.dark-theme {
+    background: #333; /* Dark background for dark theme */
+    color: #fff; /* Light text color for dark theme */
+  }
+  
+  /* Close button customization */
+  .btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .btn-close-white {
+    filter: invert(1);
+  }
+  
+  /* Content within the modal */
+  .modal-body {
+    padding: 20px;
+  }
+  
+  /* Headers inside the modal */
+  .modal-body h2,
+  .modal-body h4 {
+    margin-bottom: 15px;
+  }
+  
+  /* List styles */
+  .list-style-2 {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .list-style-2 li {
+    margin-bottom: 5px;
+  }
+  
+  /* Styling for social icons */
+  .social-icons {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-icons a {
+    color: inherit; /* Inherits color from parent, adjust as needed */
+    text-decoration: none;
+  }
+  
+  .social-icons-muted {
+    opacity: 0.7;
+  }
+  
+  /* Image styles */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Slider specific styles */
+  .slick-slide {
+    margin: 0 10px;
+  }
+  
+  .slick-list {
+    margin: 0 -10px;
+  }
+  
+  /* ... and so on for other styles */
+  
+  

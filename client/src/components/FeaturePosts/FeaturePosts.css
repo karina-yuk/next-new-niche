@@ -1,0 +1,72 @@
+.portfolio-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .portfolio-filters {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+  
+  .portfolio-filters li {
+    margin: 0 10px;
+  }
+  
+  .portfolio-filters button {
+    border: none;
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #333; /* Change as needed */
+    font-size: 1em; /* Change as needed */
+    font-weight: bold; /* Change as needed */
+    transition: color 0.3s;
+  }
+  
+  .portfolio-filters button.active,
+  .portfolio-filters button:hover {
+    color: #007bff; /* Highlight color for active and hover states */
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff; /* For white background */
+    border: none; /* Remove borders */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Card-like box shadow */
+  }
+  
+  .grid-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .grid-item:hover img {
+    transform: scale(1.05); /* Zoom-in effect on hover */
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr; /* Single column layout */
+    }
+  }
+  

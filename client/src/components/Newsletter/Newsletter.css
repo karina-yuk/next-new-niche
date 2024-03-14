@@ -1,0 +1,42 @@
+/* Contact Section Styles */
+.contact-section {
+    background-color: #212529; /* Dark background for the contact section */
+    color: white; /* Light text color for contrast */
+    padding: 4rem 0; /* Spacing above and below the content */
+    text-align: center; /* Center-align the text */
+  }
+  
+  .contact-form {
+    max-width: 600px; /* Set a max-width for the form for better readability */
+    margin: auto; /* Center the form */
+    padding: 2rem; /* Padding inside the form */
+    background-color: #343a40; /* Slightly different background color for form */
+    border-radius: 8px; /* Rounded corners for the form */
+  }
+  
+  .contact-form h2 {
+    margin-bottom: 2rem; /* Space below the form title */
+  }
+  
+  .contact-form .form-control {
+    background-color: #495057; /* Darker background for input fields */
+    border: 1px solid #ced4da; /* Lighter border color */
+    color: white; /* Light text color */
+    margin-bottom: 1rem; /* Space below each input field */
+  }
+  
+  .contact-form .form-control:focus {
+    background-color: #495057; /* Keep the background color on focus */
+    border-color: #80bdff; /* Highlight border on focus */
+    color: white; /* Ensure text remains light on focus */
+  }
+  
+  .contact-form .btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    border: none; /* Remove border */
+  }
+  
+  .contact-form .btn-primary:hover {
+    background-color: #0056b3; /* Darken button on hover */
+  }
+  
