@@ -1,0 +1,121 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    transition: all 0.5s ease;
+  }
+  
+  /* Sticky Header */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1020;
+    animation: slide-down 0.7s;
+  }
+  
+  @keyframes slide-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .profile-container {
+    text-align: center;
+  }
+  
+  .profile-image {
+    width: 170px; /* Adjust as needed */
+    height: 170px; /* Adjust as needed */
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 6px solid #343a40; /* Optional */
+  }
+  
+  
+  .nav-link {
+    color: white;
+    margin: 0.5rem 0;
+    transition: color 0.2s ease;
+    text-align: center;
+    padding: 0.5rem ;
+    padding-top: 1.5rem;
+    
+  }
+  
+  
+  .nav-link:hover {
+    color:  #64ffd8;
+    text-decoration: none;
+    text-shadow: 0 0 10px #c5a0f7, 0 0 20px #a763f5;
+  }
+  
+  
+  /* Social Links */
+  .social-links {
+    display: flex; /* Ensure flex layout for social links */
+    justify-content: center; /* Center social links */
+    padding: 1rem 0; /* Add some padding around the links */
+     margin-top: auto;
+    padding-top: 2rem;
+  }
+  
+  .icon-link {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem; /* Adjust icon size as needed */
+  }
+  
+  .icon-link:hover {
+    color: #ddd;
+  }
+  
+  .fix-to-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20vw;
+  }
+  
+  /* Add styles for the navbar when it's expanded in mobile view */
+  .navbar-accordion {
+    display: none; /* Hide by default and show when triggered */
+    position: absolute;
+    background: #fff; /* Set a background for mobile view */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Show the accordion navbar in mobile view */
+  .show-navbar-accordion {
+    display: flex;
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    .navbar-accordion {
+      display: flex; /* Display the accordion */
+      flex-direction: column; /* Stack the links vertically */
+      padding: 1rem;
+      top: 100%; /* Position right below the header */
+      left: 0;
+      right: 0;
+    }
+  
+    .nav-link {
+      padding: 0.5rem 1rem; /* Larger tap targets for mobile */
+      border-bottom: 1px solid #efefef; /* Separator between links */
+    }
+  
+    /* Last link should not have a border at the bottom */
+    .nav-link:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  
