@@ -1,4 +1,7 @@
 
+const { Schema, model } = require('mongoose');
+
+
 const blog = new Schema({
     title: String,
     slug: String,
@@ -17,4 +20,7 @@ const blog = new Schema({
     ]
 })
 
-const Blog = mongoose.model('Blog', blog); // becomes 'blogs' collection
+const Blog = model('Blog', blog); // becomes 'blogs' collection
+
+
+module.exports = Blog;
