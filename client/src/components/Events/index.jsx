@@ -3,7 +3,7 @@ import './Events.css';
 
 
 
-const Resume = ({ Header, darkTheme }) => {
+const Events = ({ Header, darkTheme }) => {
   
     const educationDetails = [
       {
@@ -88,7 +88,7 @@ const Resume = ({ Header, darkTheme }) => {
                 (darkTheme ? "text-muted opacity-1" : "text-light opacity-4")
               }
             >
-              Resume
+              Events
             </h2>
             
             <p
@@ -209,18 +209,7 @@ const Resume = ({ Header, darkTheme }) => {
                 </div>
               ))}
           </div>
-          <div className="text-center mt-5">
-            <a
-              className="btn btn-outline-secondary rounded-pill shadow-none"
-              href={resumeFile}
-              download
-            >
-              Download CV
-              <span className="ms-1">
-                <i className="fas fa-download" />
-              </span>
-            </a>
-          </div>
+          
         </div>
       </section>
     );

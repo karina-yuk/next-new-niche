@@ -5,7 +5,7 @@ import './FeaturePosts.css';
 
 
 
-const Portfolio = () => {
+const FeaturePosts = () => {
 
   const isotope = useRef();
   // store the filter keyword in a state

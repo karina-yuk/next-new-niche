@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import './PostDetailsModal.css';
 import Slider from "react-slick";
 
-const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
+const PostDetailsModal = ({ darkTheme, projectDetails }) => {
   const sliderRef = useRef();
 
   var settings = {
