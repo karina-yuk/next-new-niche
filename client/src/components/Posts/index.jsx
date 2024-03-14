@@ -1,7 +1,7 @@
 import React from 'react';
 import './Posts.css';
 
-const post = [
+const posts = [
   {
     id: 1,
     name: "Gabriel Kraskovskyi",
