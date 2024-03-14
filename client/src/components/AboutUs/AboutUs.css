@@ -1,0 +1,98 @@
+.about-me {
+    color: grey;
+    background-color: #333;
+    padding: 4rem 0;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-24 {
+    font-size: 3rem; /* Adjust as needed */
+  }
+  
+  .text-9 {
+    font-size: 2.5rem; /* Adjust as needed */
+  }
+  
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+  
+  .text-muted {
+    color: #6c757d;
+  }
+  
+  .text-light {
+    color: #f8f9fa;
+  }
+  
+  .text-dark {
+    color: #5c6772;
+  }
+  
+  .text-white {
+    color: #b63e3e;
+  }
+  
+  .mb-5 {
+    margin-bottom: 5rem;
+  }
+  
+  .heading-separator-line {
+    display: block;
+    height: 4px;
+    background-color: #64ffda; /* The highlight color */
+    width: 100px; /* Adjust width as needed */
+    position: absolute;
+    bottom: -20px; /* Position below the text */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .position-relative {
+    position: relative;
+  }
+  
+  .border-primary {
+    border-color: #26292c; /* Bootstrap primary color, adjust as needed */
+  }
+  
+  .border-3 {
+    border-width: 3px;
+  }
+  
+  .d-block {
+    display: block;
+  }
+  
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .align-self-center {
+    align-self: center;
+  }
+  
+  .introduction {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+  }
+  
+  .personal-details strong {
+    font-weight: bold;
+  }
+  
+  .personal-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  

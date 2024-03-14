@@ -65,63 +65,52 @@ const Header = ({ handleNavClick }) => {
         </Link>
         <Link
         activeClass="active"
-          to="whatido"
+          to="blogpost"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('whatwedo')}
+          onClick={() => handleNavClick('blogpost')}
         >
-          What We Do
+          Grapevine Gossip
         </Link>
         <Link
         activeClass="active"
-          to="resume"
+          to="wineevents"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('post')}
+          onClick={() => handleNavClick('wineevents')}
         >
-          Posts
+          Grape Gatherings
         </Link>
         <Link
         activeClass="active"
-          to="portfolio"
+          to="featureblogpost"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('portfolio')}
+          onClick={() => handleNavClick('featureblogpost')}
         >
-          Portfolio
+          Currated Corks
         </Link>
+       
         <Link
         activeClass="active"
-          to="testimonial"
+          to="newslettersubscribe"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('testimonial')}
+          onClick={() => handleNavClick('newslettersubscribe')}
         >
-          Testimonial
-        </Link>
-        <Link
-        activeClass="active"
-          to="subscribe"
-          className="nav-link"
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => handleNavClick('subscribe')}
-        >
-          Subscribe
+          Wine Not?
         </Link>
       </nav>
 
