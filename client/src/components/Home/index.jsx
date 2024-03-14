@@ -29,7 +29,9 @@ const Home = ({ handleNavClick }) => {
             className="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2"
             onClick={() => handleNavClick('contact')}
           >
+
             Let's Uncork One
+
           </button>
         </div>
         <button

@@ -26,7 +26,6 @@ const Header = ({ handleNavClick }) => {
     return () => window.removeEventListener("scroll", checkScrollTop);
   }, []);
 
- 
 
   return (
     <header className={`header bg-dark text-white vh-100 fix-to-left ${isSticky ? "sticky" : ""}`}>
@@ -72,9 +71,9 @@ const Header = ({ handleNavClick }) => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('whatido')}
+          onClick={() => handleNavClick('whatwedo')}
         >
-          What I Do
+          What We Do
         </Link>
         <Link
         activeClass="active"
@@ -84,9 +83,9 @@ const Header = ({ handleNavClick }) => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('resume')}
+          onClick={() => handleNavClick('post')}
         >
-          Resume
+          Posts
         </Link>
         <Link
         activeClass="active"
