@@ -23,13 +23,15 @@ const Home = ({ handleNavClick }) => {
             }}
           />
         </h2>
-       <p className="text-5 text-light mb-4">Based in Toronto, Canada.</p>
+       <p className="text-5 text-light mb-4">Based in Canada.</p>
 
           <button
             className="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2"
             onClick={() => handleNavClick('contact')}
           >
-            Let's Chat
+
+            Let's Uncork One
+
           </button>
         </div>
         <button
