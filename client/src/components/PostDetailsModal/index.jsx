@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import './PostDetailsModal.css';
 import Slider from "react-slick";
 
-const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
+const PostDetailsModal = ({ darkTheme, projectDetails }) => {
   const sliderRef = useRef();
 
   var settings = {
@@ -59,13 +59,13 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
               >
                 <h2
                   className={
-                    "text-6 font-weight-600 text-center mb-4" +
+                    "text-6 font-weight-600 text-left mb-4" +
                     (darkTheme ? " text-white" : "")
                   }
                 >
                   {projectDetails?.title}
                 </h2>
-                <div className="row g-4">
+                <div className="row g-4 ">
                   <div className="col-md-7">
                     <Slider {...settings} ref={sliderRef}>
                       <div className="item">

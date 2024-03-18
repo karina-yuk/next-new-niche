@@ -1,32 +1,33 @@
-import React, { useEffect, useState, useRef} from 'react';
+import React, { useEffect, useState, useRef } from "react";
 import Isotope from "isotope-layout";
-import ProjectDetailsModal from '../PostDetailsModal';
-import './FeaturePosts.css';
+import PostDetailsModal from "../PostDetailsModal";
+import "./FeaturePosts.css";
 
 
 
-const Portfolio = () => {
-
+const FeaturePosts= () => {
   const isotope = useRef();
+
   // store the filter keyword in a state
   const [filterKey, setFilterKey] = useState("*");
   const [imagesLoaded, setimagesLoaded] = useState(0);
   const [selectedProjectDetails, setSelectedProjectDetails] = useState();
 
   const filters = {
-    DESIGN: "Desing",
-    BRAND: "Brand",
-    PHOTOS: "Photos",
+    WEBDEV: "Web Development",
+    ARCHTECH: "Architectural Technology",
+    ARCHDESIGN: "Architectural Design",
   };
 
   const projectsData = [
     {
-      title: "Project Title 1",
+      id: 1,
+      title: "Las Vegas Trip Advisor",
       projectInfo:
         "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
       client: "Ruby Clinton",
       technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
+      industry: "Web Development",
       date: "July 16, 2019",
       url: {
         name: "www.example.com",
@@ -39,14 +40,15 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-1.jpg",
+      thumbImage: "/images/project-2.jpeg",
       sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-5.jpg",
+        "/images/project-2.jpeg",
+        "/images/project-3.jpeg",
       ],
-      categories: [filters.BRAND],
+      categories: ["*", filters.WEBDEV],
     },
     {
+      id: 2,
       title: "Project Title 2",
       projectInfo:
         "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
@@ -65,14 +67,15 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-2.jpg",
+      thumbImage: "images/project-6.JPG",
       sliderImages: [
-        "images/projects/project-2.jpg",
-        "images/projects/project-5.jpg",
+        "images/project-6.JPG",
+        "images/project-8.JPG",
       ],
-      categories: [filters.DESIGN],
+      categories: ["*", filters.ARCHTECH],
     },
     {
+      id: 3,
       title: "Project Title 3",
       projectInfo:
         "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
@@ -91,14 +94,15 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-3.jpg",
+      thumbImage: "images/project-3.jpeg",
       sliderImages: [
-        "images/projects/project-3.jpg",
-        "images/projects/project-5.jpg",
+        "images/project-3.jpeg",
+        "images/project-1.jpeg",
       ],
-      categories: [filters.PHOTOS],
+      categories: ["*", filters.ARCHDESIGN],
     },
     {
+      id: 4,
       title: "Project Title 4",
       projectInfo:
         "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
@@ -117,14 +121,15 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-4.jpg",
+      thumbImage: "images/project-4.png",
       sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-4.jpg",
+        "images/project-4.png",
+        "images/project-9.png",
       ],
-      categories: [filters.BRAND, filters.PHOTOS],
+      categories: ["*", filters.ARCHTECH, filters.ARCHDESIGN],
     },
     {
+      id: 5,
       title: "Project Title 5",
       projectInfo:
         "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
@@ -143,14 +148,15 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-5.jpg",
+      thumbImage: "images/project-10.jpeg",
       sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-5.jpg",
+        "images/project-10.jpeg",
+        "images/project-9.png",
       ],
-      categories: [filters.DESIGN],
+      categories: ["*", filters.ARCHTECH],
     },
     {
+      id: 6,
       title: "Project Title 6",
       projectInfo:
         "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
@@ -169,14 +175,15 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-6.jpg",
+      thumbImage: "images/project-7.jpg",
       sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-5.jpg",
+        "images/project-7.jpg",
+        "images/project-8.JPG",
       ],
-      categories: [filters.BRAND],
+      categories: ["*", filters.ARCHDESIGN],
     },
     {
+      id: 7,
       title: "Project Title 7",
       projectInfo:
         "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
@@ -195,12 +202,39 @@ const Portfolio = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/projects/project-7.jpg",
+      thumbImage: "images/project-4.png",
       sliderImages: [
-        "images/projects/project-1.jpg",
-        "images/projects/project-5.jpg",
+        "images/project-4.png",
+        "images/project-5.png",
       ],
-      categories: [filters.DESIGN, filters.PHOTOS],
+      categories: ["*", filters.WEBDEV, filters.ARCHTECH],
+    },
+    {
+      id: 8,
+      title: "Project Title 6",
+      projectInfo:
+        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      client: "Ruby Clinton",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "July 16, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "images/project-7.jpg",
+      sliderImages: [
+        "images/project-7.jpg",
+        "images/project-8.JPG",
+      ],
+      categories: ["*", filters.ARCHDESIGN],
     },
   ];
 
@@ -211,122 +245,136 @@ const Portfolio = () => {
       layoutMode: "masonry",
     });
 
-    // cleanup
+    const handleResize = () => {
+      isotope.current.layout();
+    }
+    
+    // Add resize event listener
+    window.addEventListener('resize', handleResize);
+
+     // cleanup
     return () => {
+      window.removeEventListener('resize', handleResize);
       isotope.current.destroy();
     };
   }, []);
 
-  // handling filter key change
-  useEffect(() => {
-    if (imagesLoaded) {
-      filterKey === "*"
-        ? isotope.current.arrange({ filter: '.Design' })
-        : isotope.current.arrange({ filter: `.${filterKey}` });
-    }
-  }, [filterKey, imagesLoaded]);
+    // handle images loaded and filter key change
+    useEffect(() => {
+      if (projectsData.length && imagesLoaded === projectsData.length) {
+        isotope.current.arrange({ filter: filterKey === '*' ? '*' : `.${filterKey}` });
+      }
+    }, [filterKey, imagesLoaded]);
 
-  const handleFilterKeyChange = (key) => () => setFilterKey(key);
+  
+
+  const handleFilterKeyChange = (key) => () => {
+    setFilterKey(key);
+  };
 
   return (
     <>
-      <section
-        id="portfolio"
-        className="container px-lg-5"
-      >
+      <section id="portfolio" className="container px-lg-5 min-vh-100">
         <div className="container px-lg-5">
           {/* Heading */}
           <div className="position-relative d-flex text-center mb-5">
-            <h2
-              className="text-24 text-uppercase fw-600 w-100 mb-0 text-light opacity-4"
-            >
-              Portfolio
-              </h2>
-          <p className="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">
-            My Work
-            <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
-          </p>
+            <h2 className="text-24 fw-600 w-100 mb-0 text-light opacity-4">
+              Currated Corcks
+            </h2>
+            <p className="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">
+              FEATURED POSTS
+              <span className="heading-separator-line  d-block mx-auto" />
+            </p>
           </div>
           {/* Heading end*/}
+
           {/* Filter Menu */}
-          <ul
-            className="position-relative d-flex text-center mb-5"
-          >
-            <li className="nav-item">
-              <button
+          <ul className="position-relative d-flex mb-5 justify-content-evenly">
+            <li className="nav-link">
+              <div
                 className={"nav-link " + (filterKey === "*" ? "active" : "")}
                 onClick={handleFilterKeyChange("*")}
+                style={{ cursor: "pointer" }}
               >
                 All
-              </button>
+              </div>
             </li>
             {Object.keys(filters).map((oneKey, i) => (
-              <li className="nav-item" key={i}>
-                <button
+              <li className="nav-link" key={i}>
+                <div
                   className={
                     "nav-link " +
                     (filterKey === filters[oneKey] ? "active" : "")
                   }
+                  style={{ cursor: "pointer" }}
                   onClick={handleFilterKeyChange(filters[oneKey])}
                 >
                   {filters[oneKey]}
-                </button>
+                </div>
               </li>
             ))}
           </ul>
-          {/* Filter Menu end */}
+
+          {/* portfolio cards */}
           <div className="portfolio popup-ajax-gallery">
+            
             <div className="row portfolio-filter filter-container g-4">
               {projectsData.length > 0 &&
-                projectsData.map((project, index) => (
-                  <div
-                    className={
-                      "col-sm-6 col-lg-4 filter-item " +
-                      project.categories.join(" ")
-                    }
-                    key={index}
-                  >
-                    <div className="portfolio-box rounded">
-                      <div className="portfolio-img rounded">
-                        <img
-                          onLoad={() => {
-                            setimagesLoaded(imagesLoaded + 1);
-                          }}
-                          className="img-fluid d-block portfolio-image"
-                          src={project.thumbImage}
-                          alt=""
-                        />
-                        <div className="portfolio-overlay">
-                          <a
-                            className="popup-ajax stretched-link"
-                            href=""
-                            onClick={() => {
-                              setSelectedProjectDetails(projectsData[index]);
-                            }}
-                            data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"
-                          />
-                          <div className="portfolio-overlay-details">
-                            <h5 className="text-white fw-400">
-                              {project.title}
-                            </h5>
-                            <span className="text-light">Category</span>
+                projectsData.map((project, ) => {
+                  if (project.categories.includes(filterKey)) {
+                    return (
+                      <div
+                        className={
+                          "col-sm-6 col-lg-4 filter-item " +
+                          project.categories.join(" ")
+                        }
+                        key={project.id}
+                      >
+                        <div className="portfolio-box rounded">
+                          <div className="portfolio-img rounded">
+                            <img
+                              onLoad={() => {
+                                setimagesLoaded(imagesLoaded + 1);
+                              }}
+                              className="img-fluid d-block portfolio-image"
+                              src={project.thumbImage}
+                              alt=""
+                            />
+                            <div className="portfolio-overlay">
+                              <a
+                                className="popup-ajax stretched-link"
+                                href=""
+                                onClick={() => {
+                                  setSelectedProjectDetails(project);
+                                }}
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"
+                              />
+                              <div className="portfolio-overlay-details">
+                                <h5 className="text-white fw-400">
+                                  {project.title}
+                                </h5>
+                                <span className="text-light">Category</span>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                ))}
+                    );
+                  } else {
+                    return "";
+                  }
+                })}
             </div>
           </div>
         </div>
       </section>
       <div className="project-details-modal">
         {/* Modal */}
-        <ProjectDetailsModal
+        <PostDetailsModal
           projectDetails={selectedProjectDetails}
           darkTheme={false}
-        ></ProjectDetailsModal>
+        ></PostDetailsModal>
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import './Events.css';
 
 
 
-const Resume = ({ Header, darkTheme }) => {
+const Events= ({ Header, darkTheme }) => {
   
     const educationDetails = [
       {
@@ -46,37 +46,11 @@ const Resume = ({ Header, darkTheme }) => {
       },
     ];
 
-    const skills = [
-      {
-        name: "Web Design",
-        percent: 65,
-      },
-      {
-        name: "HTML/CSS",
-        percent: 95,
-      },
-      {
-        name: "Java Script",
-        percent: 80,
-      },
-      {
-        name: "React JS",
-        percent: 70,
-      },
-      {
-        name: "MongoDB",
-        percent: 60,
-      },
-      {
-        name: "Bootstrap",
-        percent: 75,
-      },
-    ];
-        
+    
 
     return (
       <section
-        id="resume"
+        id="events"
         className={"section " + (darkTheme ? "bg-dark-1" : "")}
       >
         <div className={"container " + (Header ? "" : "px-lg-5")}>
@@ -88,7 +62,7 @@ const Resume = ({ Header, darkTheme }) => {
                 (darkTheme ? "text-muted opacity-1" : "text-light opacity-4")
               }
             >
-              Resume
+              Grape Gatherings
             </h2>
             
             <p
@@ -98,7 +72,7 @@ const Resume = ({ Header, darkTheme }) => {
               }
             >
               {" "}
-              SUMMARY
+              WINE EVENTS
               <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
             </p>
           </div>
@@ -111,7 +85,7 @@ const Resume = ({ Header, darkTheme }) => {
                   "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
                 }
               >
-                My Education
+                Americas
               </h2>
               {educationDetails.length > 0 &&
                 educationDetails.map((value, index) => (
@@ -144,7 +118,7 @@ const Resume = ({ Header, darkTheme }) => {
                   "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
                 }
               >
-                My Experience
+                Europe
               </h2>
               {experienceDetails.length > 0 &&
                 experienceDetails.map((value, index) => (
@@ -168,62 +142,12 @@ const Resume = ({ Header, darkTheme }) => {
                       {value.desc}
                     </p>
                   </div>
-                ))}
-            </div>
-          </div>
-          {/* My Skills */}
-          <h2
-            className={
-              "text-6 fw-600 mt-4 mb-4 " + (darkTheme ? "text-white" : "")
-            }
-          >
-            My Skills
-          </h2>
-          <div className="row gx-5">
-            {skills.length > 0 &&
-              skills.map((skill, index) => (
-                <div key={index} className="col-md-6">
-                  <p
-                    className={
-                      " fw-500 text-start mb-2 " +
-                      (darkTheme ? "text-light" : "text-dark")
-                    }
-                  >
-                    {skill.name}{" "}
-                    <span className="float-end">{skill.percent}%</span>
-                  </p>
-                  <div
-                    className={
-                      "progress progress-sm mb-4 " + (darkTheme ? "bg-dark" : "")
-                    }
-                  >
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      style={{ width: skill.percent + "%" }}
-                      aria-valuenow={skill.percent}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                    />
-                  </div>
-                </div>
-              ))}
-          </div>
-          <div className="text-center mt-5">
-            <a
-              className="btn btn-outline-secondary rounded-pill shadow-none"
-              href={resumeFile}
-              download
-            >
-              Download CV
-              <span className="ms-1">
-                <i className="fas fa-download" />
-              </span>
-            </a>
-          </div>
-        </div>
-      </section>
-    );
-  };
+               ))}
+               </div>
+             </div>
+           </div>
+         </section>
+       );
+     };
 
 export default Events;
