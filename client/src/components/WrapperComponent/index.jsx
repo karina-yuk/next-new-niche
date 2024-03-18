@@ -16,10 +16,10 @@ const WrapperComponent = ({handleNavClick}) => {
   <div className="wrapper-component">
             <Element name="home"  id="home"><Home handleNavClick={handleNavClick} /></Element>
             <Element name="aboutus" id="aboutus"><AboutUs handleNavClick={handleNavClick} /></Element>
-            <Element name="blogpost" id="blogpost"><Posts handleNavClick={handleNavClick} /></Element>
-            <Element name="wineevents" id="wineevents"><Events handleNavClick={handleNavClick} /></Element>
-            <Element name="featureblogpost" id="featureblogpost"><FeaturePosts handleNavClick={handleNavClick}/></Element>
-            <Element name="newslettersubscribe" id="newslettersubscribe"><Newsletter handleNavClick={handleNavClick}/></Element>
+            <Element name="post" id="post"><Posts handleNavClick={handleNavClick} /></Element>
+            <Element name="events" id="events"><Events handleNavClick={handleNavClick} /></Element>
+            <Element name="featurepost" id="featurepost"><FeaturePosts handleNavClick={handleNavClick}/></Element>
+            <Element name="newsletter" id="newsletter"><Newsletter handleNavClick={handleNavClick}/></Element>
             <Footer />
         </div>
   );

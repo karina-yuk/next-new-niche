@@ -65,50 +65,50 @@ const Header = ({ handleNavClick }) => {
         </Link>
         <Link
         activeClass="active"
-          to="blogpost"
+          to="post"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('blogpost')}
+          onClick={() => handleNavClick('post')}
         >
           Blog Post
         </Link>
         <Link
         activeClass="active"
-          to="wineevents"
+          to="events"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('wineevents')}
+          onClick={() => handleNavClick('events')}
         >
           Events
         </Link>
         <Link
         activeClass="active"
-          to="featureblogpost"
+          to="featurepost"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('featureblogpost')}
+          onClick={() => handleNavClick('featurepost')}
         >
           Feature Blog Post
         </Link>
        
         <Link
         activeClass="active"
-          to="newslettersubscribe"
+          to="newsletter"
           className="nav-link"
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('newslettersubscribe')}
+          onClick={() => handleNavClick('newsletter')}
         >
           Subscribe
         </Link>

@@ -4,6 +4,8 @@ import './Events.css';
 
 
 const Events= ({ Header, darkTheme }) => {
+
+
   
     const educationDetails = [
       {
@@ -61,10 +63,8 @@ const Events= ({ Header, darkTheme }) => {
                 "text-24   fw-600 w-100 mb-0 " +
                 (darkTheme ? "text-muted opacity-1" : "text-light opacity-4")
               }
-            >
               Grape Gatherings
             </h2>
-            
             <p
               className={
                 "text-9 text-dark fw-700 position-absolute w-100 align-self-center lh-base mb-0 " +
@@ -142,6 +142,7 @@ const Events= ({ Header, darkTheme }) => {
                       {value.desc}
                     </p>
                   </div>
+
                ))}
                </div>
              </div>
@@ -149,5 +150,53 @@ const Events= ({ Header, darkTheme }) => {
          </section>
        );
      };
+
+                ))}
+            </div>
+          </div>
+          {/* My Skills */}
+          <h2
+            className={
+              "text-6 fw-600 mt-4 mb-4 " + (darkTheme ? "text-white" : "")
+            }
+          >
+            My Skills
+          </h2>
+          <div className="row gx-5">
+            {skills.length > 0 &&
+              skills.map((skill, index) => (
+                <div key={index} className="col-md-6">
+                  <p
+                    className={
+                      " fw-500 text-start mb-2 " +
+                      (darkTheme ? "text-light" : "text-dark")
+                    }
+                  >
+                    {skill.name}{" "}
+                    <span className="float-end">{skill.percent}%</span>
+                  </p>
+                  <div
+                    className={
+                      "progress progress-sm mb-4 " + (darkTheme ? "bg-dark" : "")
+                    }
+                  >
+                    <div
+                      className="progress-bar"
+                      role="progressbar"
+                      style={{ width: skill.percent + "%" }}
+                      aria-valuenow={skill.percent}
+                      aria-valuemin={0}
+                      aria-valuemax={100}
+                    />
+                  </div>
+                </div>
+              ))}
+          </div>
+          
+        </div>
+      </section>
+    );
+  };
+
 
 export default Events;

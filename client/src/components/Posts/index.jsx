@@ -2,8 +2,10 @@ import React from 'react';
 import './Posts.css';
 import Slider from "react-slick";
 
+
 const Posts = () => {
   const reviews = [
+
   {
     id: 1,
     name: "Gabriel Kraskovskyi",
