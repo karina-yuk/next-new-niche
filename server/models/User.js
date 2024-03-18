@@ -4,44 +4,54 @@ const bcrypt = require('bcrypt');
 
 
 const userSchema = new Schema({
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-        minLength: 10,
-        lowercase: true,
-        match: [/.+@.+\..+/, 'Valid email address required Bucko!'],
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    minLength: 10,
+    lowercase: true,
+    match: [/.+@.+\..+/, 'Valid email address required Bucko!'],
+  },
+  username: {
+    type: String,
+    default: this.email,
+    required: true,
+    trim: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  subscribed: {
+    type: Boolean,
+    default: false,
+  },
+  blogposts: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Blogpost'
+  }],
+},
+  {
+    toJSON: {
+      virtuals: true,
     },
-    username: {
-        type: String,
-        default: this.email,
-        required: true,
-        trim: true,
-    },
-    password: {
-        type: String,
-        required: true,
-    },
-    subscribed: {
-        type:Boolean,
-        default: false,
-    }
-});
+    id: false,
+  });
 
 // Hash password before saving to database
-userSchema.pre('save', async function(next) {
-    if (!this.isModified('password')) {
-      return next();
-    }
-    try {
-      const hashedPassword = await bcrypt.hash(this.password, 10);
-      this.password = hashedPassword;
-      next();
-    } catch (error) {
-      next(error);
-    }
-  });
-  
+userSchema.pre('save', async function (next) {
+  if (!this.isModified('password')) {
+    return next();
+  }
+  try {
+    const hashedPassword = bcrypt.hash(this.password, 10);
+    this.password = hashedPassword;
+    next();
+  } catch (error) {
+    next(error);
+  }
+});
+
 const User = model('User', userSchema); // becomes 'users' collection
 
 

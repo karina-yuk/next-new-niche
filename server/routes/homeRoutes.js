@@ -5,7 +5,7 @@ const {
   getAboutUsPage,
   getEventsPage,
   getNewsletterPage,
-} = require('../../controllers/homeController');
+} = require('../controllers/homeController');
 
 // /
 router.route('/').get(getHomepage);
