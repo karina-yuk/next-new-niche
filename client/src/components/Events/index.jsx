@@ -3,7 +3,9 @@ import './Events.css';
 
 
 
-const Events = ({ Header, darkTheme }) => {
+const Events= ({ Header, darkTheme }) => {
+
+
   
     const educationDetails = [
       {
@@ -46,37 +48,11 @@ const Events = ({ Header, darkTheme }) => {
       },
     ];
 
-    const skills = [
-      {
-        name: "Web Design",
-        percent: 65,
-      },
-      {
-        name: "HTML/CSS",
-        percent: 95,
-      },
-      {
-        name: "Java Script",
-        percent: 80,
-      },
-      {
-        name: "React JS",
-        percent: 70,
-      },
-      {
-        name: "MongoDB",
-        percent: 60,
-      },
-      {
-        name: "Bootstrap",
-        percent: 75,
-      },
-    ];
-        
+    
 
     return (
       <section
-        id="resume"
+        id="events"
         className={"section " + (darkTheme ? "bg-dark-1" : "")}
       >
         <div className={"container " + (Header ? "" : "px-lg-5")}>
@@ -87,10 +63,8 @@ const Events = ({ Header, darkTheme }) => {
                 "text-24   fw-600 w-100 mb-0 " +
                 (darkTheme ? "text-muted opacity-1" : "text-light opacity-4")
               }
-            >
-              Events
+              Grape Gatherings
             </h2>
-            
             <p
               className={
                 "text-9 text-dark fw-700 position-absolute w-100 align-self-center lh-base mb-0 " +
@@ -98,7 +72,7 @@ const Events = ({ Header, darkTheme }) => {
               }
             >
               {" "}
-              SUMMARY
+              WINE EVENTS
               <span className="heading-separator-line border-bottom border-3 border-primary d-block mx-auto" />
             </p>
           </div>
@@ -111,7 +85,7 @@ const Events = ({ Header, darkTheme }) => {
                   "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
                 }
               >
-                My Education
+                Americas
               </h2>
               {educationDetails.length > 0 &&
                 educationDetails.map((value, index) => (
@@ -144,7 +118,7 @@ const Events = ({ Header, darkTheme }) => {
                   "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
                 }
               >
-                My Experience
+                Europe
               </h2>
               {experienceDetails.length > 0 &&
                 experienceDetails.map((value, index) => (
@@ -168,6 +142,15 @@ const Events = ({ Header, darkTheme }) => {
                       {value.desc}
                     </p>
                   </div>
+
+               ))}
+               </div>
+             </div>
+           </div>
+         </section>
+       );
+     };
+
                 ))}
             </div>
           </div>
@@ -214,5 +197,6 @@ const Events = ({ Header, darkTheme }) => {
       </section>
     );
   };
+
 
 export default Events;

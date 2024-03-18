@@ -1,4 +1,5 @@
 // src/components/Home/Home.jsx
+// src/components/Home/Home.jsx
 
 import React from 'react';
 import './Home.css';
@@ -23,17 +24,17 @@ const Home = ({ handleNavClick }) => {
             }}
           />
         </h2>
-       <p className="text-5 text-light mb-4">Based in Canada.</p>
+       <p className="text-5 text-light mb-4">...and we are Canadians.</p>
 
-          <button
-            className="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2"
+       <a
+            className="btn btn-outline-secondary rounded-pill shadow-none smooth-scroll mt-2"
             onClick={() => handleNavClick('contact')}
           >
-
             Let's Uncork One
-
-          </button>
+            </a>
         </div>
+
+        
         <button
           className="scroll-down-arrow animated text-white btn btn-link btn-lg"
           onClick={() => handleNavClick('about')}
@@ -45,3 +46,6 @@ const Home = ({ handleNavClick }) => {
   );
 };
 export default Home;
+
+
+

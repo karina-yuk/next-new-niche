@@ -73,7 +73,7 @@ const Header = ({ handleNavClick }) => {
           duration={500}
           onClick={() => handleNavClick('post')}
         >
-          Grapevine Gossip
+          Blog Post
         </Link>
         <Link
         activeClass="active"
@@ -85,7 +85,7 @@ const Header = ({ handleNavClick }) => {
           duration={500}
           onClick={() => handleNavClick('events')}
         >
-          Grape Gatherings
+          Events
         </Link>
         <Link
         activeClass="active"
@@ -97,7 +97,7 @@ const Header = ({ handleNavClick }) => {
           duration={500}
           onClick={() => handleNavClick('featurepost')}
         >
-          Currated Corks
+          Feature Blog Post
         </Link>
        
         <Link
@@ -110,7 +110,7 @@ const Header = ({ handleNavClick }) => {
           duration={500}
           onClick={() => handleNavClick('newsletter')}
         >
-          Wine Not?
+          Subscribe
         </Link>
       </nav>
 

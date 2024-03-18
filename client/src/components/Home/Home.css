@@ -1,78 +1,103 @@
 /* src/components/Home/Home.css */
 
-#home {
-    background-color: transparent;;
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      text-shadow: 2px 2px 10px rgb(20, 23, 27, 1.0); 
-      
-    }
 
-    #home .text-7 {
-      font-size: 3rem; /* Adjust the size as needed */
-      margin-bottom: 0.5rem;
-  }
-    
-  #home .text-16 {
-      font-size: 3.5rem; /* Larger size for main heading */
-      margin-bottom: 1rem;
-  }
-    
-  #home .text-5 {
-      font-size: 1.5rem; /* Adjust the size as needed */
-      margin-bottom: 2rem;
-  }
-    
-    #home .btn-primary {
-      margin-top: 2rem;
-      padding: 2rem 2rem;
-      font-size: 1.5rem;
-      border-radius: 15px; /* Rounded corners for the button */
-      background-color: #375e6d; /* Bootstrap primary color */
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-top: 2rem;
-    }
-    
-    #home .btn-primary:hover {
-      background-color: #375e6d; /* A darker shade for hover state */
-    }
+
+.home-section{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black with opacity for the overlay */
   
-    .scroll-down-container {
-      position: absolute;
-      bottom: 10px; /* Distance from the bottom */
-      left: 0;
-      right: 0;
-      text-align: center;
-    }
+}
+
+#home {
   
-  .scroll-down-arrow {
-    position: absolute;
-    bottom: 20px; /* Distance from the bottom */
-    color: purple;; /* White color for the arrow */
-    font-size: 20px; /* Size of the arrow */
-    height: 42px; /* Height of the element */
-    line-height: 42px; /* Aligns the text vertically */
-    left: 50%; /* Horizontally center */
-    margin-left: -16px; /* Half of the width to truly center the element */
-    text-align: center; /* Center the text (arrow icon) */
-    width: 32px; /* Width of the element */
-    z-index: 3; /* Stack order */
+  background-color: transparent;;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgb(20, 23, 27, 1.0); 
+  }
+   
+ .text-7 {
+    font-size: 3rem; /* Adjust the size as needed */
+    margin-bottom: 0.5rem;
+}
+  
+.text-16 {
+    font-size: 7rem; /* Larger size for main heading */
+    margin-bottom: 1rem;
+    font-family:  Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+.text-5 {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    margin-bottom: 2rem;
+}
+  
+
+.btn-primary {
+    margin-top: 2rem;
+    padding: 2rem 2rem;
+    font-size: 1.5rem;
+
+    border-radius: 12px; /* Rounded corners for the button */
+    background-color: #377a7d; /* Bootstrap primary color */
+    border: none;
     cursor: pointer;
-    animation: bounce 2s infinite;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
   }
   
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-30px);}
-    60% {transform: translateY(-15px);}
+.btn-primary:hover {
+    background-color: #377a7d; /* A darker shade for hover state */
   }
-    
+  .btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #5ca895;
+    border-color: #303238 !important;
+  }
+
+  .scroll-down-container {
+    position: absolute;
+    bottom: 10px; /* Distance from the bottom */
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 20px; /* Distance from the bottom */
+  color: purple;; /* White color for the arrow */
+  font-size: 20px; /* Size of the arrow */
+  height: 42px; /* Height of the element */
+  line-height: 42px; /* Aligns the text vertically */
+  left: 50%; /* Horizontally center */
+  margin-left: -16px; /* Half of the width to truly center the element */
+  text-align: center; /* Center the text (arrow icon) */
+  width: 32px; /* Width of the element */
+  z-index: 3; /* Stack order */
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  font-size: 2rem;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-30px);}
+  60% {transform: translateY(-15px);}
+}
+  
+.btn {
+  font-size: 2.5rem;
+}

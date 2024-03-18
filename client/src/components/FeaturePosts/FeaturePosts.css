@@ -1,72 +1,201 @@
-.portfolio-section {
-    padding: 60px 0;
-    background-color: #f8f9fa;
-  }
+/* src/components/Portfolio/Portfolio.css */
+
+/* Portfolio Section Styles */
+#portfolio {
+  background-color: #343a40; /* Dark background for portfolio section */
+  color: grey;
+  padding: 4rem 0;
   
-  .portfolio-filters {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 30px;
-  }
-  
-  .portfolio-filters li {
-    margin: 0 10px;
-  }
-  
-  .portfolio-filters button {
-    border: none;
-    background-color: transparent;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #333; /* Change as needed */
-    font-size: 1em; /* Change as needed */
-    font-weight: bold; /* Change as needed */
-    transition: color 0.3s;
-  }
-  
-  .portfolio-filters button.active,
-  .portfolio-filters button:hover {
-    color: #007bff; /* Highlight color for active and hover states */
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
-    gap: 30px;
-    margin-top: 30px;
-  }
-  
+}
+
+/* Portfolio Section Heading */
+.text-center {
+  text-align: center;
+}
+
+.text-24 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  z-index: 1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ .text-9 {
+  font-size: 8.25rem; /* Very large font size for emphasized text */
+  color: #282c30!important; /* Dark grey color for text */
+}
+
+.heading-separator-line {
+  display: block;
+  width: 60px; /* Width of the separator line */
+  height: 1px; /* Height of the separator line */
+  border: 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  margin: 0 auto; /* Center the separator horizontally */
+  position: absolute;
+  bottom: -0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mb-5 {
+  margin-bottom: 2rem !important;
+}
+
+.justify-content-evenly {
+  justify-content: center; /* Center the items instead of spacing them out */
+  display: flex;
+  flex-wrap: wrap; /* Ensure items can wrap if needed */
+  gap: 1rem;
+}
+.nav-link {
+  color: white;
+  margin: 0.5rem 0;
+  transition: color 0.2s ease;
+  text-align: center;
+  display: inline-flex; /* Makes .nav-link items flex containers themselves */
+  align-items: center; /* Vertically center the content within */
+  justify-content: center; 
+}
+
+.nav-link > div {
+  cursor: pointer;
+}
+.nav-link:hover {
+  color:  #64ffd8;
+  text-decoration: none;
+  text-shadow: 0 0 10px #c5a0f7, 0 0 20px #a763f5;
+}
+
+/* Portfolio Filter Menu */
+ .filter-container {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin-bottom: 2rem; /* Space below the filter buttons */
+}
+
+ .filter-container button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+
+ .filter-container button:hover,
+ .filter-container button.active {
+  color: #64ffd8;
+  border-bottom: 2px solid #64ffd8;
+}
+
+/* Portfolio Cards */
+ .portfolio-box {
+  border: 1px solid #212529;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  background: #212529;
+  margin-bottom: 1rem;
+  position: relative; /* Ensure the absolute positioned children relate to this parent */
+  background: #212529;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.portfolio-box:hover .portfolio-img img {
+  opacity: 0.3;
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.5); /* Inner shadow for a vignette effect */
+}
+
+.portfolio-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Portfolio Images */
+ .portfolio-img img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s;
+}
+.portfolio-img {
+  min-height: 80px;
+  position: relative;
+  background-size: cover;
+}
+
+/* Portfolio Image Overlay */
+.portfolio-overlay {
+  visibility: hidden; /* Hide overlay details by default */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+  background-color: rgba(73, 67, 67, 0.5); /* Semi-transparent overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; /* Aligns children vertically center */
+  justify-content: center; /* Aligns children horizontally center */
+}
+
+.portfolio-box:hover .portfolio-overlay {
+  visibility: visible; /* Show overlay details on hover */
+  opacity: 1;
+}
+
+.portfolio-overlay-details span {
+  font-size: 0.9rem;
+  color: #64ffd8; /* Theme color for consistency */
+}
+
+.portfolio-overlay-details h5 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: white;
+}
+.portfolio-overlay-details span {
+  font-size: 0.9rem;
+  color: #64ffd8;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+
+.grid-item {
+  width: 33.333%; /* for three columns */
+  padding: 1rem;
+}
+
+.grid-item.size-lg {
+  height: 400px; /* Large size */
+}
+
+.grid-item.size-md {
+  height: 300px; /* Medium size */
+}
+
+.grid-item.size-sm {
+  height: 200px; /* Small size */
+}
+/* You might need media queries to adjust the widths for responsive design */
+@media (max-width: 768px) {
   .grid-item {
-    position: relative;
-    overflow: hidden;
-    background-color: #fff; /* For white background */
-    border: none; /* Remove borders */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Card-like box shadow */
+    width: 50%;
   }
-  
-  .grid-item img {
+}
+
+@media (max-width: 480px) {
+  .grid-item {
     width: 100%;
-    display: block;
-    transition: transform 0.3s ease-in-out;
   }
-  
-  .grid-item:hover img {
-    transform: scale(1.05); /* Zoom-in effect on hover */
-  }
-  
-  /* Responsive design adjustments */
-  @media (max-width: 1024px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .grid {
-      grid-template-columns: 1fr; /* Single column layout */
-    }
-  }
-  
+}
