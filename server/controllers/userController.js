@@ -14,7 +14,7 @@ module.exports = {
   // get single user
   async getSingleUser(req, res) {
     try {
-      const user = await User.findByPk({ _id: req.params.id })
+      const user = await User.find({ _id: req.params.userId })
       .populate('blogposts');
 
       if (!user) {
