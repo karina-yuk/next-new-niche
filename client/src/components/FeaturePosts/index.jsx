@@ -3,11 +3,7 @@ import Isotope from "isotope-layout";
 import PostDetailsModal from "../PostDetailsModal";
 import "./FeaturePosts.css";
 
-
-
-
-const FeaturePosts= () => {
-
+const FeaturePosts = () => {
   const isotope = useRef();
 
   // store the filter keyword in a state
@@ -16,7 +12,7 @@ const FeaturePosts= () => {
   const [selectedProjectDetails, setSelectedProjectDetails] = useState();
 
   const filters = {
-    WEBDEV: "Web Development",
+    WEBDEV: "Food and Wine Pairing",
     ARCHTECH: "Architectural Technology",
     ARCHDESIGN: "Architectural Design",
   };
@@ -24,29 +20,8 @@ const FeaturePosts= () => {
   const projectsData = [
     {
       id: 1,
-      title: "Las Vegas Trip Advisor",
-      projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Web Development",
-      date: "July 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "/images/project-2.jpeg",
-      sliderImages: [
-        "/images/project-2.jpeg",
-        "/images/project-3.jpeg",
-      ],
+      title: "Pinot Noir with earthy flavors",
+      Info: "Recipes made with earthy ingredients like mushrooms and lentils taste great with reds like Pinot Noir and Dolcetto, which are light-bodied but full of savory depth. Pinot is also often delicious alongside salmon, proving that red wine and fish can go together brilliantly.",
       categories: ["*", filters.WEBDEV],
     },
     {
@@ -70,10 +45,7 @@ const FeaturePosts= () => {
         mail: "mailto:example@gmail.com",
       },
       thumbImage: "images/project-6.JPG",
-      sliderImages: [
-        "images/project-6.JPG",
-        "images/project-8.JPG",
-      ],
+      sliderImages: ["images/project-6.JPG", "images/project-8.JPG"],
       categories: ["*", filters.ARCHTECH],
     },
     {
@@ -97,10 +69,7 @@ const FeaturePosts= () => {
         mail: "mailto:example@gmail.com",
       },
       thumbImage: "images/project-3.jpeg",
-      sliderImages: [
-        "images/project-3.jpeg",
-        "images/project-1.jpeg",
-      ],
+      sliderImages: ["images/project-3.jpeg", "images/project-1.jpeg"],
       categories: ["*", filters.ARCHDESIGN],
     },
     {
@@ -124,10 +93,7 @@ const FeaturePosts= () => {
         mail: "mailto:example@gmail.com",
       },
       thumbImage: "images/project-4.png",
-      sliderImages: [
-        "images/project-4.png",
-        "images/project-9.png",
-      ],
+      sliderImages: ["images/project-4.png", "images/project-9.png"],
       categories: ["*", filters.ARCHTECH, filters.ARCHDESIGN],
     },
     {
@@ -151,10 +117,7 @@ const FeaturePosts= () => {
         mail: "mailto:example@gmail.com",
       },
       thumbImage: "images/project-10.jpeg",
-      sliderImages: [
-        "images/project-10.jpeg",
-        "images/project-9.png",
-      ],
+      sliderImages: ["images/project-10.jpeg", "images/project-9.png"],
       categories: ["*", filters.ARCHTECH],
     },
     {
@@ -178,10 +141,7 @@ const FeaturePosts= () => {
         mail: "mailto:example@gmail.com",
       },
       thumbImage: "images/project-7.jpg",
-      sliderImages: [
-        "images/project-7.jpg",
-        "images/project-8.JPG",
-      ],
+      sliderImages: ["images/project-7.jpg", "images/project-8.JPG"],
       categories: ["*", filters.ARCHDESIGN],
     },
     {
@@ -205,10 +165,7 @@ const FeaturePosts= () => {
         mail: "mailto:example@gmail.com",
       },
       thumbImage: "images/project-4.png",
-      sliderImages: [
-        "images/project-4.png",
-        "images/project-5.png",
-      ],
+      sliderImages: ["images/project-4.png", "images/project-5.png"],
       categories: ["*", filters.WEBDEV, filters.ARCHTECH],
     },
     {
@@ -232,10 +189,7 @@ const FeaturePosts= () => {
         mail: "mailto:example@gmail.com",
       },
       thumbImage: "images/project-7.jpg",
-      sliderImages: [
-        "images/project-7.jpg",
-        "images/project-8.JPG",
-      ],
+      sliderImages: ["images/project-7.jpg", "images/project-8.JPG"],
       categories: ["*", filters.ARCHDESIGN],
     },
   ];
@@ -249,26 +203,26 @@ const FeaturePosts= () => {
 
     const handleResize = () => {
       isotope.current.layout();
-    }
-    
-    // Add resize event listener
-    window.addEventListener('resize', handleResize);
+    };
 
-     // cleanup
+    // Add resize event listener
+    window.addEventListener("resize", handleResize);
+
+    // cleanup
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
       isotope.current.destroy();
     };
   }, []);
 
-    // handle images loaded and filter key change
-    useEffect(() => {
-      if (projectsData.length && imagesLoaded === projectsData.length) {
-        isotope.current.arrange({ filter: filterKey === '*' ? '*' : `.${filterKey}` });
-      }
-    }, [filterKey, imagesLoaded]);
-
-  
+  // handle images loaded and filter key change
+  useEffect(() => {
+    if (projectsData.length && imagesLoaded === projectsData.length) {
+      isotope.current.arrange({
+        filter: filterKey === "*" ? "*" : `.${filterKey}`,
+      });
+    }
+  }, [filterKey, imagesLoaded]);
 
   const handleFilterKeyChange = (key) => () => {
     setFilterKey(key);
@@ -319,10 +273,9 @@ const FeaturePosts= () => {
 
           {/* portfolio cards */}
           <div className="portfolio popup-ajax-gallery">
-            
             <div className="row portfolio-filter filter-container g-4">
               {projectsData.length > 0 &&
-                projectsData.map((project, ) => {
+                projectsData.map((project) => {
                   if (project.categories.includes(filterKey)) {
                     return (
                       <div
