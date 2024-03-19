@@ -1,5 +1,6 @@
 
 const { Schema, model } = require('mongoose');
+const moment = require('moment');
 
 
 const blogpostSchema = new Schema({
@@ -16,10 +17,6 @@ const blogpostSchema = new Schema({
         type: Boolean,
         default: false,
     },
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-       },
     content: String,
     tags: [String],
     createdAt: {
@@ -33,7 +30,18 @@ const blogpostSchema = new Schema({
      type: Schema.Types.ObjectId,
      ref: 'Comment',
     }]
-})
+},
+{
+    toJSON: {
+        virtuals: true,
+    },
+    id: false,
+});
+
+// format data
+blogpostSchema.virtual('Date').get(function () {
+    return moment(blogpostSchema.createdAt).format('MMMM, DD, YYYY');
+  });
 
 const Blogpost = model('Blogpost', blogpostSchema); // becomes 'blogposts' collection
 

@@ -10,7 +10,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-  
+
   // get single blogpost
   async getSingleBlogpost(req, res) {
     try {
@@ -34,7 +34,7 @@ module.exports = {
       // update user's blogposts array
       const user = await User.findOneAndUpdate(
         { _id: req.body.userId },
-        { $push: { blogposts: blogpost._id } },
+        { $addToSet: { blogposts: blogpost._id } },
         { new: true }
       );
       
@@ -77,7 +77,7 @@ module.exports = {
 
       // update user's blogposts array
       const user = await User.findOneAndUpdate(
-        { _id: blogpost.userId },
+        { _id: req.body.userId },
         { $pull: { blogposts: blogpost._id } },
         { runValidators: true, new: true }
       );
