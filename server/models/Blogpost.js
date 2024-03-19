@@ -16,7 +16,10 @@ const blogpostSchema = new Schema({
         type: Boolean,
         default: false,
     },
-    author: String,
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+       },
     content: String,
     tags: [String],
     createdAt: {
@@ -25,6 +28,7 @@ const blogpostSchema = new Schema({
         immutable: true,
     },
     updatedAt: Date,
+    rating: Number,
     comments: [{
      type: Schema.Types.ObjectId,
      ref: 'Comment',
