@@ -25,6 +25,7 @@ const blogpostSchema = new Schema({
         immutable: true,
     },
     updatedAt: Date,
+    rating: Number,
     comments: [{
      type: Schema.Types.ObjectId,
      ref: 'Comment',
