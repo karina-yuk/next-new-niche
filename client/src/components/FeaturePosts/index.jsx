@@ -22,8 +22,12 @@ const FeaturePosts = () => {
       id: 1,
       title: "Pinot Noir with earthy flavors",
       Info: "Recipes made with earthy ingredients like mushrooms and lentils taste great with reds like Pinot Noir and Dolcetto, which are light-bodied but full of savory depth. Pinot is also often delicious alongside salmon, proving that red wine and fish can go together brilliantly.",
+      user: "Ruby Clinton",
+      thumbImage: "images/project-6.JPG",
+      sliderImages: ["images/project-6.JPG", "images/project-8.JPG"],
       categories: ["*", filters.WEBDEV],
     },
+
     {
       id: 2,
       title: "Project Title 2",
