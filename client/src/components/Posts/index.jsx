@@ -8,7 +8,7 @@ const Posts = () => {
 
   {
     id: 1,
-    author: "Gabriel Kraskovskyi",
+    user: "Gabriel Kraskovskyi",
     title: "Arch Tech from USA",
     src: "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/347436958_1917420595290690_4501166707948439754_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=wtr-gZqRzuEAX-LMPV-&_nc_ht=scontent-ord5-2.xx&oh=00_AfDA4hjGEuos6Ef_59guLEqm0wFnyNnuxESTp4dCkZo-KA&oe=65F9A939",
     content: "I am happy working with printing and typesetting industry. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -16,7 +16,7 @@ const Posts = () => {
   },
   {
     id: 2,
-    author: "Anna Antropova",
+    user: "Anna Antropova",
     title: "Arch from UK",
     src: "https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-1/361112109_10161048926611007_5778823206661691662_n.jpg?stp=dst-jpg_p320x320&_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=k99UOD_ESmAAX_xNtkj&_nc_ht=scontent-ord5-1.xx&oh=00_AfBaVdet41CTbCDpXARhcODYsSZoveqHUko6lTQM9Smnfw&oe=65FA02A3",
     content: "I have used them twice now. Good rates, very efficient service and lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -24,7 +24,7 @@ const Posts = () => {
   },
   {
     id: 3,
-    author: "Christina MacIntyre ",
+    user: "Christina MacIntyre ",
     title: "Project Manager from Toronto",
     src: "https://media.licdn.com/dms/image/D5603AQEihJlxsuBEjA/profile-displayphoto-shrink_200_200/0/1705968358833?e=1715817600&v=beta&t=ohR16-2zzd1XO2uWYtIwF-6cyaN7gUUi-aOgIFVwWuc",
     content: "I am happy working with printing and typesetting industry. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -32,7 +32,7 @@ const Posts = () => {
   },
   {
     id: 4,
-    author: "Valeriia Kolimbet",
+    user: "Valeriia Kolimbet",
     title: "QA Analyst from Toronto",
     src: "https://scontent-ord5-1.xx.fbcdn.net/v/t1.6435-9/55849361_10157126481940270_605990318910734336_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=icF_iYRwSoUAX_bA02-&_nc_ht=scontent-ord5-1.xx&oh=00_AfB8XNTb7_Em-mlemcd8IWD0bc7AbHZnmhZbn-lODJA1gA&oe=661D903C",
     content: "I have used them twice now. Good rates, very efficient service and lorem ipsum dolor sit amet, consectetur adipiscing elit.",
