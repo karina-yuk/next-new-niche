@@ -16,7 +16,10 @@ const blogpostSchema = new Schema({
         type: Boolean,
         default: false,
     },
-    author: String,
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+       },
     content: String,
     tags: [String],
     createdAt: {
