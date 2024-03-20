@@ -14,7 +14,7 @@ const FeaturePosts = () => {
   const filters = {
     WEBDEV: "Food and Wine Pairing",
     ARCHTECH: "Architectural Technology",
-    ARCHDESIGN: "Architectural Design",
+    ARCHDESIGN: "Random Articles",
   };
 
   const projectsData = [
@@ -59,10 +59,9 @@ const FeaturePosts = () => {
         "Many dry sparkling wines, such as brut Champagne and Spanish cava, actually have a faint touch of fruity sweetness. This makes them extra-refreshing when served with salty foods. They also cut through the richness and oil of fried dishes: Bubbly and a bowl of potato chips is terrific.",
       client: "Admin",
       date: "September 16, 2019",
-      thumbImage:
-        "https://github.com/Olivia-the-G/next-new-niche/blob/main/client/src/img/03%20-%20Champagne%20with%20anything%20salty.png?raw=true",
+      thumbImage: "../src/img/03 - Champagne 2.jpeg",
       sliderImages: [
-        "../src/img/03 - Champagne 2.jpeg",
+        "../src/img/03 - Champagne 1.png",
         "../src/img/03 - Champagne 3.jpeg",
       ],
       categories: ["*", filters.WEBDEV],
@@ -163,10 +162,10 @@ const FeaturePosts = () => {
 
     {
       id: 8,
-      title: "Project Title 6",
+      title: "Do NOT Drink",
       projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
+        "Do not drink when you are: Driving a car, snowmobile, boat or other motorized vehicle. Operating heavy machinery and tools. Taking medicine or other drugs that interact with alcohol. Doing any kind of physical activity. Living with mental or physical health problems. Living with alcohol dependence. Pregnant, planning to be pregnant, or about to breastfeed.",
+      client: "Admin",
       technologies: "iOS, HTML5, CSS3, PHP, Java",
       industry: "Art & Design",
       date: "July 16, 2019",
@@ -181,7 +180,7 @@ const FeaturePosts = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/project-7.jpg",
+      thumbImage: "../src/img/Do Not Drink.jpeg",
       sliderImages: ["images/project-7.jpg", "images/project-8.JPG"],
       categories: ["*", filters.ARCHDESIGN],
     },
