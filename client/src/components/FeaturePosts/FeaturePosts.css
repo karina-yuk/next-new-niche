@@ -5,7 +5,6 @@
   background-color: #343a40; /* Dark background for portfolio section */
   color: grey;
   padding: 4rem 0;
-  
 }
 
 /* Portfolio Section Heading */
@@ -17,12 +16,12 @@
   font-size: 3.5rem;
   font-weight: 600;
   z-index: 1;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
- .text-9 {
+.text-9 {
   font-size: 8.25rem; /* Very large font size for emphasized text */
-  color: #282c30!important; /* Dark grey color for text */
+  color: #282c30 !important; /* Dark grey color for text */
 }
 
 .heading-separator-line {
@@ -30,7 +29,12 @@
   width: 60px; /* Width of the separator line */
   height: 1px; /* Height of the separator line */
   border: 0;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
   margin: 0 auto; /* Center the separator horizontally */
   position: absolute;
   bottom: -0px;
@@ -54,20 +58,20 @@
   text-align: center;
   display: inline-flex; /* Makes .nav-link items flex containers themselves */
   align-items: center; /* Vertically center the content within */
-  justify-content: center; 
+  justify-content: center;
 }
 
 .nav-link > div {
   cursor: pointer;
 }
 .nav-link:hover {
-  color:  #64ffd8;
+  color: #64ffd8;
   text-decoration: none;
   text-shadow: 0 0 10px #c5a0f7, 0 0 20px #a763f5;
 }
 
 /* Portfolio Filter Menu */
- .filter-container {
+.filter-container {
   display: flex;
   justify-content: center; /* Center buttons horizontally */
   list-style: none; /* Remove default list styling */
@@ -75,7 +79,7 @@
   margin-bottom: 2rem; /* Space below the filter buttons */
 }
 
- .filter-container button {
+.filter-container button {
   background: transparent;
   border: none;
   color: #fff;
@@ -84,18 +88,18 @@
   font-size: 1rem;
   cursor: pointer;
   text-transform: uppercase;
-  transition: color 0.3s, border-bottom 0.3s;
+  transition: color 0.3s;
+  border-bottom: 0.3s;
 }
 
-
- .filter-container button:hover,
- .filter-container button.active {
+.filter-container button:hover,
+.filter-container button.active {
   color: #64ffd8;
   border-bottom: 2px solid #64ffd8;
 }
 
 /* Portfolio Cards */
- .portfolio-box {
+.portfolio-box {
   border: 1px solid #212529;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -109,7 +113,7 @@
 }
 .portfolio-box:hover .portfolio-img img {
   opacity: 0.3;
-  box-shadow: inset 0 0 100px rgba(0,0,0,0.5); /* Inner shadow for a vignette effect */
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Inner shadow for a vignette effect */
 }
 
 .portfolio-box:hover {
@@ -118,7 +122,7 @@
 }
 
 /* Portfolio Images */
- .portfolio-img img {
+.portfolio-img img {
   width: 100%;
   display: block;
   transition: opacity 0.3s;

@@ -21,40 +21,53 @@ const FeaturePosts = () => {
     {
       id: 1,
       title: "Pinot Noir with earthy flavors",
-      Info: "Recipes made with earthy ingredients like mushrooms and lentils taste great with reds like Pinot Noir and Dolcetto, which are light-bodied but full of savory depth. Pinot is also often delicious alongside salmon, proving that red wine and fish can go together brilliantly.",
-      user: "Ruby Clinton",
-      thumbImage: "images/project-6.JPG",
-      sliderImages: ["images/project-6.JPG", "images/project-8.JPG"],
+      projectInfo:
+        "Recipes made with earthy ingredients like mushrooms and lentils taste great with reds like Pinot Noir and Dolcetto, which are light-bodied but full of savory depth. Pinot is also often delicious alongside salmon, proving that red wine and fish can go together brilliantly.",
+      client: "Admin",
+      date: "May 06, 2019",
+      thumbImage:
+        "https://github.com/Olivia-the-G/next-new-niche/blob/main/client/src/img/01%20-%20Pinot%20Noir%20with%20earthy%20flavors.png?raw=true",
+      sliderImages: [
+        "../src/img/01 - Mushroom-Sauce-2.jpeg",
+        "../src/img/01 - Mushroom-Sauce.jpeg",
+      ],
+
       categories: ["*", filters.WEBDEV],
     },
 
     {
       id: 2,
-      title: "Project Title 2",
+      title: "Chardonnay with fatty fish or fish in a rich sauce",
       projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "images/project-6.JPG",
-      sliderImages: ["images/project-6.JPG", "images/project-8.JPG"],
-      categories: ["*", filters.ARCHTECH],
+        "Silky whites — like many Chardonnays from California, Chile, or Australia — are delicious with hearty fish like swordfish or any kind of seafood in a rich sauce.",
+      client: "Admin",
+      date: "August 19, 2019",
+
+      thumbImage:
+        "https://github.com/Olivia-the-G/next-new-niche/blob/main/client/src/img/02%20-%20Chardonnay%20with%20fatty%20fish%20or%20fish%20in%20a%20rich%20sauce.png?raw=true",
+      sliderImages: [
+        "../src/img/02 - fatty-fish-recipes.JPEG",
+        "../src/img/02 - fish sashimi salad.JPEG",
+      ],
+      categories: ["*", filters.WEBDEV],
     },
+
     {
       id: 3,
-      title: "Project Title 3",
+      title: "Champagne with anything salty",
+      projectInfo:
+        "Many dry sparkling wines, such as brut Champagne and Spanish cava, actually have a faint touch of fruity sweetness. This makes them extra-refreshing when served with salty foods. They also cut through the richness and oil of fried dishes: Bubbly and a bowl of potato chips is terrific.",
+      client: "Admin",
+      date: "September 16, 2019",
+      thumbImage:
+        "https://github.com/Olivia-the-G/next-new-niche/blob/main/client/src/img/03%20-%20Champagne%20with%20anything%20salty.png?raw=true",
+      sliderImages: ["images/project-4.png", "images/project-5.png"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 7,
+      title: "",
       projectInfo:
         "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
       client: "Ruby Clinton",
@@ -148,30 +161,7 @@ const FeaturePosts = () => {
       sliderImages: ["images/project-7.jpg", "images/project-8.JPG"],
       categories: ["*", filters.ARCHDESIGN],
     },
-    {
-      id: 7,
-      title: "Project Title 7",
-      projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "images/project-4.png",
-      sliderImages: ["images/project-4.png", "images/project-5.png"],
-      categories: ["*", filters.WEBDEV, filters.ARCHTECH],
-    },
+
     {
       id: 8,
       title: "Project Title 6",
