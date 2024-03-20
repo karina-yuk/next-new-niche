@@ -61,8 +61,79 @@ const FeaturePosts = () => {
       date: "September 16, 2019",
       thumbImage:
         "https://github.com/Olivia-the-G/next-new-niche/blob/main/client/src/img/03%20-%20Champagne%20with%20anything%20salty.png?raw=true",
-      sliderImages: ["images/project-4.png", "images/project-5.png"],
+      sliderImages: [
+        "../src/img/03 - Champagne 2.jpeg",
+        "../src/img/03 - Champagne 3.jpeg",
+      ],
       categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 4,
+      title: "Cabernet Sauvignon with juicy red meat",
+      projectInfo:
+        "California Cabernet, Bordeaux, and Bordeaux-style blends are terrific with steaks and lamb dishes. The firm tannins in Cab cut through the fat and protein, which in turn smooth out the tannins. It's a perfect symbiotic relationship in each bite.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "October 02, 2019",
+
+      thumbImage: "../src/img/04 - Cabernet Sauvignon with juicy red meat.png",
+      sliderImages: [
+        "../src/img/04 - Best+Sunday+Roast+Wines+roast+beef+thethreedrinkers.jpeg",
+        "../src/img/04 - Wine_to_Pair_with_Steak.jpg",
+      ],
+      categories: ["*", filters.WEBDEV],
+    },
+    {
+      id: 5,
+      title: "Sauvignon Blanc with tart dressings and sauces",
+      projectInfo:
+        "Tangy foods — like scallops with a grapefruit-onion salad — won't overwhelm zippy wines like Sauvignon Blanc, Vinho Verde from Portugal, and Verdejo from Spain. Sauvignon Blanc also works well alongside vinaigrette, roasted or sautéed fish, and goat cheese.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "October 16, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage:
+        "../src/img/05 - Sauvignon Blanc with tart dressings and sauces.jpg",
+      sliderImages: ["../src/img/05 - 02.jpeg", "../src/img/05 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 6,
+      title: "Project Title 6",
+      projectInfo:
+        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      client: "Ruby Clinton",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "July 16, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "images/project-7.jpg",
+      sliderImages: ["images/project-7.jpg", "images/project-8.JPG"],
+      categories: ["*", filters.ARCHDESIGN],
     },
 
     {
@@ -87,78 +158,6 @@ const FeaturePosts = () => {
       },
       thumbImage: "images/project-3.jpeg",
       sliderImages: ["images/project-3.jpeg", "images/project-1.jpeg"],
-      categories: ["*", filters.ARCHDESIGN],
-    },
-    {
-      id: 4,
-      title: "Project Title 4",
-      projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "images/project-4.png",
-      sliderImages: ["images/project-4.png", "images/project-9.png"],
-      categories: ["*", filters.ARCHTECH, filters.ARCHDESIGN],
-    },
-    {
-      id: 5,
-      title: "Project Title 5",
-      projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "images/project-10.jpeg",
-      sliderImages: ["images/project-10.jpeg", "images/project-9.png"],
-      categories: ["*", filters.ARCHTECH],
-    },
-    {
-      id: 6,
-      title: "Project Title 6",
-      projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "images/project-7.jpg",
-      sliderImages: ["images/project-7.jpg", "images/project-8.JPG"],
       categories: ["*", filters.ARCHDESIGN],
     },
 
