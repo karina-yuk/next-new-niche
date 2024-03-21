@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const {
   getBlogposts,
+  getUserBlogposts,
   getSingleBlogpost,
   createBlogpost,
   updateBlogpost,
@@ -9,6 +10,9 @@ const {
 
 // /api/blogposts
 router.route('/').get(getBlogposts).post(createBlogpost);
+
+// /api/blogposts/:userId
+router.route('/:userId').get(getUserBlogposts);
 
 // /api/blogposts/:blogpostId
 router

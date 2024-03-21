@@ -11,6 +11,21 @@ module.exports = {
     }
   },
 
+  // get all blogposts by a user
+  async getUserBlogposts(req, res) {
+    try {
+      const user = await User.findOne({ _id: req.params.userId });
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+
+      const blogposts = await Blogpost.find({ userId: req.params.userId });
+      res.json(blogposts);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
+
   // get single blogpost
   async getSingleBlogpost(req, res) {
     try {
@@ -31,16 +46,6 @@ module.exports = {
   async createBlogpost(req, res) {
     try {
       const blogpost = await Blogpost.create(req.body);
-      // update user's blogposts array
-      const user = await User.findOneAndUpdate(
-        { _id: req.body.userId },
-        { $addToSet: { blogposts: blogpost._id } },
-        { new: true }
-      );
-      
-      if (!user) {
-        return res.status(404).json({ message: 'User not found' });
-      }
       res.json({ message: 'New blogpost created', blogpost });
     } catch (err) {
       res.status(500).json(err);
@@ -73,17 +78,6 @@ module.exports = {
 
       if (!blogpost) {
         return res.status(404).json({ message: 'Blogpost not found' });
-      }
-
-      // update user's blogposts array
-      const user = await User.findOneAndUpdate(
-        { _id: req.body.userId },
-        { $pull: { blogposts: blogpost._id } },
-        { runValidators: true, new: true }
-      );
-
-      if (!user) {
-        return res.status(404).json({ message: 'User not found' });
       }
 
       res.json({ message: 'Blogpost deleted' });
