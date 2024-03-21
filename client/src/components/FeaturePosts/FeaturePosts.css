@@ -1,13 +1,22 @@
 /* src/components/Portfolio/Portfolio.css */
 
+
 /* Portfolio Section Styles */
 #portfolio {
   background-color: #343a40; /* Dark background for portfolio section */
   color: grey;
   padding: 4rem 0;
-  
-}
+  width: 80vw;
+  text-align: center;
 
+}
+.container {
+  max-width: 1400px;
+  margin-top: 5px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  text-align: center;
+}
 /* Portfolio Section Heading */
 .text-center {
   text-align: center;
@@ -17,7 +26,7 @@
   font-size: 3.5rem;
   font-weight: 600;
   z-index: 1;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 
  .text-9 {
@@ -75,24 +84,7 @@
   margin-bottom: 2rem; /* Space below the filter buttons */
 }
 
- .filter-container button {
-  background: transparent;
-  border: none;
-  color: #fff;
-  margin: 0 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: color 0.3s, border-bottom 0.3s;
-}
 
-
- .filter-container button:hover,
- .filter-container button.active {
-  color: #64ffd8;
-  border-bottom: 2px solid #64ffd8;
-}
 
 /* Portfolio Cards */
  .portfolio-box {

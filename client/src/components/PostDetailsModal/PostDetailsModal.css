@@ -36,7 +36,7 @@
 .wrapper-component h2{
   font-size: 2rem;
   font-weight: 600;
-  color: black;
+  color: #333 ;
 }
 
 /* Content within the modal */

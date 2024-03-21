@@ -16,7 +16,7 @@ const FeaturePosts= () => {
   const [selectedProjectDetails, setSelectedProjectDetails] = useState();
 
   const filters = {
-    WEBDEV: "Web Development",
+    PostCategory: "Web Development",
     ARCHTECH: "Architectural Technology",
     ARCHDESIGN: "Architectural Design",
   };
