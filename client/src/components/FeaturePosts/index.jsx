@@ -287,6 +287,81 @@ const FeaturePosts = () => {
     },
 
     {
+      id: 13,
+      title: "Off-dry Riesling with sweet and spicy dishes",
+      projectInfo:
+        "The slight sweetness of many Rieslings, Gewürztraminers, and Vouvrays helps tame the heat of spicy dishes and goes toe-to-toe with the lift of more aromatic ingredients. A spicy green salad is a delicious partner for any of those wines.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "March 03, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/13 - 01.png",
+      sliderImages: ["../src/img/13 - 02.jpeg", "../src/img/13 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 14,
+      title: "Rosé Champagne with dinner, not just hors d'oeuvres",
+      projectInfo:
+        "Rosé sparkling wines, such as rosé Champagne, Prosecco rosé, and pink sparkling wine from California, have the depth of flavor, richness, and mouthwatering acidity to go with a wide range of main courses. Grilled tuna, lamb chops, salads, and risotto are all phenomenal with it.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "April 03, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/14 - 01.png",
+      sliderImages: ["../src/img/14 - 02.jpeg", "../src/img/14 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 15,
+      title: "Old World wines with Old World dishes",
+      projectInfo:
+        "The flavors of foods and wines that have developed together over the centuries — Tuscan recipes and Tuscan wines, for instance — are almost always a natural fit; it's an offshoot of the old wine-pairing advice that if it grows together, it goes together. The classic Italian dish Chicken Cacciatore, traditionally prepared in the woods over a fire, pairs well with an herbal, medium-bodied Chianti, as it has for generations.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "May 06, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/15 - 01.png",
+      sliderImages: ["../src/img/15 - 02.jpeg", "../src/img/15 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
       id: 18,
       title: "Do NOT Drink",
       projectInfo:

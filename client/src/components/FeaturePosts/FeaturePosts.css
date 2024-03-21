@@ -129,6 +129,7 @@
 }
 .portfolio-img {
   min-height: 80px;
+  max-height: 180px;
   position: relative;
   background-size: cover;
 }
