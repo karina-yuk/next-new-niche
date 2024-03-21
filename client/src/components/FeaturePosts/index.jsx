@@ -13,7 +13,7 @@ const FeaturePosts = () => {
 
   const filters = {
     WEBDEV: "Food and Wine Pairing",
-    ARCHTECH: "Architectural Technology",
+    ARCHTECH: "Cheese and Wine Pairing",
     ARCHDESIGN: "Random Articles",
   };
 
@@ -219,7 +219,7 @@ const FeaturePosts = () => {
       client: "Admin",
       technologies: "iOS, HTML5, CSS3, PHP, Java",
       industry: "Art & Design",
-      date: "July 16, 2019",
+      date: "January 31, 2020",
       url: {
         name: "www.example.com",
         link: "https://www.example.com",
@@ -237,7 +237,57 @@ const FeaturePosts = () => {
     },
 
     {
+      id: 11,
+      title: "Grüner Veltliner with fresh herbs and vegetables",
+      projectInfo:
+        "Austrian Grüner Veltliner's citrus-and-clover scent is lovely when there are lots of fresh herbs in a dish. Other go-to grapes include Albariño from Spain and Vermentino from Italy.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "February 14, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/11 - 01.jpeg",
+      sliderImages: ["../src/img/11 - 02.jpeg", "../src/img/11 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
       id: 12,
+      title: "Zinfandel with pâtés, mousses, and terrines",
+      projectInfo:
+        "If you can apply the same adjectives to a wine and a dish, pairing them will often work. For instance, the words (rustic) (savory) or (rich) are often used to describe Zinfandel, Italy's Nero d'Avola, and Spain's Monastrell, as well as a creamy liver mousse. Spice- and fruit-driven Zinfandel also has a natural affinity for barbecued or sauce-slathered meats.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "February 28, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/12 - 01.png",
+      sliderImages: ["../src/img/12 - 02.jpeg", "../src/img/12 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 18,
       title: "Do NOT Drink",
       projectInfo:
         "Do not drink when you are: Driving a car, snowmobile, boat or other motorized vehicle. Operating heavy machinery and tools. Taking medicine or other drugs that interact with alcohol. Doing any kind of physical activity. Living with mental or physical health problems. Living with alcohol dependence. Pregnant, planning to be pregnant, or about to breastfeed.",
