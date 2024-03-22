@@ -14,8 +14,7 @@ module.exports = {
   // get single user
   async getSingleUser(req, res) {
     try {
-      const user = await User.find({ _id: req.params.userId })
-      .populate('blogposts');
+      const user = await User.find({ _id: req.params.userId });
 
       if (!user) {
         return res.status(404).json({ message: 'User not found' });

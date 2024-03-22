@@ -1,10 +1,19 @@
 
 const { Schema, model } = require('mongoose');
 const moment = require('moment');
+const User = require('./User');
 
 
 const blogpostSchema = new Schema({
     title: {
+        type: String,
+        required: true,
+    },
+    userId: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+    },
+    username: {
         type: String,
         required: true,
     },
@@ -40,8 +49,9 @@ const blogpostSchema = new Schema({
 
 // format data
 blogpostSchema.virtual('Date').get(function () {
-    return moment(blogpostSchema.createdAt).format('MMMM, DD, YYYY');
-  });
+    return moment(this.createdAt).format('MMMM, DD, YYYY');
+});
+
 
 const Blogpost = model('Blogpost', blogpostSchema); // becomes 'blogposts' collection
 
