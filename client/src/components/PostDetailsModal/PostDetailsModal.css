@@ -2,7 +2,7 @@
 
 /* Base styles for the modal */
 .modal-content {
-  background: #fff; /* Adjust the background as needed */
+  background: #c9c8c8; /* Adjust the background as needed */
   color: #333; /* Adjust text color as needed */
   border-radius: 8px;
   overflow-y: auto; /* Makes the content scrollable vertically */
@@ -33,7 +33,7 @@
   filter: invert(1);
 }
 
-.wrapper-component h2{
+.wrapper-component h2 {
   font-size: 2rem;
   font-weight: 600;
   color: #333 ;

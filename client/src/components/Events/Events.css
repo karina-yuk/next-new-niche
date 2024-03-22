@@ -88,9 +88,7 @@
   max-width: 500px;
 }
 
-div.card {
-  display: block;
-}
+
 
 .card {
   position: relative;
@@ -105,7 +103,7 @@ div.card {
   
 }
 .container .card .face {
-  width: 500px;
+  width: 450px;
   height: 250px;
   transition: 0.5s;
 }
