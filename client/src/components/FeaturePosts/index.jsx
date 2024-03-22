@@ -362,7 +362,132 @@ const FeaturePosts = () => {
     },
 
     {
+      id: 16,
+      title: "Fresh Cheese",
+      projectInfo:
+        "The best pairings for these types of cheese are light-bodied white wines, those with fruit-forward profiles and tight acidities. Wines are meant to be drunk fresh with no aging and spend most of their time in stainless steel tanks. Think Sauvignon Blanc, unoaked Chardonnay, Pinot Grigio, and Vermentino.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "July 18, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/16 - 01.jpeg",
+      sliderImages: ["../src/img/16 - 02.jpeg", "../src/img/16 - 03.jpeg"],
+      categories: ["*", filters.ARCHTECH],
+    },
+
+    {
+      id: 17,
+      title: "Soft, Creamy Cheese",
+      projectInfo:
+        "To pair these cheeses, we must find bold wines that won’t fall short. This is where white wine and cheese pairing is essential. Full-bodied Chardonnays, traditional white Riojas, or oak-aged Viognier will have the necessary weight for the task. The dairy creaminess typical in some white wines, a product of malolactic fermentation, mirrors the flavors in cheese perfectly.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "September 18, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/17 - 01.jpeg",
+      sliderImages: ["../src/img/17 - 02.jpeg", "../src/img/17 - 03.jpeg"],
+      categories: ["*", filters.ARCHTECH],
+    },
+
+    {
       id: 18,
+      title: "Aged Semi-Hard Cheese",
+      projectInfo:
+        "As cheese ages, it loses moisture and gains flavor concentration. Cheddar, Edam, Emmental, and Gouda are considered semi-hard cheeses. Their creaminess is characteristic, and so is their firm but malleable texture. Moreover, the flavor can be mild or quite assertive. Semi-hard cheeses will pair nicely with medium-bodied red wines like Merlot, Malbec, or a Montepulciano.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "December 24, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/18 - 01.jpeg",
+      sliderImages: ["../src/img/18 - 02.jpeg", "../src/img/18 - 03.jpeg"],
+      categories: ["*", filters.ARCHTECH],
+    },
+
+    {
+      id: 19,
+      title: "Aged Hard Cheese",
+      projectInfo:
+        "Both Parmigiano Reggiano or Manchego have a solid texture. These cheeses are usually bold and straightforward; they hold up to several years of aging before entering the market. Match their intensity and mouthfeel with assertive, structured red wines like an aged Tempranillo or a Cabernet Sauvignon. This is the type of wine and cheese pairing that allows wine lovers who dislike tannins (super-tasters in the lingo) can enjoy more tannic wines than usual.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "November 14, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/19 - 01.jpeg",
+      sliderImages: ["../src/img/19 - 02.png", "../src/img/19 - 03.jpeg"],
+      categories: ["*", filters.ARCHTECH],
+    },
+
+    {
+      id: 20,
+      title: "Blue Cheese",
+      projectInfo:
+        "When you inoculate cheese with bacteria from the Penicillin family, a miracle happens. Blue spots and veins develop in the cheese, creating incredibly fragrant aromas and ferocious flavors. Cheeses like Stilton, Roquefort, Cabrales, and Gorgonzola dominate the segment. However, their character is hard to match, and their sometimes overwhelming salinity challenges Sommeliers. Traditionally, only sweet, bold, and often fortified wines like Vin Santo, Port, or Muscat de Beaumes de Venise dare to match these delicacies. The sweetness balances the saltiness and the coating unctuousness of the sharp cheese.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "November 14, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/20 - 01.jpeg",
+      sliderImages: ["../src/img/20 - 02.jpeg", "../src/img/20 - 03.jpeg"],
+      categories: ["*", filters.ARCHTECH],
+    },
+
+    {
+      id: 21,
       title: "Do NOT Drink",
       projectInfo:
         "Do not drink when you are: Driving a car, snowmobile, boat or other motorized vehicle. Operating heavy machinery and tools. Taking medicine or other drugs that interact with alcohol. Doing any kind of physical activity. Living with mental or physical health problems. Living with alcohol dependence. Pregnant, planning to be pregnant, or about to breastfeed.",
