@@ -13,6 +13,10 @@ const blogpostSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User',
     },
+    username: {
+        type: String,
+        required: true,
+    },
     slug: {
         type: String,
         required: true,
@@ -46,25 +50,6 @@ const blogpostSchema = new Schema({
 // format data
 blogpostSchema.virtual('Date').get(function () {
     return moment(this.createdAt).format('MMMM, DD, YYYY');
-});
-
-blogpostSchema.virtual('username').get(async function () {
-    try {
-        // Log userId before and after conversion
-        console.log('Original userId:', this.userId);
-        const userId = typeof this.userId === 'string' ? mongoose.Types.ObjectId(this.userId) : this.userId;
-        console.log('Converted userId:', userId);
-
-        const user = await User.findOne({ _id: userId }, 'username');
-        if (user) {
-            return user.username;
-        } else {
-            return 'Unknown'; 
-        }
-    } catch (error) {
-        console.error('Error fetching username:', error);
-        throw new Error('Failed to fetch username');
-    }
 });
 
 

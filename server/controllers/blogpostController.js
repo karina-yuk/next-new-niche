@@ -29,8 +29,8 @@ module.exports = {
   // get single blogpost
   async getSingleBlogpost(req, res) {
     try {
-      const blogpost = await Blogpost.find({ _id: req.params.blogpostId })
-      .populate('comments');
+      const blogpost = await Blogpost.findById(req.params.blogpostId)
+        .populate('comments');
 
       if (!blogpost) {
         return res.status(404).json({ message: 'Blogpost not found' });
@@ -42,15 +42,17 @@ module.exports = {
     }
   },
 
-  // create a blogpost
-  async createBlogpost(req, res) {
-    try {
-      const blogpost = await Blogpost.create(req.body);
-      res.json({ message: 'New blogpost created', blogpost });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  },
+// create a blogpost
+async createBlogpost(req, res) {
+  try {
+    const user = await User.findOne({ _id: req.body.userId });
+    const blogpost = await Blogpost.create({...req.body, username: user.username});
+    res.json({ message: 'New blogpost created', blogpost });
+  } catch (err) {
+    console.log('Error:', err);
+    res.status(500).json(err);
+  }
+},
 
   // update a blogpost
   async updateBlogpost(req, res) {
