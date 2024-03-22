@@ -13,7 +13,7 @@ const FeaturePosts = () => {
 
   const filters = {
     WEBDEV: "Food and Wine Pairing",
-    ARCHTECH: "Architectural Technology",
+    ARCHTECH: "Cheese and Wine Pairing",
     ARCHDESIGN: "Random Articles",
   };
 
@@ -112,13 +112,13 @@ const FeaturePosts = () => {
 
     {
       id: 6,
-      title: "Project Title 6",
+      title: "Dry Rosé with rich, cheesy dishes",
       projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
+        "Some cheeses go better with white wine and some sing alongside red. Almost all, however, pair well with dry rosé, which has the acidity of white wine and the fruit character of red. Rosé also works well with grilled fish, fresh salad, and even a big plate of charcuterie.",
+      client: "Admin",
       technologies: "iOS, HTML5, CSS3, PHP, Java",
       industry: "Art & Design",
-      date: "July 16, 2019",
+      date: "November 16, 2019",
       url: {
         name: "www.example.com",
         link: "https://www.example.com",
@@ -130,17 +130,42 @@ const FeaturePosts = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/project-7.jpg",
-      sliderImages: ["images/project-7.jpg", "images/project-8.JPG"],
-      categories: ["*", filters.ARCHDESIGN],
+      thumbImage: "../src/img/06 - Dry Rosé with rich, cheesy dishes.png",
+      sliderImages: ["../src/img/06 - 02.jpeg", "../src/img/06 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
     },
 
     {
       id: 7,
-      title: "",
+      title: "Pinot Grigio with light fish dishes",
       projectInfo:
-        "Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      client: "Ruby Clinton",
+        "Light seafood dishes seem to take on more flavor when matched with equally delicate white wines, such as Pinot Grigio or Arneis from Italy, Chablis from France, and Vinho Verde from Portugal.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "November 19, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/07 - Pinot Grigio with light fish dishes.png",
+      sliderImages: ["../src/img/07 - 02.jpeg", "../src/img/07 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 8,
+      title: "Malbec with sweet-spicy barbecue sauces",
+      projectInfo:
+        "Malbec, Shiraz, and Côtes-du-Rhône are bold enough to drink alongside foods brushed with heavily spiced barbecue sauces — just be careful that the sauce isn't too sugary-sweet, which can throw off the wine's fruit.",
+      client: "Admin",
       technologies: "iOS, HTML5, CSS3, PHP, Java",
       industry: "Art & Design",
       date: "July 16, 2019",
@@ -155,13 +180,314 @@ const FeaturePosts = () => {
         instagram: "http://www.instagram.com/",
         mail: "mailto:example@gmail.com",
       },
-      thumbImage: "images/project-3.jpeg",
-      sliderImages: ["images/project-3.jpeg", "images/project-1.jpeg"],
-      categories: ["*", filters.ARCHDESIGN],
+      thumbImage:
+        "../src/img/08 - Malbec with sweet-spicy barbecue sauces .jpeg",
+      sliderImages: ["../src/img/08 - 02.jpeg", "../src/img/08 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
     },
 
     {
-      id: 8,
+      id: 9,
+      title: "Moscato d'Asti with fruit desserts",
+      projectInfo:
+        "Sweet sparkling wines such as Moscato d'Asti and demi-sec Champagne help emphasize the fruit in the dessert, rather than the sugar. Try it with these Honeyed Fig Crostatas. It's also delicious alongside a simple summer fruit salad or even splashed into it.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "January 16, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/09 - Moscato d'Asti with fruit desserts.png",
+      sliderImages: ["../src/img/09 - 02.jpeg", "../src/img/09 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 10,
+      title: "Syrah with highly spiced dishes",
+      projectInfo:
+        "When a meat is heavily seasoned, look for a red wine with lots of spicy notes. Syrah from Washington or France's Rhône Valley, Cabernet Franc from the Loire, and Xinomavro from Greece are all good choices. Be careful with spice heat, however: For hot dishes like those, try to avoid high-alcohol wines, which will amplify the sizzle.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "January 31, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/10 - 01.png",
+      sliderImages: ["../src/img/10 - 02.jpeg", "../src/img/10 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 11,
+      title: "Grüner Veltliner with fresh herbs and vegetables",
+      projectInfo:
+        "Austrian Grüner Veltliner's citrus-and-clover scent is lovely when there are lots of fresh herbs in a dish. Other go-to grapes include Albariño from Spain and Vermentino from Italy.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "February 14, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/11 - 01.jpeg",
+      sliderImages: ["../src/img/11 - 02.jpeg", "../src/img/11 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 12,
+      title: "Zinfandel with pâtés, mousses, and terrines",
+      projectInfo:
+        "If you can apply the same adjectives to a wine and a dish, pairing them will often work. For instance, the words (rustic) (savory) or (rich) are often used to describe Zinfandel, Italy's Nero d'Avola, and Spain's Monastrell, as well as a creamy liver mousse. Spice- and fruit-driven Zinfandel also has a natural affinity for barbecued or sauce-slathered meats.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "February 28, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/12 - 01.png",
+      sliderImages: ["../src/img/12 - 02.jpeg", "../src/img/12 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 13,
+      title: "Off-dry Riesling with sweet and spicy dishes",
+      projectInfo:
+        "The slight sweetness of many Rieslings, Gewürztraminers, and Vouvrays helps tame the heat of spicy dishes and goes toe-to-toe with the lift of more aromatic ingredients. A spicy green salad is a delicious partner for any of those wines.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "March 03, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/13 - 01.png",
+      sliderImages: ["../src/img/13 - 02.jpeg", "../src/img/13 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 14,
+      title: "Rosé Champagne with dinner, not just hors d'oeuvres",
+      projectInfo:
+        "Rosé sparkling wines, such as rosé Champagne, Prosecco rosé, and pink sparkling wine from California, have the depth of flavor, richness, and mouthwatering acidity to go with a wide range of main courses. Grilled tuna, lamb chops, salads, and risotto are all phenomenal with it.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "April 03, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/14 - 01.png",
+      sliderImages: ["../src/img/14 - 02.jpeg", "../src/img/14 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 15,
+      title: "Old World wines with Old World dishes",
+      projectInfo:
+        "The flavors of foods and wines that have developed together over the centuries — Tuscan recipes and Tuscan wines, for instance — are almost always a natural fit; it's an offshoot of the old wine-pairing advice that if it grows together, it goes together. The classic Italian dish Chicken Cacciatore, traditionally prepared in the woods over a fire, pairs well with an herbal, medium-bodied Chianti, as it has for generations.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "May 06, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/15 - 01.png",
+      sliderImages: ["../src/img/15 - 02.jpeg", "../src/img/15 - 03.jpeg"],
+      categories: ["*", filters.WEBDEV],
+    },
+
+    {
+      id: 16,
+      title: "Fresh Cheese",
+      projectInfo:
+        "The best pairings for these types of cheese are light-bodied white wines, those with fruit-forward profiles and tight acidities. Wines are meant to be drunk fresh with no aging and spend most of their time in stainless steel tanks. Think Sauvignon Blanc, unoaked Chardonnay, Pinot Grigio, and Vermentino.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "July 18, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/16 - 01.jpeg",
+      sliderImages: ["../src/img/16 - 02.jpeg", "../src/img/16 - 03.jpeg"],
+      categories: ["*", filters.ARCHTECH],
+    },
+
+    {
+      id: 17,
+      title: "Soft, Creamy Cheese",
+      projectInfo:
+        "To pair these cheeses, we must find bold wines that won’t fall short. This is where white wine and cheese pairing is essential. Full-bodied Chardonnays, traditional white Riojas, or oak-aged Viognier will have the necessary weight for the task. The dairy creaminess typical in some white wines, a product of malolactic fermentation, mirrors the flavors in cheese perfectly.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "September 18, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/17 - 01.jpeg",
+      sliderImages: ["../src/img/17 - 02.jpeg", "../src/img/17 - 03.jpeg"],
+      categories: ["*", filters.ARCHTECH],
+    },
+
+    {
+      id: 18,
+      title: "Aged Semi-Hard Cheese",
+      projectInfo:
+        "As cheese ages, it loses moisture and gains flavor concentration. Cheddar, Edam, Emmental, and Gouda are considered semi-hard cheeses. Their creaminess is characteristic, and so is their firm but malleable texture. Moreover, the flavor can be mild or quite assertive. Semi-hard cheeses will pair nicely with medium-bodied red wines like Merlot, Malbec, or a Montepulciano.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "December 24, 2020",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/18 - 01.jpeg",
+      sliderImages: ["../src/img/18 - 02.jpeg", "../src/img/18 - 03.jpeg"],
+      categories: ["*", filters.ARCHTECH],
+    },
+
+    {
+      id: 19,
+      title: "Aged Hard Cheese",
+      projectInfo:
+        "Both Parmigiano Reggiano or Manchego have a solid texture. These cheeses are usually bold and straightforward; they hold up to several years of aging before entering the market. Match their intensity and mouthfeel with assertive, structured red wines like an aged Tempranillo or a Cabernet Sauvignon. This is the type of wine and cheese pairing that allows wine lovers who dislike tannins (super-tasters in the lingo) can enjoy more tannic wines than usual.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "November 14, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/19 - 01.jpeg",
+      sliderImages: ["../src/img/19 - 02.png", "../src/img/19 - 03.jpeg"],
+      categories: ["*", filters.ARCHTECH],
+    },
+
+    {
+      id: 20,
+      title: "Blue Cheese",
+      projectInfo:
+        "When you inoculate cheese with bacteria from the Penicillin family, a miracle happens. Blue spots and veins develop in the cheese, creating incredibly fragrant aromas and ferocious flavors. Cheeses like Stilton, Roquefort, Cabrales, and Gorgonzola dominate the segment. However, their character is hard to match, and their sometimes overwhelming salinity challenges Sommeliers. Traditionally, only sweet, bold, and often fortified wines like Vin Santo, Port, or Muscat de Beaumes de Venise dare to match these delicacies. The sweetness balances the saltiness and the coating unctuousness of the sharp cheese.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "November 14, 2019",
+      url: {
+        name: "www.example.com",
+        link: "https://www.example.com",
+      },
+      socialLinks: {
+        facebook: "http://www.facebook.com/",
+        twitter: "http://www.twitter.com/",
+        google: "http://www.google.com/",
+        instagram: "http://www.instagram.com/",
+        mail: "mailto:example@gmail.com",
+      },
+      thumbImage: "../src/img/20 - 01.jpeg",
+      sliderImages: ["../src/img/20 - 02.jpeg", "../src/img/20 - 03.jpeg"],
+      categories: ["*", filters.ARCHTECH],
+    },
+
+    {
+      id: 21,
       title: "Do NOT Drink",
       projectInfo:
         "Do not drink when you are: Driving a car, snowmobile, boat or other motorized vehicle. Operating heavy machinery and tools. Taking medicine or other drugs that interact with alcohol. Doing any kind of physical activity. Living with mental or physical health problems. Living with alcohol dependence. Pregnant, planning to be pregnant, or about to breastfeed.",

@@ -26,10 +26,6 @@ const userSchema = new Schema({
     type: Boolean,
     default: false,
   },
-  blogposts: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Blogpost'
-  }],
 },
   {
     toJSON: {

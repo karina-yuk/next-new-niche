@@ -11,11 +11,26 @@ module.exports = {
     }
   },
 
+  // get all blogposts by a user
+  async getUserBlogposts(req, res) {
+    try {
+      const user = await User.findOne({ _id: req.params.userId });
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+
+      const blogposts = await Blogpost.find({ userId: req.params.userId });
+      res.json(blogposts);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
+
   // get single blogpost
   async getSingleBlogpost(req, res) {
     try {
-      const blogpost = await Blogpost.find({ _id: req.params.blogpostId })
-      .populate('comments');
+      const blogpost = await Blogpost.findById(req.params.blogpostId)
+        .populate('comments');
 
       if (!blogpost) {
         return res.status(404).json({ message: 'Blogpost not found' });
@@ -27,25 +42,17 @@ module.exports = {
     }
   },
 
-  // create a blogpost
-  async createBlogpost(req, res) {
-    try {
-      const blogpost = await Blogpost.create(req.body);
-      // update user's blogposts array
-      const user = await User.findOneAndUpdate(
-        { _id: req.body.userId },
-        { $addToSet: { blogposts: blogpost._id } },
-        { new: true }
-      );
-      
-      if (!user) {
-        return res.status(404).json({ message: 'User not found' });
-      }
-      res.json({ message: 'New blogpost created', blogpost });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  },
+// create a blogpost
+async createBlogpost(req, res) {
+  try {
+    const user = await User.findOne({ _id: req.body.userId });
+    const blogpost = await Blogpost.create({...req.body, username: user.username});
+    res.json({ message: 'New blogpost created', blogpost });
+  } catch (err) {
+    console.log('Error:', err);
+    res.status(500).json(err);
+  }
+},
 
   // update a blogpost
   async updateBlogpost(req, res) {
@@ -73,17 +80,6 @@ module.exports = {
 
       if (!blogpost) {
         return res.status(404).json({ message: 'Blogpost not found' });
-      }
-
-      // update user's blogposts array
-      const user = await User.findOneAndUpdate(
-        { _id: req.body.userId },
-        { $pull: { blogposts: blogpost._id } },
-        { runValidators: true, new: true }
-      );
-
-      if (!user) {
-        return res.status(404).json({ message: 'User not found' });
       }
 
       res.json({ message: 'Blogpost deleted' });
