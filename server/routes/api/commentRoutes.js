@@ -2,6 +2,7 @@ const router = require('express').Router();
 
 const {
   getComments,
+  getBlogpostComments,
   getSingleComment,
   createComment,
   updateComment,
@@ -10,6 +11,9 @@ const {
 
 // /api/comments
 router.route('/').get(getComments).post(createComment);
+
+// /api/comments/blogposts/:blogpostId
+router.route('/blogposts/:blogpostId').get(getBlogpostComments);
 
 // /api/comments/:commentId
 router
