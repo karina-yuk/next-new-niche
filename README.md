@@ -2,7 +2,7 @@
 
 ## Description
 
-Welcome to Whine About Wine, an online blog for posting about everything Wine! This single paged application is made with **React** and connected to a **MongoDB** and **Express** back-end.
+Welcome to Whine About Wine, your ultimate guide to all things wine! Dive into a world of flavors with our blog, where we share tasting notes, delicious recipes, and insider secrets from top winemakers. Explore the best wines and immerse yourself in wine culture. Whether you're just starting out or a seasoned enthusiast, Whine About Wine is here to be your trusted companion on your wine journey. Join us as we explore the finest vintages, one post at a time. Cheers to discovering the wonders of wine with Whine About Wine!"
 
 ## Table of Contents
 
