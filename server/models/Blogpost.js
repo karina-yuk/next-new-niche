@@ -48,7 +48,7 @@ const blogpostSchema = new Schema({
     id: false,
 });
 
-// format data
+// format date
 blogpostSchema.virtual('Date').get(function () {
     return moment(this.createdAt).format('MMMM, DD, YYYY');
 });
