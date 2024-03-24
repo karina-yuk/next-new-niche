@@ -2,13 +2,16 @@
   padding: 4rem 0;
   background-color: #333; /* Dark background */
   color: #212529; /* Light text */
+  height: 100%;
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 15px;
- 
+  max-width: 1400px;
+  margin-top: 5px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  text-align: center;
+  
 }
 
 .text-center {
@@ -42,7 +45,6 @@
 .rounded {
   border-radius: 0.25rem;
   
-  background-color: black;
 }
 
 .p-4 {
@@ -65,73 +67,122 @@
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   position: absolute;
   bottom: -0px; /* Position below the text */
-  margin-bottom: 1rem;
-  
+  margin-bottom: 1rem
 
 }
 
-.badge{
-  background-color: #333 !important;
+:root{
+  --index: calc(1vw + 1vh);
+  --transition: cubic-bezier(.1, .7, 0, 1);
 }
 
-.info-box{
-  background-color: #212529;
-  text-align: left;
-  margin-left: 2rem;
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
 }
 
-.info-boxt{
-  background-color: #212529;
-  text-align: left;
-  margin-right: 2rem;
-}
-
-.btn {
-  display: inline-block;
-  font-weight: 400;
-  color: #343a40;
+.event-description {
+  font-size: 0.7rem;
   text-align: center;
-  vertical-align: middle;
-  user-select: none;
-  background-color: transparent;
-  border: 2px solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    text-shadow: 2px 2px 10px rgb(2, 7, 14);
+    margin-top: 27%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.items{
+  display: flex;
+  gap: 0.4rem;
+  perspective: calc(var(--index) * 35);
 }
 
-.btn-outline-secondary {
-  color: #6c757d;
-  border-color: #6c757d;
+.item{
+  width: calc(var(--index) * 3);
+  height: calc(var(--index) * 12);
+  background-color: #222;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  filter: grayscale(1) brightness(.5);
+  transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
+  will-change: transform, filter, rotateY, width;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); 
 }
 
-.btn-outline-secondary:hover {
-  color: #fff;
-  background-color: #5ca895;
-  border-color: #6c757d;
+.item::before, .item::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: calc(var(--index) * -1);
 }
 
-.rounded-pill {
-  border-radius: 50rem;
+.item::after{
+  left: calc(var(--index) * -1);
 }
 
-.shadow-none {
-  box-shadow: none;
-}
-.skill-icon {
-  display: inline-block; /* Makes sure the padding and margin are applied correctly */
-  margin: 0 10px; /* Adjusts the space between icons */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+.items .item:hover{
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 10));
 }
 
-.skill-icon:hover {
-  transform: scale(1.1); /* Slightly enlarges the icon */
-  box-shadow: 0 0 10px #c5a0f7, 0 0 20px #a763f5; /* Glowing effect */
-  background-color: transparent; /* Ensures no background color is influencing the glow */
-  border: none;
+/*Right*/
+.items .item:hover + *{
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
+  z-index: -1;
 }
+
+.items .item:hover + * + *{
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
+  z-index: -2;
+}
+
+.items .item:hover + * + * + *{
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 2.5)) rotateY(30deg);
+  z-index: -3;
+}
+
+.items .item:hover + * + * + * + *{
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * .6)) rotateY(15deg);
+  z-index: -4;
+}
+
+
+/*Left*/
+
+.items .item:has( + :hover){
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
+}
+
+.items .item:has( + * + :hover){
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
+}
+
+.items .item:has( + * + * + :hover){
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 2.5)) rotateY(-30deg);
+}
+
+.items .item:has( + * + * + * + :hover){
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * .6)) rotateY(-15deg);
+}
+
+.items .item:active, .items .item:focus {
+width: 28vw;
+filter: inherit;
+z-index: 100;
+transform: translateZ(calc(var(--index) * 10));
+  margin: 0 .45vw;
+}
+
 @media (max-width: 768px) {
   .text-9 {
     font-size: 2rem;

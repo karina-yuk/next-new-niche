@@ -34,7 +34,7 @@
 }
   
 .text-16 {
-    font-size: 7rem; /* Larger size for main heading */
+    font-size: 5rem !important; /* Larger size for main heading */
     margin-bottom: 1rem;
     font-family:  Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -43,12 +43,14 @@
     font-size: 1.5rem; /* Adjust the size as needed */
     margin-bottom: 2rem;
 }
-  
+.btn {
+  font-size: 1.5rem !important;
+}
 
 .btn-primary {
     margin-top: 2rem;
     padding: 2rem 2rem;
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
 
     border-radius: 12px; /* Rounded corners for the button */
     background-color: #377a7d; /* Bootstrap primary color */

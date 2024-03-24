@@ -1,12 +1,21 @@
 /* src/components/Portfolio/Portfolio.css */
 
+
 /* Portfolio Section Styles */
 #portfolio {
   background-color: #343a40; /* Dark background for portfolio section */
   color: grey;
   padding: 4rem 0;
+  height: 100%;
 }
 
+.container {
+  max-width: 1400px;
+  margin-top: 5px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  text-align: center;
+}
 /* Portfolio Section Heading */
 .text-center {
   text-align: center;
@@ -105,10 +114,10 @@
   transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
   background: #212529;
-  margin-bottom: 1rem;
+  
   position: relative; /* Ensure the absolute positioned children relate to this parent */
   background: #212529;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
   cursor: pointer;
 }
 .portfolio-box:hover .portfolio-img img {
