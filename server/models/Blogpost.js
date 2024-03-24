@@ -1,6 +1,7 @@
 
 const { Schema, model } = require('mongoose');
 const moment = require('moment');
+const Comment = require('./Comment');
 const User = require('./User');
 
 
@@ -26,6 +27,7 @@ const blogpostSchema = new Schema({
         type: Boolean,
         default: false,
     },
+    src: String,
     content: String,
     tags: [String],
     createdAt: {
@@ -47,7 +49,7 @@ const blogpostSchema = new Schema({
     id: false,
 });
 
-// format data
+// format date
 blogpostSchema.virtual('Date').get(function () {
     return moment(this.createdAt).format('MMMM, DD, YYYY');
 });
