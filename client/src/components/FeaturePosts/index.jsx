@@ -12,9 +12,9 @@ const FeaturePosts = () => {
   const [selectedProjectDetails, setSelectedProjectDetails] = useState();
 
   const filters = {
-    WEBDEV: "Food and Wine Pairing",
-    ARCHTECH: "Cheese and Wine Pairing",
-    ARCHDESIGN: "Random Articles",
+    FOODWINE: "Food and Wine Pairing",
+    CHEESEWINE: "Cheese and Wine Pairing",
+    OTHER: "Random Articles",
   };
 
   const projectsData = [
@@ -32,333 +32,7 @@ const FeaturePosts = () => {
         "../src/img/01 - Mushroom-Sauce.jpeg",
       ],
 
-      categories: ["*", filters.WEBDEV],
-    },
-
-    {
-      id: 2,
-      title: "Chardonnay with fatty fish or fish in a rich sauce",
-      projectInfo:
-        "Silky whites — like many Chardonnays from California, Chile, or Australia — are delicious with hearty fish like swordfish or any kind of seafood in a rich sauce.",
-      client: "Admin",
-      date: "August 19, 2019",
-
-      thumbImage:
-        "https://github.com/Olivia-the-G/next-new-niche/blob/main/client/src/img/02%20-%20Chardonnay%20with%20fatty%20fish%20or%20fish%20in%20a%20rich%20sauce.png?raw=true",
-      sliderImages: [
-        "../src/img/02 - fatty-fish-recipes.JPEG",
-        "../src/img/02 - fish sashimi salad.JPEG",
-      ],
-      categories: ["*", filters.WEBDEV],
-    },
-
-    {
-      id: 3,
-      title: "Champagne with anything salty",
-      projectInfo:
-        "Many dry sparkling wines, such as brut Champagne and Spanish cava, actually have a faint touch of fruity sweetness. This makes them extra-refreshing when served with salty foods. They also cut through the richness and oil of fried dishes: Bubbly and a bowl of potato chips is terrific.",
-      client: "Admin",
-      date: "September 16, 2019",
-      thumbImage: "../src/img/03 - Champagne 2.jpeg",
-      sliderImages: [
-        "../src/img/03 - Champagne 1.png",
-        "../src/img/03 - Champagne 3.jpeg",
-      ],
-      categories: ["*", filters.WEBDEV],
-    },
-
-    {
-      id: 4,
-      title: "Cabernet Sauvignon with juicy red meat",
-      projectInfo:
-        "California Cabernet, Bordeaux, and Bordeaux-style blends are terrific with steaks and lamb dishes. The firm tannins in Cab cut through the fat and protein, which in turn smooth out the tannins. It's a perfect symbiotic relationship in each bite.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "October 02, 2019",
-
-      thumbImage: "../src/img/04 - Cabernet Sauvignon with juicy red meat.png",
-      sliderImages: [
-        "../src/img/04 - Best+Sunday+Roast+Wines+roast+beef+thethreedrinkers.jpeg",
-        "../src/img/04 - Wine_to_Pair_with_Steak.jpg",
-      ],
-      categories: ["*", filters.WEBDEV],
-    },
-    {
-      id: 5,
-      title: "Sauvignon Blanc with tart dressings and sauces",
-      projectInfo:
-        "Tangy foods — like scallops with a grapefruit-onion salad — won't overwhelm zippy wines like Sauvignon Blanc, Vinho Verde from Portugal, and Verdejo from Spain. Sauvignon Blanc also works well alongside vinaigrette, roasted or sautéed fish, and goat cheese.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "October 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage:
-        "../src/img/05 - Sauvignon Blanc with tart dressings and sauces.jpg",
-      sliderImages: ["../src/img/05 - 02.jpeg", "../src/img/05 - 03.jpeg"],
-      categories: ["*", filters.WEBDEV],
-    },
-
-    {
-      id: 6,
-      title: "Dry Rosé with rich, cheesy dishes",
-      projectInfo:
-        "Some cheeses go better with white wine and some sing alongside red. Almost all, however, pair well with dry rosé, which has the acidity of white wine and the fruit character of red. Rosé also works well with grilled fish, fresh salad, and even a big plate of charcuterie.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "November 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "../src/img/06 - Dry Rosé with rich, cheesy dishes.png",
-      sliderImages: ["../src/img/06 - 02.jpeg", "../src/img/06 - 03.jpeg"],
-      categories: ["*", filters.WEBDEV],
-    },
-
-    {
-      id: 7,
-      title: "Pinot Grigio with light fish dishes",
-      projectInfo:
-        "Light seafood dishes seem to take on more flavor when matched with equally delicate white wines, such as Pinot Grigio or Arneis from Italy, Chablis from France, and Vinho Verde from Portugal.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "November 19, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "../src/img/07 - Pinot Grigio with light fish dishes.png",
-      sliderImages: ["../src/img/07 - 02.jpeg", "../src/img/07 - 03.jpeg"],
-      categories: ["*", filters.WEBDEV],
-    },
-
-    {
-      id: 8,
-      title: "Malbec with sweet-spicy barbecue sauces",
-      projectInfo:
-        "Malbec, Shiraz, and Côtes-du-Rhône are bold enough to drink alongside foods brushed with heavily spiced barbecue sauces — just be careful that the sauce isn't too sugary-sweet, which can throw off the wine's fruit.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage:
-        "../src/img/08 - Malbec with sweet-spicy barbecue sauces .jpeg",
-      sliderImages: ["../src/img/08 - 02.jpeg", "../src/img/08 - 03.jpeg"],
-      categories: ["*", filters.WEBDEV],
-    },
-
-    {
-      id: 9,
-      title: "Moscato d'Asti with fruit desserts",
-      projectInfo:
-        "Sweet sparkling wines such as Moscato d'Asti and demi-sec Champagne help emphasize the fruit in the dessert, rather than the sugar. Try it with these Honeyed Fig Crostatas. It's also delicious alongside a simple summer fruit salad or even splashed into it.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "January 16, 2020",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "../src/img/09 - Moscato d'Asti with fruit desserts.png",
-      sliderImages: ["../src/img/09 - 02.jpeg", "../src/img/09 - 03.jpeg"],
-      categories: ["*", filters.WEBDEV],
-    },
-
-    {
-      id: 10,
-      title: "Syrah with highly spiced dishes",
-      projectInfo:
-        "When a meat is heavily seasoned, look for a red wine with lots of spicy notes. Syrah from Washington or France's Rhône Valley, Cabernet Franc from the Loire, and Xinomavro from Greece are all good choices. Be careful with spice heat, however: For hot dishes like those, try to avoid high-alcohol wines, which will amplify the sizzle.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "January 31, 2020",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "../src/img/10 - 01.png",
-      sliderImages: ["../src/img/10 - 02.jpeg", "../src/img/10 - 03.jpeg"],
-      categories: ["*", filters.WEBDEV],
-    },
-
-    {
-      id: 11,
-      title: "Grüner Veltliner with fresh herbs and vegetables",
-      projectInfo:
-        "Austrian Grüner Veltliner's citrus-and-clover scent is lovely when there are lots of fresh herbs in a dish. Other go-to grapes include Albariño from Spain and Vermentino from Italy.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "February 14, 2020",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "../src/img/11 - 01.jpeg",
-      sliderImages: ["../src/img/11 - 02.jpeg", "../src/img/11 - 03.jpeg"],
-      categories: ["*", filters.WEBDEV],
-    },
-
-    {
-      id: 12,
-      title: "Zinfandel with pâtés, mousses, and terrines",
-      projectInfo:
-        "If you can apply the same adjectives to a wine and a dish, pairing them will often work. For instance, the words (rustic) (savory) or (rich) are often used to describe Zinfandel, Italy's Nero d'Avola, and Spain's Monastrell, as well as a creamy liver mousse. Spice- and fruit-driven Zinfandel also has a natural affinity for barbecued or sauce-slathered meats.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "February 28, 2020",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "../src/img/12 - 01.png",
-      sliderImages: ["../src/img/12 - 02.jpeg", "../src/img/12 - 03.jpeg"],
-      categories: ["*", filters.WEBDEV],
-    },
-
-    {
-      id: 13,
-      title: "Off-dry Riesling with sweet and spicy dishes",
-      projectInfo:
-        "The slight sweetness of many Rieslings, Gewürztraminers, and Vouvrays helps tame the heat of spicy dishes and goes toe-to-toe with the lift of more aromatic ingredients. A spicy green salad is a delicious partner for any of those wines.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "March 03, 2020",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "../src/img/13 - 01.png",
-      sliderImages: ["../src/img/13 - 02.jpeg", "../src/img/13 - 03.jpeg"],
-      categories: ["*", filters.WEBDEV],
-    },
-
-    {
-      id: 14,
-      title: "Rosé Champagne with dinner, not just hors d'oeuvres",
-      projectInfo:
-        "Rosé sparkling wines, such as rosé Champagne, Prosecco rosé, and pink sparkling wine from California, have the depth of flavor, richness, and mouthwatering acidity to go with a wide range of main courses. Grilled tuna, lamb chops, salads, and risotto are all phenomenal with it.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "April 03, 2020",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "../src/img/14 - 01.png",
-      sliderImages: ["../src/img/14 - 02.jpeg", "../src/img/14 - 03.jpeg"],
-      categories: ["*", filters.WEBDEV],
-    },
-
-    {
-      id: 15,
-      title: "Old World wines with Old World dishes",
-      projectInfo:
-        "The flavors of foods and wines that have developed together over the centuries — Tuscan recipes and Tuscan wines, for instance — are almost always a natural fit; it's an offshoot of the old wine-pairing advice that if it grows together, it goes together. The classic Italian dish Chicken Cacciatore, traditionally prepared in the woods over a fire, pairs well with an herbal, medium-bodied Chianti, as it has for generations.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "May 06, 2020",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "../src/img/15 - 01.png",
-      sliderImages: ["../src/img/15 - 02.jpeg", "../src/img/15 - 03.jpeg"],
-      categories: ["*", filters.WEBDEV],
+      categories: ["*", filters.FOODWINE],
     },
 
     {
@@ -383,8 +57,42 @@ const FeaturePosts = () => {
       },
       thumbImage: "../src/img/16 - 01.jpeg",
       sliderImages: ["../src/img/16 - 02.jpeg", "../src/img/16 - 03.jpeg"],
-      categories: ["*", filters.ARCHTECH],
+      categories: ["*", filters.CHEESEWINE],
     },
+
+    {
+      id: 3,
+      title: "Champagne with anything salty",
+      projectInfo:
+        "Many dry sparkling wines, such as brut Champagne and Spanish cava, actually have a faint touch of fruity sweetness. This makes them extra-refreshing when served with salty foods. They also cut through the richness and oil of fried dishes: Bubbly and a bowl of potato chips is terrific.",
+      client: "Admin",
+      date: "September 16, 2019",
+      thumbImage: "../src/img/03 - Champagne 2.jpeg",
+      sliderImages: [
+        "../src/img/03 - Champagne 1.png",
+        "../src/img/03 - Champagne 3.jpeg",
+      ],
+      categories: ["*", filters.FOODWINE],
+    },
+
+    {
+      id: 4,
+      title: "Cabernet Sauvignon with juicy red meat",
+      projectInfo:
+        "California Cabernet, Bordeaux, and Bordeaux-style blends are terrific with steaks and lamb dishes. The firm tannins in Cab cut through the fat and protein, which in turn smooth out the tannins. It's a perfect symbiotic relationship in each bite.",
+      client: "Admin",
+      technologies: "iOS, HTML5, CSS3, PHP, Java",
+      industry: "Art & Design",
+      date: "October 02, 2019",
+
+      thumbImage: "../src/img/04 - Cabernet Sauvignon with juicy red meat.png",
+      sliderImages: [
+        "../src/img/04 - Best+Sunday+Roast+Wines+roast+beef+thethreedrinkers.jpeg",
+        "../src/img/04 - Wine_to_Pair_with_Steak.jpg",
+      ],
+      categories: ["*", filters.FOODWINE],
+    },
+   
 
     {
       id: 17,
@@ -408,7 +116,7 @@ const FeaturePosts = () => {
       },
       thumbImage: "../src/img/17 - 01.jpeg",
       sliderImages: ["../src/img/17 - 02.jpeg", "../src/img/17 - 03.jpeg"],
-      categories: ["*", filters.ARCHTECH],
+      categories: ["*", filters.CHEESEWINE],
     },
 
     {
@@ -433,7 +141,7 @@ const FeaturePosts = () => {
       },
       thumbImage: "../src/img/18 - 01.jpeg",
       sliderImages: ["../src/img/18 - 02.jpeg", "../src/img/18 - 03.jpeg"],
-      categories: ["*", filters.ARCHTECH],
+      categories: ["*", filters.CHEESEWINE],
     },
 
     {
@@ -458,34 +166,10 @@ const FeaturePosts = () => {
       },
       thumbImage: "../src/img/19 - 01.jpeg",
       sliderImages: ["../src/img/19 - 02.png", "../src/img/19 - 03.jpeg"],
-      categories: ["*", filters.ARCHTECH],
+      categories: ["*", filters.CHEESEWINE],
     },
 
-    {
-      id: 20,
-      title: "Blue Cheese",
-      projectInfo:
-        "When you inoculate cheese with bacteria from the Penicillin family, a miracle happens. Blue spots and veins develop in the cheese, creating incredibly fragrant aromas and ferocious flavors. Cheeses like Stilton, Roquefort, Cabrales, and Gorgonzola dominate the segment. However, their character is hard to match, and their sometimes overwhelming salinity challenges Sommeliers. Traditionally, only sweet, bold, and often fortified wines like Vin Santo, Port, or Muscat de Beaumes de Venise dare to match these delicacies. The sweetness balances the saltiness and the coating unctuousness of the sharp cheese.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "November 14, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "../src/img/20 - 01.jpeg",
-      sliderImages: ["../src/img/20 - 02.jpeg", "../src/img/20 - 03.jpeg"],
-      categories: ["*", filters.ARCHTECH],
-    },
-
+  
     {
       id: 21,
       title: "Do NOT Drink",
@@ -508,7 +192,7 @@ const FeaturePosts = () => {
       },
       thumbImage: "../src/img/Do Not Drink.jpeg",
       sliderImages: ["images/project-7.jpg", "images/project-8.JPG"],
-      categories: ["*", filters.ARCHDESIGN],
+      categories: ["*", filters.OTHER],
     },
   ];
 
@@ -627,7 +311,7 @@ const FeaturePosts = () => {
                                 <h5 className="text-white fw-400">
                                   {project.title}
                                 </h5>
-                                <span className="text-light">Category</span>
+                            
                               </div>
                             </div>
                           </div>

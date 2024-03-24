@@ -2,13 +2,15 @@
   padding: 4rem 0;
   background-color: #333; /* Dark background */
   color: #212529; /* Light text */
+  height: 100%;
 }
 
 .container {
-  max-width: 500px;
-  margin: auto;
-  padding: 0 15px;
-  gap: 20px;
+  max-width: 1400px;
+  margin-top: 5px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  text-align: center;
   
 }
 
@@ -65,125 +67,120 @@
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   position: absolute;
   bottom: -0px; /* Position below the text */
-  margin-bottom: 1rem;
-  
+  margin-bottom: 1rem
 
 }
 
-.rowcard  {
-  margin: 15px;
-  padding: 5rem;
-  margin-left: 5rem;
-  min-height: 100vh;
-  background: #333;
+:root{
+  --index: calc(1vw + 1vh);
+  --transition: cubic-bezier(.1, .7, 0, 1);
+}
+
+.wrapper{
   display: flex;
-  justify-content: center;
   align-items: center;
- 
-}
-
-.container .card {
-  position: relative;
-  cursor: pointer;
-  max-width: 500px;
-}
-
-
-
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: transparent;
-  overflow: hidden; /* Ensures content fits within the rounded corners */
-  margin-bottom: 2rem; /* Space between cards */
-  
-  
-}
-.container .card .face {
-  width: 450px;
-  height: 250px;
-  transition: 0.5s;
-}
-
-.container .card .face.face1 {
-  position: relative;
-  background: #646363;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 1;
-  transform: translateY(100px);
+  height: 60vh;
 }
 
-.container .card:hover .face.face1 {
-  background: #72253f;
-  transform: translateY(0px);
-}
-
-.container .card .face.face2 {
-  position: relative;
-  background: #a09797;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  transform: translateY(-100px);
-}
-
-.container .card:hover .face.face2 {
-  transform: translateY(0px);
-}
-
-.container .card .face.face2 .content p {
-  margin: 0;
-  padding: 0;
-}
-
-.container .card .face.face2 .content a {
-  margin: 25px 80px 0;
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 900;
-  color: #333;
-  padding: 5px;
-  border: 1px solid #333;
-}
-
-.container .card .face.face2 .content a:hover {
-  background: #333;
-  color: #fff;
-}
-
-.container .card .face.face1 .content {
-  opacity: 0.2;
-  transition: 0.5s;
-}
-
-.container .card:hover .face.face1 .content {
-  opacity: 1;
-}
-
-.container .card .face.face1 .content img {
-  max-width: 100px;
-}
-
-.container .card .face.face1 .content h3 {
-  margin: 10px 0 0;
-  padding: 0;
-  color: #fff;
+.event-description {
+  font-size: 0.7rem;
   text-align: center;
-  font-size: 1.5em;
+    text-shadow: 2px 2px 10px rgb(2, 7, 14);
+    margin-top: 27%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.items{
+  display: flex;
+  gap: 0.4rem;
+  perspective: calc(var(--index) * 35);
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -1rem;
+.item{
+  width: calc(var(--index) * 3);
+  height: calc(var(--index) * 12);
+  background-color: #222;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  filter: grayscale(1) brightness(.5);
+  transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
+  will-change: transform, filter, rotateY, width;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); 
+}
+
+.item::before, .item::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: calc(var(--index) * -1);
+}
+
+.item::after{
+  left: calc(var(--index) * -1);
+}
+
+.items .item:hover{
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 10));
+}
+
+/*Right*/
+.items .item:hover + *{
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
+  z-index: -1;
+}
+
+.items .item:hover + * + *{
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
+  z-index: -2;
+}
+
+.items .item:hover + * + * + *{
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 2.5)) rotateY(30deg);
+  z-index: -3;
+}
+
+.items .item:hover + * + * + * + *{
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * .6)) rotateY(15deg);
+  z-index: -4;
+}
+
+
+/*Left*/
+
+.items .item:has( + :hover){
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
+}
+
+.items .item:has( + * + :hover){
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
+}
+
+.items .item:has( + * + * + :hover){
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * 2.5)) rotateY(-30deg);
+}
+
+.items .item:has( + * + * + * + :hover){
+  filter: inherit;
+  transform: translateZ(calc(var(--index) * .6)) rotateY(-15deg);
+}
+
+.items .item:active, .items .item:focus {
+width: 28vw;
+filter: inherit;
+z-index: 100;
+transform: translateZ(calc(var(--index) * 10));
+  margin: 0 .45vw;
 }
 
 @media (max-width: 768px) {

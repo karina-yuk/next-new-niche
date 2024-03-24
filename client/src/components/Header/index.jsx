@@ -1,14 +1,13 @@
 // src/components/Header.jsx
 
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import "./Header.css";
-
-
 
 const Header = ({ handleNavClick }) => {
   const [isSticky, setIsSticky] = useState(false);
   const [isNavModalOpen, setIsNavModalOpen] = useState(false);
+  const [selectedTab, setSelectedTab] = useState("events");
 
   // This function will toggle the visibility of the navigation modal in mobile view
   const toggleNav = () => setIsNavModalOpen(!isNavModalOpen);
@@ -26,89 +25,105 @@ const Header = ({ handleNavClick }) => {
     return () => window.removeEventListener("scroll", checkScrollTop);
   }, []);
 
-
   return (
-    <header className={`header bg-dark text-white vh-100 fix-to-left ${isSticky ? "sticky" : ""}`}>
+    <header
+      className={`header bg-dark text-white vh-100 fix-to-left ${
+        isSticky ? "sticky" : ""
+      }`}
+    >
       <div className="profile-container">
         <img
-          src="https://i.pinimg.com/564x/7f/81/84/7f818464ceaece8f8ef7e580e7a541e5.jpg"
+          src="https://i.pinimg.com/564x/7f/4b/77/7f4b77922662e577a5202aea3d70592a.jpg"
           alt="Profile"
           className="profile-image"
         />
         <h2>Olivia's Five</h2>
       </div>
-      <nav className={`nav flex-column ${!isNavModalOpen ? '' : 'open'}`}>
+      <nav className={`nav flex-column ${!isNavModalOpen ? "" : "open"}`}>
         <Link
-        onClick={() => handleNavClick('home')}
-        activeClass="active"
+          onClick={() => {
+            setSelectedTab("home");
+            handleNavClick("home");
+          }}
           to="home"
-          className="nav-link"
+          className={`nav-link test ${selectedTab === "home" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          
         >
           Home
         </Link>
         <Link
-        activeClass="active"
           to="aboutus"
-          className="nav-link"
+          className={`nav-link ${selectedTab === "aboutus" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('aboutus')}
+          onClick={() => {
+            setSelectedTab("aboutus");
+            handleNavClick("aboutus");
+          }}
         >
           About Us
         </Link>
         <Link
-        activeClass="active"
           to="post"
-          className="nav-link"
+          className={`nav-link ${selectedTab === "post" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('post')}
+          onClick={() => {
+            setSelectedTab("post");
+            handleNavClick("post");
+          }}
         >
           Blog Post
         </Link>
         <Link
-        activeClass="active"
           to="events"
-          className="nav-link"
+          className={`nav-link ${selectedTab === "events" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('events')}
+          onClick={() => {
+            setSelectedTab("events");
+            handleNavClick("events");
+          }}
         >
           Events
         </Link>
         <Link
-        activeClass="active"
           to="featurepost"
-          className="nav-link"
+          className={`nav-link ${
+            selectedTab === "featurepost" ? "active" : ""
+          }`}
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('featurepost')}
+          onClick={() => {
+            setSelectedTab("featurepost");
+            handleNavClick("featurepost");
+          }}
         >
           Feature Blog Post
         </Link>
-       
+
         <Link
-        activeClass="active"
           to="newsletter"
-          className="nav-link"
+          className={`nav-link ${selectedTab === "newsletter" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('newsletter')}
+          onClick={() => {
+            setSelectedTab("newsletter");
+            handleNavClick("newsletter");
+          }}
         >
           Subscribe
         </Link>
@@ -156,7 +171,6 @@ const Header = ({ handleNavClick }) => {
           <i className="fab fa-instagram"></i>
         </a>
       </div>
-     
     </header>
   );
 };

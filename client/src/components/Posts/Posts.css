@@ -1,43 +1,28 @@
-.testimonial{
-  background-color: #343a40; /* Adjust the background color as needed */
-  color: white;
+/* Base testimonial section styling */
+.post {
+  background-color: #343a40;
+  color: rgb(109, 93, 93);
   padding: 4rem 0;
+  height: 100%;
 }
+
 .container {
   max-width: 900px;
-  margin-top: 5px;
   margin: 0 auto;
   padding: 5px 15px;
   
 }
 
- .slick-track{
+/* Slider base and track */
+.slick-track {
   position: relative;
-  top: 0;
-  left: 0;
   display: flex !important;
   margin-left: auto;
   margin-right: auto;
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: 5rem !important;
-  font-size: 2.5rem;
-}
-
-.testimonial-photo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-
-
+/* Typography and titles */
 .text-center {
-  margin-top: 5px;
   text-align: center;
   letter-spacing: 0.05em;
 }
@@ -48,7 +33,7 @@
 }
 
 .text-9 {
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
   letter-spacing: 0.05em;
 }
 
@@ -63,103 +48,179 @@
 .text-dark {
   color: #5c6772;
 }
-.testimonial-grid {
+
+.container .card {
+  position: relative;
+  cursor: pointer;
+  height: 630px;
+}
+
+.card-container {
+  perspective: 1000px; /* Setup for the 3D effect on hover */
+}
+.card {
+  position: relative;
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping to a new line */
-overflow-x: auto;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #343a40;
+  background-clip: border-box;
+  border: 1px solid #343a40;
+  border-radius: .25rem;
+  margin: 2rem;
+  overflow: hidden;
 }
 
-.testimonial-item {
-  width: 40%;
-  flex-basis: calc(40% - 1rem);
-
-  margin-top: 5rem; /* Two testimonials per row */
+.card-photo {
+  width: 100%;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 1rem;
-  background-color: #212529; /* Adjust the background color of each testimonial as needed */
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1)
 }
 
-.testimonial-content p {
+.card-content p, .face2 p {
   font-style: italic;
-  
 }
 
-.testimonial-rating {
-  color: gold; /* Color for the stars */
-  margin-bottom: 1rem;
-}
 
-.testimonial-name {
+
+.post-name, .face1 h5 {
   font-weight: bold;
 }
 
-.testimonial-title {
+.card-title, .face1 h6 {
   font-size: 1rem;
-  color: #aaa; /* Adjust color for the title as needed */
+  color: #aaa;
 }
 
 
-.slick-dot {
-  bottom: 10px;
-   /* Adjust this value to position the dots correctly */
+/* Faces of the card */
+.container .card .face {
+  width: 100%; /* Makes the faces take up the full width of the card */
+  height: 100%; /* Makes the faces take up the full height of the card */
+  transition: transform 0.5s, opacity 0.5s; /* Smooth transitions for transform and opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.slick-dots li{
-  margin-top: 10px;
-  position: static;
-  border: 1px solid transparent;
-  border-radius: 30px;
-  display: block;
-  height: 30px;
-  margin: 0;
-  margin: 5px 5px;
+.face.face1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back of this face when flipped */
+  transform: rotateY(0deg); /* Start without any rotation */
+}
+
+.container .card .face.face1 {
   position: relative;
-  transition: all .2s ease;
-  width: 30px;
-}
-.slick-dots li  {
-  background: transparent;
-  border: 0;
-  color: transparent;
-  cursor: pointer;
-  font-size: 2;
-  line-height: 0;
-  outline: none;
-  padding: 5px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 20px 50px rgba(29, 27, 27, 0.8);
+  transform: translateY(150px);
+  height: 350px;
+  width: 100%;
+  height: 100%;
+  
 }
 
-.slick-dots li button:before {
-  color: transparent; /* Make dots transparent */
-border: 2px solid ; /* Green border for all dots */
-border-radius: 50%; /* Round shape */
-content: '•'; /* Unicode character for the dot */
-font-size: 15px;
+.container .card:hover .face.face1 {
+  background: #5c2727;
+  transform: translateY(0px);
+}
+
+.container .card .face.face1 .content {
+  opacity: 0.2; /* Starts with lower opacity */
+}
+.container .card:hover .face.face1 .content {
+  opacity: 1; /* Full opacity on hover */
+}
+
+
+.container .card .face.face2 {
+  position: relative;
+  background: #858080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(29, 27, 27, 0.8);
+  transform: translateY(-150px);
+  height: 350px;
+  width: 100%;
+  height: 100%;
+}
+
+.container .card:hover .face.face2 {
+  transform: translateY(0px);
+}
+
+
+.container .card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-container {
+    width: 90%; /* Full width on smaller screens */
+  }
+
+
+  .card-container:hover {
+    height: auto; /* Height adjusts to content on hover */
+  }
+}
+
+/* Read More Button */
+.read-more {
+  margin-top: 10px;
+  text-decoration: none;
+  background: #57d499;
+  color: white;
+  padding: 5px 5px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background: #40f09e;
+}
+
+/* Slider dots and arrows */
+.slick-dots li button:before, .slick-dots li.slick-active button:before {
+  color: transparent;
+  border: 2px solid;
+  border-radius: 50%;
+  content: '•';
+  font-size: 15px;
 }
 
 .slick-dots li.slick-active button:before {
-  color: #40f09e; /* Color of the active dot */
+  color: #40f09e;
   border: 3px solid #40f09e;
-  
 }
 
-
-.slick-prev,
-.slick-next {
-  color: #57d499; /* Color of arrows */
-  font-size: 24px; /* Size of arrows */
+.slick-prev, .slick-next {
+  color: #57d499;
+  font-size: 24px;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .testimonial-item {
-    flex-basis: 100%; 
-    width: 90%; /* Adjust for smaller screens */
-    margin: 1rem auto;/* Stack testimonials on smaller screens */
+    flex-basis: 100%;
+    width: 90%;
+    margin: 1rem auto;
   }
 }
- 
-  
