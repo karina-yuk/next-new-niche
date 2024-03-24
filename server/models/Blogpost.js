@@ -26,6 +26,7 @@ const blogpostSchema = new Schema({
         type: Boolean,
         default: false,
     },
+    src: String,
     content: String,
     tags: [String],
     createdAt: {
