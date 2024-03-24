@@ -8,7 +8,6 @@ Welcome to Whine About Wine, your ultimate guide to all things wine! Dive into a
 
 - [Features](#features)
 - [Usage](#usage)
-- [Demo](#demo)
 - [Technologies](#technologies)
 - [Credits](#credits)
 - [License](#license)
@@ -23,9 +22,11 @@ Welcome to Whine About Wine, your ultimate guide to all things wine! Dive into a
 
 ## Usage
 
-## Demo
+Visit Whine About Wine [here]()
 
 ## Technologies
+
+This application was created using the following technologies:
 
 ### React
 
