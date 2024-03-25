@@ -4,7 +4,7 @@ import React from 'react';
 import './AboutUs.css'; 
 
 
-const AboutMe = ({ }) => {
+const AboutUs = ({ }) => {
   return (
     <section id="about" className="about-me">
     
@@ -37,7 +37,7 @@ const AboutMe = ({ }) => {
   );
 };
 
-export default AboutMe;
+export default AboutUs;
 
 
 
