@@ -7,7 +7,7 @@ import "./Header.css";
 const Header = ({ handleNavClick }) => {
   const [isSticky, setIsSticky] = useState(false);
   const [isNavModalOpen, setIsNavModalOpen] = useState(false);
-  const [selectedTab, setSelectedTab] = useState("events");
+  const [selectedTab, setSelectedTab] = useState("home");
 
   // This function will toggle the visibility of the navigation modal in mobile view
   const toggleNav = () => setIsNavModalOpen(!isNavModalOpen);
