@@ -92,7 +92,22 @@ const FeaturePosts = () => {
       ],
       categories: ["*", filters.FOODWINE],
     },
-   
+
+    {
+      id: 6,
+      title: "Oak Used for Spirit Casks",
+      projectInfo:
+        "Spirits and oak have been almost inseparable since the 3rd century, back when the Romans swapped in barrels for the clay pots and other breakable vessels they traditionally used for booze-making. But the complex flavors these casks imparted were only later realized through sheer circumstance, after barrels were left to sit for extended periods in transit overseas. Eventually, Cognac producers began charring barrels to break down and caramelize the wood’s sugars, and distillers have never looked back.",
+      client: "Admin",
+      date: "May 06, 2019",
+      thumbImage: "../src/img/Oak.png",
+      sliderImages: [
+        "../src/img/white-vs-red-wine.jpeg",
+        "../src/img/oak-2.png",
+      ],
+
+      categories: ["*", filters.OTHER],
+    },
 
     {
       id: 17,
@@ -169,7 +184,6 @@ const FeaturePosts = () => {
       categories: ["*", filters.CHEESEWINE],
     },
 
-  
     {
       id: 21,
       title: "Do NOT Drink",
@@ -311,7 +325,6 @@ const FeaturePosts = () => {
                                 <h5 className="text-white fw-400">
                                   {project.title}
                                 </h5>
-                            
                               </div>
                             </div>
                           </div>
