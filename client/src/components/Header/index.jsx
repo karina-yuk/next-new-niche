@@ -140,7 +140,7 @@ const Header = ({ handleNavClick }) => {
 
       <div className="social-links">
         <a
-          href="https://linkedin.com/in/stanislavmorozan"
+          href="https://linkedin.com"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
@@ -148,7 +148,7 @@ const Header = ({ handleNavClick }) => {
           <i className="fab fa-linkedin-in"></i>
         </a>
         <a
-          href="https://github.com/Stas-Cell-Max"
+          href="https://github.com"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
@@ -156,7 +156,7 @@ const Header = ({ handleNavClick }) => {
           <i className="fab fa-github"></i>
         </a>
         <a
-          href="https://facebook.com/stas.moozan"
+          href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
@@ -164,7 +164,7 @@ const Header = ({ handleNavClick }) => {
           <i className="fab fa-facebook-f"></i>
         </a>
         <a
-          href="https://twitter.com/yourusername"
+          href="https://twitter.com"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
@@ -172,7 +172,7 @@ const Header = ({ handleNavClick }) => {
           <i className="fab fa-twitter"></i>
         </a>
         <a
-          href="https://instagram.com/stas_moozan"
+          href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
