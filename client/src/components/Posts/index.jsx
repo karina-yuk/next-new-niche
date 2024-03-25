@@ -3,7 +3,7 @@ import './Posts.css';
 import Slider from "react-slick";
 
 
-const Posts = () => {
+const Posts = ({ handleNavClick }) => {
   const post = [
 
   {
@@ -94,7 +94,12 @@ var settings = {
       <div className="face face2">
         <div className="content">
           <p>{post.content}</p>
-          <a href="#" className="read-more">Read More</a> {/* Placeholder, ensure it links to the right destination */}
+          <a
+            className="btn btn-outline-secondary rounded-pill shadow-none smooth-scroll mt-2"
+            onClick={() => handleNavClick('contact')}
+          >
+            Leave a Comment
+            </a>
         </div>
       </div>
     </div>

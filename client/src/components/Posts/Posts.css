@@ -84,8 +84,6 @@
   font-style: italic;
 }
 
-
-
 .post-name, .face1 h5 {
   font-weight: bold;
 }
@@ -94,7 +92,6 @@
   font-size: 1rem;
   color: #aaa;
 }
-
 
 /* Faces of the card */
 .container .card .face {
@@ -127,8 +124,7 @@
   transform: translateY(150px);
   height: 350px;
   width: 100%;
-  height: 100%;
-  
+  height: 100%; 
 }
 
 .container .card:hover .face.face1 {
@@ -142,7 +138,6 @@
 .container .card:hover .face.face1 .content {
   opacity: 1; /* Full opacity on hover */
 }
-
 
 .container .card .face.face2 {
   position: relative;
@@ -182,20 +177,33 @@
   }
 }
 
-/* Read More Button */
-.read-more {
-  margin-top: 10px;
-  text-decoration: none;
-  background: #57d499;
-  color: white;
-  padding: 5px 5px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
+/* Leave a Comment Button */
+.btn {
+  font-size: 1rem !important;
 }
 
-.read-more:hover {
-  background: #40f09e;
-}
+.btn-primary {
+    margin-top: 2rem;
+    padding: 2rem 2rem;
+    font-size: 1.5rem !important;
+    color: #303238;
+    border-radius: 12px; /* Rounded corners for the button */
+    background-color: #377a7d; /* Bootstrap primary color */
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
+  }
+  
+.btn-primary:hover {
+    background-color: #377a7d; /* A darker shade for hover state */
+  }
+  .btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #5ca895;
+    border-color: #303238 !important;
+  }
 
 /* Slider dots and arrows */
 .slick-dots li button:before, .slick-dots li.slick-active button:before {
