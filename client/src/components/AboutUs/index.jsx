@@ -6,7 +6,7 @@ import './AboutUs.css';
 
 const AboutUs = ({ }) => {
   return (
-    <section id="about" className="about-me">
+    <section id="aboutus" className="about-me">
     
     <div className="position-relative d-flex text-center mb-5">
           <h2
