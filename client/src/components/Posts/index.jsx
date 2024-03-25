@@ -2,7 +2,11 @@ import React from "react";
 import "./Posts.css";
 import Slider from "react-slick";
 
-const Posts = () => {
+
+
+const Posts = ({ handleNavClick }) => {
+=======
+
   const post = [
     {
       id: 1,
@@ -100,6 +104,26 @@ const Posts = () => {
           ))}
         </Slider>
       </div>
+
+      <div className="face face2">
+        <div className="content">
+          <p>{post.content}</p>
+          <a
+            className="btn btn-outline-secondary rounded-pill shadow-none smooth-scroll mt-2"
+            onClick={() => handleNavClick('contact')}
+          >
+            Leave a Comment
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+))}
+</Slider>
+
+        </div> 
+        
+
     </section>
   );
 };

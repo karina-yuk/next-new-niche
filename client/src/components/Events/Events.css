@@ -80,16 +80,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: 70vh;
 }
 
+
 .event-description {
+  color: #3b3b3b;
   font-size: 0.7rem;
   text-align: center;
-    text-shadow: 2px 2px 10px rgb(2, 7, 14);
+    text-shadow: 12px 12px 20px rgb(222, 226, 231);
     margin-top: 40%;
     margin-left: 3%;
     margin-right: 3%;
+    
 }
 .items{
   display: flex;
