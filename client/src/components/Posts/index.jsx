@@ -5,7 +5,6 @@ import Slider from "react-slick";
 
 
 const Posts = ({ handleNavClick }) => {
-=======
 
   const post = [
     {
@@ -116,14 +115,6 @@ const Posts = ({ handleNavClick }) => {
             </a>
         </div>
       </div>
-    </div>
-  </div>
-))}
-</Slider>
-
-        </div> 
-        
-
     </section>
   );
 };
