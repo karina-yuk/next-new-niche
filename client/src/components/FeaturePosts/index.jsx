@@ -195,7 +195,9 @@ const FeaturePosts = () => {
       sliderImages: ["../src/img/19 - 02.png", "../src/img/19 - 03.jpeg"],
       categories: ["*", filters.CHEESEWINE],
     },
+   
 
+  ];
     //    {
     //    id: 21,
     //  title: "Do NOT Drink",
@@ -220,7 +222,7 @@ const FeaturePosts = () => {
     //  sliderImages: ["images/project-7.jpg", "images/project-8.JPG"],
     //  categories: ["*", filters.OTHER],
     // },
-  ];
+
 
   // initialize an Isotope object with configs
   useEffect(() => {
@@ -360,6 +362,7 @@ const FeaturePosts = () => {
       </div>
     </>
   );
+    
 };
 
 export default FeaturePosts;
