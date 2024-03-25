@@ -99,13 +99,25 @@ const FeaturePosts = () => {
       projectInfo:
         "Spirits and oak have been almost inseparable since the 3rd century, back when the Romans swapped in barrels for the clay pots and other breakable vessels they traditionally used for booze-making. But the complex flavors these casks imparted were only later realized through sheer circumstance, after barrels were left to sit for extended periods in transit overseas. Eventually, Cognac producers began charring barrels to break down and caramelize the wood’s sugars, and distillers have never looked back.",
       client: "Admin",
-      date: "May 06, 2019",
+      date: "May 06, 2020",
       thumbImage: "../src/img/Oak.png",
       sliderImages: [
-        "../src/img/white-vs-red-wine.jpeg",
-        "../src/img/oak-2.png",
+        "../src/img/white-vs-red-wine.jpg",
+        "../src/img/white-vs-red.png",
       ],
 
+      categories: ["*", filters.OTHER],
+    },
+
+    {
+      id: 7,
+      title: "Wine Producing Countries",
+      projectInfo:
+        "Italy has been leading the way for several years now, making almost 20% of the global production, followed by France, ranked as the second largest wine producer, then Spain, while it has the most vineyard surface area in the world, it comes third on the list of the top wine-producing countries.This three countries produces nearly half of the world’s wine.",
+      client: "Admin",
+      date: "March 06, 2024",
+      thumbImage: "../src/img/vineyards-italy.jpeg",
+      sliderImages: ["./src/img/Italy Wine Map.png", "../src/img/TOP-5.PNG"],
       categories: ["*", filters.OTHER],
     },
 
@@ -184,30 +196,30 @@ const FeaturePosts = () => {
       categories: ["*", filters.CHEESEWINE],
     },
 
-    {
-      id: 21,
-      title: "Do NOT Drink",
-      projectInfo:
-        "Do not drink when you are: Driving a car, snowmobile, boat or other motorized vehicle. Operating heavy machinery and tools. Taking medicine or other drugs that interact with alcohol. Doing any kind of physical activity. Living with mental or physical health problems. Living with alcohol dependence. Pregnant, planning to be pregnant, or about to breastfeed.",
-      client: "Admin",
-      technologies: "iOS, HTML5, CSS3, PHP, Java",
-      industry: "Art & Design",
-      date: "July 16, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "../src/img/Do Not Drink.jpeg",
-      sliderImages: ["images/project-7.jpg", "images/project-8.JPG"],
-      categories: ["*", filters.OTHER],
-    },
+    //    {
+    //    id: 21,
+    //  title: "Do NOT Drink",
+    //projectInfo:
+    // "Do not drink when you are: Driving a car, snowmobile, boat or other motorized vehicle. Operating heavy machinery and tools. Taking medicine or other drugs that interact with alcohol. Doing any kind of physical activity. Living with mental or physical health problems. Living with alcohol dependence. Pregnant, planning to be pregnant, or about to breastfeed.",
+    //client: "Admin",
+    // technologies: "iOS, HTML5, CSS3, PHP, Java",
+    // industry: "Art & Design",
+    // date: "July 16, 2019",
+    // url: {
+    // name: "www.example.com",
+    //  link: "https://www.example.com",
+    //  },
+    //  socialLinks: {
+    //  facebook: "http://www.facebook.com/",
+    //  twitter: "http://www.twitter.com/",
+    //   google: "http://www.google.com/",
+    //  instagram: "http://www.instagram.com/",
+    // mail: "mailto:example@gmail.com",
+    // },
+    //  thumbImage: "../src/img/Do Not Drink.jpeg",
+    //  sliderImages: ["images/project-7.jpg", "images/project-8.JPG"],
+    //  categories: ["*", filters.OTHER],
+    // },
   ];
 
   // initialize an Isotope object with configs
