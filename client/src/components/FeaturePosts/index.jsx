@@ -102,8 +102,8 @@ const FeaturePosts = () => {
       date: "May 06, 2019",
       thumbImage: "../src/img/Oak.png",
       sliderImages: [
-        "../src/img/white-vs-red-wine.jpeg",
-        "../src/img/oak-2.png",
+        "../src/img/white-vs-red-wine.jpg",
+        "../src/img/white-vs-red.png",
       ],
 
       categories: ["*", filters.OTHER],
