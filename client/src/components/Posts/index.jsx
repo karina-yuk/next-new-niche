@@ -23,18 +23,18 @@ const Posts = () => {
     {
       id: 3,
       user: "Christina MacIntyre ",
-      title: "Post Title Three",
+      title: "The Rise of Natural Wines: Embracing Minimal Intervention",
       src: "https:/hoto-shrink_200_200/0/1705968358833?e=1715817600&v=beta&t=ohR16-2zzd1XO2uWYtIwF-6cyaN7gUUi-aOgIFVwWuc",
       content:
-        "I am happy working with printing and typesetting industry. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Natural wines, made with minimal intervention and additives, have gained popularity among wine enthusiasts seeking authentic expressions of terroir and craftsmanship. Unlike conventionally produced wines, which may rely on additives and technological interventions to achieve a consistent flavor profile, natural wines embrace the unique characteristics of each vintage and vineyard. These wines are often fermented with native yeasts, undergo minimal filtration, and contain little to no added sulfites. Advocates of natural wine appreciate its raw, unadulterated qualities, which reflect the true essence of the grape and its growing conditions. While natural wines may exhibit more variation from bottle to bottle, they offer a captivating journey into the world of artisanal winemaking.",
     },
     {
       id: 4,
       user: "Valeriia Kolimbet",
-      title: "Post Title Four",
+      title: "Exploring the Wonders of Niagara Falls Wine Country",
       src: "https://sco1_10157126481940270_605990318910734336_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=icF_iYRwSoUAX_bA02-&_nc_ht=scontent-ord5-1.xx&oh=00_AfB8XNTb7_Em-mlemcd8IWD0bc7AbHZnmhZbn-lODJA1gA&oe=661D903C",
       content:
-        "I have used them twice now. Good rates, very efficient service and lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Niagara Falls isn't just about breathtaking natural beauty—it's also home to a thriving wine scene. With its cool climate and fertile soil, the region produces exceptional wines, particularly renowned for its ice wines. From the elegant Rieslings to the robust Cabernet Francs, Niagara's wineries offer a diverse range of varietals to suit every palate. Don't miss the chance to sip and savor amidst stunning vineyard landscapes, making your visit to Niagara Falls an unforgettable wine experience.",
     },
   ];
 
