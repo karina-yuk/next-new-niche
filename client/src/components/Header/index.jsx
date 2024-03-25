@@ -45,7 +45,6 @@ const Header = ({ handleNavClick }) => {
             setSelectedTab("home");
             handleNavClick("home");
           }}
-          to="home"
           className={`nav-link test ${selectedTab === "home" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
@@ -55,7 +54,6 @@ const Header = ({ handleNavClick }) => {
           Home
         </Link>
         <Link
-          to="aboutus"
           className={`nav-link ${selectedTab === "aboutus" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
@@ -70,7 +68,6 @@ const Header = ({ handleNavClick }) => {
         </Link>
 
         <Link
-          to="post"
           className={`nav-link ${selectedTab === "post" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
@@ -85,7 +82,6 @@ const Header = ({ handleNavClick }) => {
         </Link>
 
         <Link
-          to="events"
           className={`nav-link ${selectedTab === "events" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
@@ -100,7 +96,6 @@ const Header = ({ handleNavClick }) => {
         </Link>
 
         <Link
-          to="featurepost"
           className={`nav-link ${
             selectedTab === "featurepost" ? "active" : ""
           }`}
@@ -129,7 +124,6 @@ const Header = ({ handleNavClick }) => {
         </Link>
 
         <Link
-          to="newsletter"
           className={`nav-link ${selectedTab === "newsletter" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
