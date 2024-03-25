@@ -68,6 +68,7 @@ const Header = ({ handleNavClick }) => {
         >
           About Us
         </Link>
+
         <Link
           to="post"
           className={`nav-link ${selectedTab === "post" ? "active" : ""}`}
@@ -82,6 +83,7 @@ const Header = ({ handleNavClick }) => {
         >
           Blog Post
         </Link>
+
         <Link
           to="events"
           className={`nav-link ${selectedTab === "events" ? "active" : ""}`}
@@ -96,6 +98,7 @@ const Header = ({ handleNavClick }) => {
         >
           Events
         </Link>
+
         <Link
           to="featurepost"
           className={`nav-link ${
@@ -111,6 +114,18 @@ const Header = ({ handleNavClick }) => {
           }}
         >
           Feature Blog Post
+        </Link>
+
+        <Link
+        className={`nav-link ${
+          selectedTab === "testimonial" ? "active" : ""}`}
+          style={{ cursor: "pointer" }}
+          spy={true}
+          smooth={true}
+          duration={500}
+          onClick={() => handleNavClick('testimonial')}
+        >
+          Testimonial
         </Link>
 
         <Link
