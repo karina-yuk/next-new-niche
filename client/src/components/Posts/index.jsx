@@ -6,7 +6,7 @@ const Posts = () => {
   const post = [
     {
       id: 1,
-      user: "Post Title One",
+      user: "",
       title: "The Art of Decanting: Enhancing Your Wine Experience",
       src: "../src/img/decantingwine.jpg",
       content:
@@ -14,7 +14,7 @@ const Posts = () => {
     },
     {
       id: 2,
-      user: "Anna Antropova",
+      user: "",
       title: "Exploring Rosé: More Than Just a Summertime Sipper",
       src: "../src/img/rose.jpg",
       content:
@@ -22,7 +22,7 @@ const Posts = () => {
     },
     {
       id: 3,
-      user: "Christina MacIntyre ",
+      user: " ",
       title: "The Rise of Natural Wines: Embracing Minimal Intervention",
       src: "../src/img/naturalwines.webp",
       content:
@@ -30,7 +30,7 @@ const Posts = () => {
     },
     {
       id: 4,
-      user: "Valeriia Kolimbet",
+      user: " ",
       title: "Exploring the Wonders of Niagara Falls Wine Country",
       src: "../src/img/icewine.jpg",
       content:
