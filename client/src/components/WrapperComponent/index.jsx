@@ -24,18 +24,12 @@ const WrapperComponent = ({ handleNavClick }) => {
       <Element name="post" style={{ height: "100%" }} id="post">
         <Posts handleNavClick={handleNavClick} />
       </Element>
-      <br></br>
-      <br></br>
-      <br></br>
       <Element name="events" style={{ height: "100%" }} id="events">
         <Events handleNavClick={handleNavClick} />
       </Element>
       <Element name="featurepost" style={{ height: "100%" }} id="featurepost">
         <FeaturePosts handleNavClick={handleNavClick} />
       </Element>
-      <br></br>
-      <br></br>
-      <br></br>
       <Element name="testimonials" style={{ height: "100%" }} id="testimonials">
         <Testimonial handleNavClick={handleNavClick} />
       </Element>
