@@ -1,5 +1,6 @@
 
 // authMiddleware.js
+const session = require('express-session');
 
 async function requireAuth(req, res, next) {
     try {
@@ -21,7 +22,7 @@ async function checkUserAuthentication(req) {
     return req.session && req.session.user ? true : false;
 }
 
-module.exports = requireAuth;
+module.exports = { requireAuth };
 
 
 // **************************************

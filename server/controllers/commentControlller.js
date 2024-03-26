@@ -43,24 +43,25 @@ module.exports = {
     }
   },
 
-  // create a comment
-  async createComment(req, res) {
-    try {
-      await requireAuth(req, res); // check if user is authenticated
-      const user = await User.findOne({ _id: req.body.userId });
-      const blogpost = await Blogpost.findOne({ _id: req.body.blogpostId });
-      const comment = await Comment.create({ ...req.body, username: user.username, blogpostId: blogpost._id });
-      res.json({ message: 'New comment created', comment });
+// create a comment
+async createComment(req, res) {
+  try {
+    await requireAuth(req, res); // check if user is authenticated
+    const user = await User.findOne({ _id: req.body.userId });
+    const blogpost = await Blogpost.findOne({ _id: req.body.blogpostId });
+    const comment = await Comment.create({ ...req.body, username: user.username, blogpostId: blogpost._id });
 
-      // add comment to blogpost
-      blogpost.comments.push(comment);
-      await blogpost.save();
+    // add comment to blogpost
+    blogpost.comments.push(comment);
+    await blogpost.save();
 
-    } catch (err) {
-      console.log('Error:', err);
-      res.status(500).json(err);
-    }
-  },
+    res.json({ message: 'New comment created', comment });
+  } catch (err) {
+    console.error('Error:', err);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+},
+
 
   // update a comment
   async updateComment(req, res) {

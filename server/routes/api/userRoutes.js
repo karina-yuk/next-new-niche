@@ -6,6 +6,7 @@ const {
   createUser,
   updateUser,
   deleteUser,
+  logoutUser
 } = require('../../controllers/userController');
 
 // /api/users
@@ -20,5 +21,20 @@ router
   .get(getSingleUser)
   .put(updateUser)
   .delete(deleteUser);
+
+// /api/users/login
+router
+  .route('/login')
+  .post(loginUser);
+
+// api/users/signup
+router
+  .route('/signup')
+  .post(createUser);
+
+// /api/users/logout
+router
+  .route('/logout')
+  .get(logoutUser);
 
 module.exports = router;

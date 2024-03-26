@@ -1,4 +1,6 @@
 const { User, Blogpost } = require('../models');
+const bcrypt = require('bcrypt');
+const session = require('express-session');
 
 module.exports = {
   // get all users
@@ -30,7 +32,7 @@ module.exports = {
 async loginUser (req, res) {
   try {
     // Check if user exists
-    const user = await User.findOne({ username });
+    const user = await User.findOne({ email });
     if (!user) {
       return res.status(400).json({ msg: 'Invalid credentials' });
     }
@@ -41,8 +43,10 @@ async loginUser (req, res) {
       return res.status(400).json({ msg: 'Invalid credentials' });
     }
 
-    // Return JWT token or session token
-    res.json({ msg: 'Login successful' });
+    // Create session
+    req.session.user = user;
+
+    res.json({ message: 'Login successful' });
 
   } catch (err) {
     console.error(err.message);
@@ -97,4 +101,15 @@ async loginUser (req, res) {
       res.status(500).json(err);
     }
   },
+  
+  // Logout route
+  async logoutUser(req, res) {
+    try {
+      req.session.destroy();
+      res.json({ message: 'Logout successful' });
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  }
 };

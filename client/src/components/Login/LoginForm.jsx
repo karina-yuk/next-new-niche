@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/users", {
+      const response = await fetch("/api/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -22,6 +22,7 @@ const Login = () => {
         body: JSON.stringify(formData),
       });
       const data = await response.json();
+      return data;
       // Handle success or error response
     } catch (error) {
       console.error("Login failed", error);
