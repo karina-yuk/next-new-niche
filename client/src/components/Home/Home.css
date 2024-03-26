@@ -9,12 +9,10 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5); /* Black with opacity for the overlay */
-  
+  background: rgba(123, 121, 121, 0.5); /* Black with opacity for the overlay */
 }
 
 #home {
-  
   background-color: transparent;;
     background-size: cover;
     background-position: center;
@@ -51,7 +49,6 @@
     margin-top: 2rem;
     padding: 2rem 2rem;
     font-size: 1.5rem !important;
-
     border-radius: 12px; /* Rounded corners for the button */
     background-color: #377a7d; /* Bootstrap primary color */
     border: none;
@@ -80,14 +77,13 @@
 .scroll-down-arrow {
   position: absolute;
   bottom: 20px; /* Distance from the bottom */
-  color: purple;; /* White color for the arrow */
   font-size: 20px; /* Size of the arrow */
   height: 42px; /* Height of the element */
   line-height: 42px; /* Aligns the text vertically */
   left: 50%; /* Horizontally center */
   margin-left: -16px; /* Half of the width to truly center the element */
   text-align: center; /* Center the text (arrow icon) */
-  width: 32px; /* Width of the element */
+  width: 39px!important; /* Width of the element */
   z-index: 3; /* Stack order */
   cursor: pointer;
   animation: bounce 2s infinite;
