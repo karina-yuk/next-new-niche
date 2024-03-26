@@ -27,11 +27,11 @@ const FeaturePosts = () => {
       date: "May 06, 2019",
       thumbImage:
         "https://github.com/Olivia-the-G/next-new-niche/blob/main/client/src/img/01%20-%20Pinot%20Noir%20with%20earthy%20flavors.png?raw=true",
+
       sliderImages: [
         "../src/img/01 - Mushroom-Sauce-2.jpeg",
         "../src/img/01 - Mushroom-Sauce.jpeg",
       ],
-
       categories: ["*", filters.FOODWINE],
     },
 
@@ -134,13 +134,7 @@ const FeaturePosts = () => {
         name: "www.example.com",
         link: "https://www.example.com",
       },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
+
       thumbImage: "../src/img/17 - 01.jpeg",
       sliderImages: ["../src/img/17 - 02.jpeg", "../src/img/17 - 03.jpeg"],
       categories: ["*", filters.CHEESEWINE],
@@ -148,7 +142,7 @@ const FeaturePosts = () => {
 
     {
       id: 18,
-      title: "Aged Semi-Hard Cheese",
+      title: "Aged Semi-Hard and Hard Cheese",
       projectInfo:
         "As cheese ages, it loses moisture and gains flavor concentration. Cheddar, Edam, Emmental, and Gouda are considered semi-hard cheeses. Their creaminess is characteristic, and so is their firm but malleable texture. Moreover, the flavor can be mild or quite assertive. Semi-hard cheeses will pair nicely with medium-bodied red wines like Merlot, Malbec, or a Montepulciano.",
       client: "Admin",
@@ -173,55 +167,18 @@ const FeaturePosts = () => {
 
     {
       id: 19,
-      title: "Aged Hard Cheese",
+      title: " How to store your wine properly",
       projectInfo:
-        "Both Parmigiano Reggiano or Manchego have a solid texture. These cheeses are usually bold and straightforward; they hold up to several years of aging before entering the market. Match their intensity and mouthfeel with assertive, structured red wines like an aged Tempranillo or a Cabernet Sauvignon. This is the type of wine and cheese pairing that allows wine lovers who dislike tannins (super-tasters in the lingo) can enjoy more tannic wines than usual.",
+        "The golden rule of storing wine, whether it’s for next month or next decade, is to keep it somewhere (1) cool, (2) dark, and (3) away from temperature fluctuations, and (4) away from vibrations. Pro Tip: Wine bottles with corks in them should be stored on their side so that the cork can remain moist and sealed. Wines with screw caps can be stored upright.",
       client: "Admin",
       technologies: "iOS, HTML5, CSS3, PHP, Java",
       industry: "Art & Design",
       date: "November 14, 2019",
-      url: {
-        name: "www.example.com",
-        link: "https://www.example.com",
-      },
-      socialLinks: {
-        facebook: "http://www.facebook.com/",
-        twitter: "http://www.twitter.com/",
-        google: "http://www.google.com/",
-        instagram: "http://www.instagram.com/",
-        mail: "mailto:example@gmail.com",
-      },
-      thumbImage: "../src/img/19 - 01.jpeg",
-      sliderImages: ["../src/img/19 - 02.png", "../src/img/19 - 03.jpeg"],
-      categories: ["*", filters.CHEESEWINE],
+      thumbImage: "../src/img/store-wine1.png",
+      sliderImages: ["../src/store-wine.jpeg", "../src/img/store-wine-2.jpeg"],
+      categories: ["*", filters.OTHER],
     },
-   
-
   ];
-    //    {
-    //    id: 21,
-    //  title: "Do NOT Drink",
-    //projectInfo:
-    // "Do not drink when you are: Driving a car, snowmobile, boat or other motorized vehicle. Operating heavy machinery and tools. Taking medicine or other drugs that interact with alcohol. Doing any kind of physical activity. Living with mental or physical health problems. Living with alcohol dependence. Pregnant, planning to be pregnant, or about to breastfeed.",
-    //client: "Admin",
-    // technologies: "iOS, HTML5, CSS3, PHP, Java",
-    // industry: "Art & Design",
-    // date: "July 16, 2019",
-    // url: {
-    // name: "www.example.com",
-    //  link: "https://www.example.com",
-    //  },
-    //  socialLinks: {
-    //  facebook: "http://www.facebook.com/",
-    //  twitter: "http://www.twitter.com/",
-    //   google: "http://www.google.com/",
-    //  instagram: "http://www.instagram.com/",
-    // mail: "mailto:example@gmail.com",
-    // },
-    //  thumbImage: "../src/img/Do Not Drink.jpeg",
-    //  sliderImages: ["images/project-7.jpg", "images/project-8.JPG"],
-    //  categories: ["*", filters.OTHER],
-    // },
 
 
   // initialize an Isotope object with configs
@@ -362,7 +319,6 @@ const FeaturePosts = () => {
       </div>
     </>
   );
-    
 };
 
 export default FeaturePosts;

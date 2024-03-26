@@ -10,10 +10,15 @@ const {
 } = require('../../controllers/commentControlller');
 
 // /api/comments
-router.route('/').get(getComments).post(createComment);
+router
+  .route('/')
+  .get(getComments)
+  .post(createComment);
 
 // /api/comments/blogposts/:blogpostId
-router.route('/blogposts/:blogpostId').get(getBlogpostComments);
+router
+  .route('/blogposts/:blogpostId')
+  .get(getBlogpostComments);
 
 // /api/comments/:commentId
 router

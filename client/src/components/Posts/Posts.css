@@ -48,16 +48,19 @@
   color: #5c6772;
 }
 
-.container .card {
-  position: relative;
-  cursor: pointer;
-  height: 630px;
-}
-
 .card-container {
   perspective: 1000px; /* Setup for the 3D effect on hover */
 }
+.container .card {
+  position: relative;
+  cursor: pointer;
+  height: 500px;
+  width: 80%;
+  margin: 2 auto; /* Center the card container */
+  overflow: hidden;
+}
 .card {
+  height: 330px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -69,14 +72,36 @@
   border-radius: 0.25rem;
   margin: 2rem;
   overflow: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  position: relative;
+}
+/* Base setup for the card faces */
+.container .card .face {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for both properties */
 }
 
 .card-image {
-  width: 700px;
-  height: 300px;
-  border-radius: 2%;
+  width: 100%; 
+  height: auto; 
+  object-fit: cover;
+  border-radius: 1%;
   object-fit: cover;
   margin-bottom: 1rem;
+  background-size: cover; 
+  position: relative;
+  max-height: 100%;
 }
 
 .card-content p,
@@ -84,9 +109,7 @@
   font-style: italic;
 }
 
-
 .post-name, .face1 h5 {
-
   font-weight: bold;
 }
 
@@ -96,45 +119,29 @@
   color: #aaa;
 }
 
-/* Faces of the card */
-.container .card .face {
-  width: 100%; /* Makes the faces take up the full width of the card */
-  height: 100%; /* Makes the faces take up the full height of the card */
-  transition: transform 0.5s, opacity 0.5s; /* Smooth transitions for transform and opacity */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .face.face1 {
+  height: 350px;
   position: absolute;
   top: 0;
+  z-index: 3;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
   backface-visibility: hidden; /* Hide the back of this face when flipped */
-  transform: rotateY(0deg); /* Start without any rotation */
+  transform: rotateY(0deg);
+  background: #333; /* Start without any rotation */
 }
 
-.container .card .face.face1 {
-  position: relative;
-  background: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container .card:hover .face.face1 {
   z-index: 2;
-  box-shadow: 0 20px 50px rgba(29, 27, 27, 0.8);
-  transform: translateY(150px);
-  height: 350px;
-  width: 100%;
-
-  height: 100%; 
-
+  transform: translateX(-50%); /* Moves face1 to the left */
 }
 
 .container .card:hover .face.face1 {
   background: #5c2727;
-  transform: translateY(0px);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
 }
 
 .container .card .face.face1 .content {
@@ -144,23 +151,25 @@
   opacity: 1; /* Full opacity on hover */
 }
 
-.container .card .face.face2 {
-  position: relative;
-  background: #858080;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  box-sizing: border-box;
+.face.face2 {
+  right: 0;
+  opacity: 0;
+  z-index: 1; /* z-index set to 1 to be below face1 */
+  background: #858080; /* Example background color */
   box-shadow: 0 20px 50px rgba(29, 27, 27, 0.8);
-  transform: translateY(-150px);
-  height: 350px;
-  width: 100%;
-  height: 100%;
+  
+}
+.container .card:hover .face.face2 {
+  z-index: 1; /* Lower z-index to ensure face1 is on top */
+  transform: translateX(50%); 
+  opacity: 1;
+  transition: transform 0.5s ease;
 }
 
 .container .card:hover .face.face2 {
-  transform: translateY(0px);
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+  
 }
 
 .container .card .face.face2 .content p {
