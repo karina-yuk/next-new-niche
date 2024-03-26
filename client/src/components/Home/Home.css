@@ -10,11 +10,9 @@
   bottom: 0;
   left: 0;
   background: rgba(123, 121, 121, 0.5); /* Black with opacity for the overlay */
-  
 }
 
 #home {
-  
   background-color: transparent;;
     background-size: cover;
     background-position: center;
