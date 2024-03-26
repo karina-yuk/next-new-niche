@@ -1,7 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const mongoose = require('mongoose');
-const MongoStore = require('connect-mongo')(session);
+// new MongoStore = require('connect-mongo')(session);
 const db = require('./config/connection');
 const path = require('path');
 
@@ -16,7 +16,7 @@ app.use(session({
     secret: 'your_secret_key', // Change this to your own secret key
     resave: false,
     saveUninitialized: false,
-    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    // store: new MongoStore({ mongooseConnection: mongoose.connection }),
     cookie: { maxAge: 3 * 60 * 60 * 1000 } // Session expiration time (3 hour)
 }));
 
