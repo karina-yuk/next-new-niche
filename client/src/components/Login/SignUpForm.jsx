@@ -14,7 +14,7 @@ const SignUpForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/users", {
+      const response = await fetch("/api/users/signup", {
         // Changed endpoint to /api/signup
         method: "POST",
         headers: {

@@ -29,22 +29,24 @@ module.exports = {
   },
 
 // Login route
-async loginUser (req, res) {
+async loginUser(req, res) {
   try {
+    const { email, password } = req.body; // Extract email and password from request body
+
     // Check if user exists
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(400).json({ msg: 'Invalid credentials' });
+      return res.status(400).json({ msg: 'Invalid email' });
     }
 
     // Validate password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.status(400).json({ msg: 'Invalid credentials' });
+      return res.status(400).json({ msg: 'Invalid password' });
     }
 
     // Create session
-    req.session.user = user;
+    req.session.user = user; // Assuming session middleware is properly configured
 
     res.json({ message: 'Login successful' });
 
@@ -54,15 +56,24 @@ async loginUser (req, res) {
   }
 },
 
-  // create a user
-  async createUser(req, res) {
-    try {
-      const user = await User.create(req.body);
-      res.json({ message: 'New user created', user });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  },
+
+ // create a user
+async createUser(req, res) {
+  try {
+    const { username, email, password } = req.body;
+    
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(password, 10); // 10 is the salt rounds
+    
+    // Create user with hashed password
+    const user = await User.create({ username, email, password: hashedPassword });
+    
+    res.json({ message: 'New user created', user });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+},
+
 
   // update a user
   async updateUser(req, res) {
@@ -101,7 +112,7 @@ async loginUser (req, res) {
       res.status(500).json(err);
     }
   },
-  
+
   // Logout route
   async logoutUser(req, res) {
     try {
