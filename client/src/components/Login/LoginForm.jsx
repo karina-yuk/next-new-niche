@@ -22,19 +22,41 @@ const Login = () => {
         },
         body: JSON.stringify(formData),
       });
+
       if (!response.ok) {
         throw new Error("Login failed");
       }
+
+      // Clear form data
+      setFormData({
+        username: "",
+        email: "",
+        password: "",
+      });
+
       const data = await response.json();
+
+      // Update session to indicate that the user is logged in
+      const sessionResponse = await fetch("http://localhost:3001/api/session", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ isLoggedIn: true }),
+      });
+
+      if (!sessionResponse.ok) {
+        throw new Error("Failed to update session");
+      }
+
+      console.log("Session updated", sessionResponse);
       // Handle success response
       console.log("Login successful:", data);
-      // Redirect or perform other actions as needed
     } catch (error) {
       console.error("Login failed", error);
-      // Handle error response or display error message
     }
   };
-  
+
   
 
   return (

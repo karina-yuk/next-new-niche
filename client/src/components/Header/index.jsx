@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import "./Header.css";
 
-const Header = ({ handleNavClick }) => {
+const Header = ({ isLoggedIn, handleNavClick, handleLogout }) => {
   const [isSticky, setIsSticky] = useState(false);
   const [isNavModalOpen, setIsNavModalOpen] = useState(false);
   const [selectedTab, setSelectedTab] = useState("home");
@@ -25,11 +25,14 @@ const Header = ({ handleNavClick }) => {
     return () => window.removeEventListener("scroll", checkScrollTop);
   }, []);
 
+  const handleLogoutClick = () => {
+    handleLogout(); // Call the handleLogout function passed as a prop
+    };
+
   return (
     <header
-      className={`header bg-dark text-white vh-100 fix-to-left ${
-        isSticky ? "sticky" : ""
-      }`}
+      className={`header bg-dark text-white vh-100 fix-to-left ${isSticky ? "sticky" : ""
+        }`}
     >
       <div className="profile-container">
         <img
@@ -96,9 +99,8 @@ const Header = ({ handleNavClick }) => {
         </Link>
 
         <Link
-          className={`nav-link ${
-            selectedTab === "featurepost" ? "active" : ""
-          }`}
+          className={`nav-link ${selectedTab === "featurepost" ? "active" : ""
+            }`}
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
@@ -112,9 +114,8 @@ const Header = ({ handleNavClick }) => {
         </Link>
 
         <Link
-          className={`nav-link ${
-            selectedTab === "testimonial" ? "active" : ""
-          }`}
+          className={`nav-link ${selectedTab === "testimonial" ? "active" : ""
+            }`}
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
@@ -141,33 +142,53 @@ const Header = ({ handleNavClick }) => {
           Subscribe
         </Link>
 
-        <Link
-          className={`nav-link ${selectedTab === "LoginForm" ? "active" : ""}`}
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => {
-            setSelectedTab("LoginForm");
-            handleNavClick("LoginForm");
-          }}
-        >
-          Log In
-        </Link>
+        {isLoggedIn ? (
+          <Link
+            className={`nav-link ${selectedTab === "Home" ? "active" : ""}`}
+            style={{ cursor: "pointer" }}
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={() => {
+              setSelectedTab("Home");
+              handleNavClick("Home");
+              handleLogoutClick("Home");
+            }}
+          >Log Out
+          </Link>
+        ) : (
+          <Link
+            className={`nav-link ${selectedTab === "LoginForm" ? "active" : ""}`}
+            style={{ cursor: "pointer" }}
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={() => {
+              setSelectedTab("LoginForm");
+              handleNavClick("LoginForm");
+            }}
+          >
+            Log In
+          </Link>
+        )}
+        {!isLoggedIn && (
+          <Link
+            className={`nav-link ${selectedTab === "SignUpForm" ? "active" : ""}`}
+            style={{ cursor: "pointer" }}
+            spy={true}
+            smooth={true}
+            duration={500}
+            onClick={() => {
+              setSelectedTab("SignUpForm");
+              handleNavClick("SignUpForm");
+            }}
+          >
+            Sign Up
+          </Link>
+        )}
 
-        <Link
-          className={`nav-link ${selectedTab === "SignUpForm" ? "active" : ""}`}
-          style={{ cursor: "pointer" }}
-          spy={true}
-          smooth={true}
-          duration={500}
-          onClick={() => {
-            setSelectedTab("SignUpForm");
-            handleNavClick("SignUpForm");
-          }}
-        >
-          Sign Up
-        </Link>
+
+
       </nav>
 
       <div className="social-links">
