@@ -119,7 +119,10 @@ const Header = ({ handleNavClick }) => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick("testimonial")}
+          onClick={() => 
+            {
+            setSelectedTab("testimonial");
+            handleNavClick("testimonial")}}
         >
           Testimonial
         </Link>
