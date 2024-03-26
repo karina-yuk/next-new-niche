@@ -9,10 +9,14 @@ const {
 } = require('../../controllers/blogpostController.js');
 
 // /api/blogposts
-router.route('/').get(getBlogposts).post(createBlogpost);
+router.route('/')
+  .get(getBlogposts)
+  .post(createBlogpost);
 
 // /api/blogposts/:userId
-router.route('/:userId').get(getUserBlogposts);
+router
+  .route('/:userId')
+  .get(getUserBlogposts);
 
 // /api/blogposts/:blogpostId
 router
