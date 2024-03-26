@@ -6,6 +6,10 @@
   transition: all 0.5s ease;
 }
 
+.h2 {
+  font-size: 2rem;
+  font-weight: 500 !important;
+}
 /* Sticky Header */
 .sticky {
   position: fixed;
@@ -39,20 +43,14 @@
   border: 6px solid #343a40; /* Optional */
 }
 
-
 .nav-link {
-  
   color: white;
-  margin: 0.5rem 0;
+  margin: 0.2rem 0;
   transition: color 0.2s ease;
   text-align: center;
-  padding: 6px 0;
+  padding: 3px 0;
   font-size: 18px !important;
-  
 }
-
-
-
 
 .nav-link:hover {
   color:  #64ffd8;
@@ -113,7 +111,7 @@
     left: 0;
     right: 0;
   }
-
+ 
   .nav-link {
     padding: 0.5rem 1rem; /* Larger tap targets for mobile */
     border-bottom: 1px solid #efefef; /* Separator between links */
