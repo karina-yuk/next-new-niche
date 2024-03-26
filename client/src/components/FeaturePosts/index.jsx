@@ -179,30 +179,7 @@ const FeaturePosts = () => {
       categories: ["*", filters.OTHER],
     },
   ];
-  //    {
-  //    id: 21,
-  //  title: "Do NOT Drink",
-  //projectInfo:
-  // "Do not drink when you are: Driving a car, snowmobile, boat or other motorized vehicle. Operating heavy machinery and tools. Taking medicine or other drugs that interact with alcohol. Doing any kind of physical activity. Living with mental or physical health problems. Living with alcohol dependence. Pregnant, planning to be pregnant, or about to breastfeed.",
-  //client: "Admin",
-  // technologies: "iOS, HTML5, CSS3, PHP, Java",
-  // industry: "Art & Design",
-  // date: "July 16, 2019",
-  // url: {
-  // name: "www.example.com",
-  //  link: "https://www.example.com",
-  //  },
-  //  socialLinks: {
-  //  facebook: "http://www.facebook.com/",
-  //  twitter: "http://www.twitter.com/",
-  //   google: "http://www.google.com/",
-  //  instagram: "http://www.instagram.com/",
-  // mail: "mailto:example@gmail.com",
-  // },
-  //  thumbImage: "../src/img/Do Not Drink.jpeg",
-  //  sliderImages: ["images/project-7.jpg", "images/project-8.JPG"],
-  //  categories: ["*", filters.OTHER],
-  // },
+
 
   // initialize an Isotope object with configs
   useEffect(() => {

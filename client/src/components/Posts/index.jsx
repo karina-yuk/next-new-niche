@@ -5,7 +5,6 @@ import Slider from "react-slick";
 
 
 const Posts = ({ handleNavClick }) => {
-
   const post = [
     {
       id: 1,
@@ -61,7 +60,6 @@ const Posts = ({ handleNavClick }) => {
   };
 
   return (
-    
     <section id="post" className="post">
       <div className={"container " }>
       <div className="position-relative d-flex text-center mb-5 ">
@@ -80,7 +78,6 @@ const Posts = ({ handleNavClick }) => {
             <span className="heading-separator-line  d-block mx-auto" />
           </p>
         </div>
-
 
 <Slider {...settings}>
 {post.map((post) => (
@@ -107,9 +104,7 @@ const Posts = ({ handleNavClick }) => {
   </div>
 ))}
 </Slider>
-
-        </div> 
-        
+        </div>   
     </section>
   );
 };

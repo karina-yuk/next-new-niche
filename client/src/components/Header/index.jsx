@@ -119,7 +119,10 @@ const Header = ({ handleNavClick }) => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick("testimonial")}
+          onClick={() => {
+            setSelectedTab("testimonial");
+            handleNavClick("testimonial");
+          }}
         >
           Testimonial
         </Link>
@@ -144,7 +147,10 @@ const Header = ({ handleNavClick }) => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick("LoginForm")}
+          onClick={() => {
+            setSelectedTab("LoginForm");
+            handleNavClick("LoginForm");
+          }}
         >
           Log In
         </Link>
@@ -155,7 +161,10 @@ const Header = ({ handleNavClick }) => {
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick("SignUpForm")}
+          onClick={() => {
+            setSelectedTab("SignUpForm");
+            handleNavClick("SignUpForm");
+          }}
         >
           Sign Up
         </Link>
