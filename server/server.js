@@ -1,34 +1,39 @@
-const express = require('express');
-const session = require('express-session');
-const mongoose = require('mongoose');
-// new MongoStore = require('connect-mongo')(session);
-const db = require('./config/connection');
-const path = require('path');
+// server.js
 
-const routes = require('./routes');
+const express = require("express");
+const bodyParser = require("body-parser");
 
-// port
-const PORT = process.env.PORT || 3001;
 const app = express();
+const PORT = process.env.PORT || 3001;
 
-// Express session middleware
-app.use(session({
-    secret: 'your_secret_key', // Change this to your own secret key
-    resave: false,
-    saveUninitialized: false,
-    // store: new MongoStore({ mongooseConnection: mongoose.connection }),
-    cookie: { maxAge: 3 * 60 * 60 * 1000 } // Session expiration time (3 hour)
-}));
+app.use(bodyParser.json());
 
-// express middleware
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(routes);
+const users = [];
 
-// start database server
-db.once('open', () => {
-  app.listen(PORT, () => {
-    console.log(`API server running on port ${PORT}!`);
-  });
+app.post("/api/signup", (req, res) => {
+  const { email, password, confirmPassword } = req.body;
+
+  // Validate email format (you might want to use a library for more thorough validation)
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return res.status(400).json({ error: "Invalid email format" });
+  }
+
+  const existingUser = users.find((user) => user.email === email);
+  if (existingUser) {
+    return res.status(400).json({ error: "Email already exists" });
+  }
+
+  if (password !== confirmPassword) {
+    return res.status(400).json({ error: "Passwords do not match" });
+  }
+
+  const newUser = { email, password };
+  users.push(newUser);
+
+  res.json({ message: "Sign up successful" });
 });
 
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

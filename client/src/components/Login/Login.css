@@ -1,6 +1,6 @@
 .login-form {
   max-width: 300px;
-  margin: 0 auto;
+  margin: 20% auto;
   padding: 20px;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
@@ -30,7 +30,7 @@
 }
 
 .login-form button:hover {
-  background-color: #ff3434;
+  background-color: #f3893d;
 }
 
 .Signup-form {
@@ -64,5 +64,17 @@
 }
 
 .Signup-form button:hover {
-  background-color: #ff3434;
+  background-color: #f3893d;
+}
+
+.password-input-container {
+  position: relative;
+}
+.eye-icon {
+  width: 10%;
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust as needed */
+  transform: translateY(-50%);
+  cursor: pointer;
 }
