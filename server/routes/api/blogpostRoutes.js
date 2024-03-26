@@ -13,11 +13,6 @@ router.route('/')
   .get(getBlogposts)
   .post(createBlogpost);
 
-// /api/blogposts/:userId
-router
-  .route('/:userId')
-  .get(getUserBlogposts);
-
 // /api/blogposts/:blogpostId
 router
   .route('/:blogpostId')

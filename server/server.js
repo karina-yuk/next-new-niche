@@ -16,12 +16,12 @@ const store = new MongoStore({
   uri: process.env.DB_URI,
   databaseName: 'niche',
   collection: 'sessions',
-})
+});
 
 // Express session middleware
 app.use(
   session({
-  secret: '', // Change this to your own secret key
+  secret: 'applePie', // Change this to your own secret key
   resave: false,
   saveUninitialized: false,
   store: store, // Correct instantiation

@@ -1,4 +1,5 @@
 const { User, Comment, Blogpost } = require('../models');
+const { requireAuth } = require('../utils/authMiddleware');
 
 module.exports = {
   // get all comments
@@ -45,6 +46,7 @@ module.exports = {
   // create a comment
   async createComment(req, res) {
     try {
+      await requireAuth(req, res); // check if user is authenticated
       const user = await User.findOne({ _id: req.body.userId });
       const blogpost = await Blogpost.findOne({ _id: req.body.blogpostId });
       const comment = await Comment.create({ ...req.body, username: user.username, blogpostId: blogpost._id });
@@ -63,6 +65,7 @@ module.exports = {
   // update a comment
   async updateComment(req, res) {
     try {
+      await requireAuth(req, res); // check if user is authenticated
       const comment = await Comment.findOneAndUpdate(
         { _id: req.params.commentId },
         { $set: req.body },
@@ -88,6 +91,7 @@ module.exports = {
   // delete a comment
   async deleteComment(req, res) {
     try {
+      await requireAuth(req, res); // check if user is authenticated
       const comment = await Comment.findOneAndDelete({ _id: req.params.commentId });
       if (!comment) {
         return res.status(404).json({ message: 'Comment not found' });
