@@ -9,8 +9,8 @@ import FeaturePosts from "../FeaturePosts";
 import Testimonial from "../Testimonials";
 import Newsletter from "../Newsletter";
 import Footer from "../Footer";
-import LoginForm from "../LoginForm";
-import SignUpForm from "../SignUpForm";
+import LoginForm from "../Login/LoginForm";
+import SignUpForm from "../Login/SignUpForm";
 import "./WrapperComponent.css";
 
 const WrapperComponent = ({ handleNavClick }) => {

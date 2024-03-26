@@ -30,7 +30,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="Signup-form" onSubmit={handleSubmit}>
       <input
         type="email"
         name="email"
