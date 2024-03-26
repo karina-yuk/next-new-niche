@@ -4,9 +4,9 @@ import React from 'react';
 import './AboutUs.css'; 
 
 
-const AboutUs = ({ }) => {
+const AboutMe = ({ }) => {
   return (
-    <section id="aboutus" className="about-me">
+    <section id="about" className="about-me">
     
     <div className="position-relative d-flex text-center mb-5">
           <h2
@@ -37,7 +37,7 @@ const AboutUs = ({ }) => {
   );
 };
 
-export default AboutUs;
+export default AboutMe;
 
 
 
