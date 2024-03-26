@@ -112,13 +112,14 @@ const Header = ({ handleNavClick }) => {
         </Link>
 
         <Link
-        className={`nav-link ${
-          selectedTab === "testimonial" ? "active" : ""}`}
+          className={`nav-link ${
+            selectedTab === "testimonial" ? "active" : ""
+          }`}
           style={{ cursor: "pointer" }}
           spy={true}
           smooth={true}
           duration={500}
-          onClick={() => handleNavClick('testimonial')}
+          onClick={() => handleNavClick("testimonial")}
         >
           Testimonial
         </Link>
@@ -135,6 +136,28 @@ const Header = ({ handleNavClick }) => {
           }}
         >
           Subscribe
+        </Link>
+
+        <Link
+          className={`nav-link ${selectedTab === "LoginForm" ? "active" : ""}`}
+          style={{ cursor: "pointer" }}
+          spy={true}
+          smooth={true}
+          duration={500}
+          onClick={() => handleNavClick("LoginForm")}
+        >
+          Log In
+        </Link>
+
+        <Link
+          className={`nav-link ${selectedTab === "SignUpForm" ? "active" : ""}`}
+          style={{ cursor: "pointer" }}
+          spy={true}
+          smooth={true}
+          duration={500}
+          onClick={() => handleNavClick("SignUpForm")}
+        >
+          Sign Up
         </Link>
       </nav>
 
