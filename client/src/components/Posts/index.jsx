@@ -61,13 +61,19 @@ const Posts = ({ handleNavClick }) => {
   };
 
   return (
+    
     <section id="post" className="post">
-      <div className={"container "}>
-        <div className="position-relative d-flex text-center mb-5 ">
-          <h2 className={"text-24  fw-600 w-100 mb-0 "}>Uncorked Insights</h2>
+      <div className={"container " }>
+      <div className="position-relative d-flex text-center mb-5 ">
+          <h2
+            className={"text-24  fw-600 w-100 mb-0 " 
+            }
+          >
+            Uncorked Insights
+          </h2>
           <p
             className={
-              "text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 "
+              "text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0 " 
             }
           >
             BLOG POST
@@ -75,35 +81,17 @@ const Posts = ({ handleNavClick }) => {
           </p>
         </div>
 
-        <Slider {...settings}>
-          {post.map((post) => (
-            <div key={post.id} className="card-container">
-              <div className="card">
-                <div className="face face1">
-                  <div className="content">
-                    <img
-                      src={post.src}
-                      alt={post.user}
-                      className="card-image"
-                    />
-                    <h3 className="card-title">{post.title}</h3>
-                  </div>
-                </div>
-                <div className="face face2">
-                  <div className="content">
-                    <p>{post.content}</p>
-                    <a href="#" className="read-more">
-                      Read More
-                    </a>{" "}
-                    {/* Placeholder, ensure it links to the right destination */}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
 
+<Slider {...settings}>
+{post.map((post) => (
+  <div key={post.id} className="card-container"> 
+    <div className="card">
+      <div className="face face1">
+        <div className="content">
+          <img src={post.src} alt={post.user} className="card-image" />
+          <h3 className="card-title">{post.title}</h3>
+        </div>
+      </div>
       <div className="face face2">
         <div className="content">
           <p>{post.content}</p>
@@ -115,6 +103,13 @@ const Posts = ({ handleNavClick }) => {
             </a>
         </div>
       </div>
+    </div>
+  </div>
+))}
+</Slider>
+
+        </div> 
+        
     </section>
   );
 };

@@ -37,7 +37,7 @@ const Header = ({ handleNavClick }) => {
           alt="Profile"
           className="profile-image"
         />
-        <h2>Olivia's Five</h2>
+        <h2>Whine About Wine</h2>
       </div>
       <nav className={`nav flex-column ${!isNavModalOpen ? "" : "open"}`}>
         <Link
