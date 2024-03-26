@@ -69,14 +69,19 @@
   border-radius: 0.25rem;
   margin: 2rem;
   overflow: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  position: relative;
 }
 
 .card-image {
-  width: 700px;
-  height: 300px;
+  width: 750px;
+  height: 330px;
   border-radius: 2%;
   object-fit: cover;
   margin-bottom: 1rem;
+  background-size: cover; 
+  position: relative;
 }
 
 .card-content p,
