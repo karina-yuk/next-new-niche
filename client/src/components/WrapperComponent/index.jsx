@@ -9,6 +9,8 @@ import FeaturePosts from "../FeaturePosts";
 import Testimonial from "../Testimonials";
 import Newsletter from "../Newsletter";
 import Footer from "../Footer";
+import LoginForm from "../LoginForm";
+import SignUpForm from "../SignUpForm";
 import "./WrapperComponent.css";
 
 const WrapperComponent = ({ handleNavClick }) => {
@@ -35,6 +37,12 @@ const WrapperComponent = ({ handleNavClick }) => {
       </Element>
       <Element name="newsletter" style={{ height: "100%" }} id="newsletter">
         <Newsletter handleNavClick={handleNavClick} />
+      </Element>
+      <Element name="LoginForm" style={{ height: "100%" }} id="LoginForm">
+        <LoginForm handleNavClick={handleNavClick} />
+      </Element>
+      <Element name="SignUpForm" style={{ height: "100%" }} id="SignUpForm">
+        <SignUpForm handleNavClick={handleNavClick} />
       </Element>
       <Footer />
     </div>
