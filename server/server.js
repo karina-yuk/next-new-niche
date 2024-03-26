@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const MongoStore = require('connect-mongodb-session')(session);
 const db = require('./config/connection');
 const path = require('path');
+const cors = require('cors');
 
 const routes = require('./routes');
 
@@ -11,22 +12,27 @@ const routes = require('./routes');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-
 const store = new MongoStore({
   uri: process.env.DB_URI,
   databaseName: 'niche',
   collection: 'sessions',
 });
 
+// Enable CORS middleware
+app.use(cors({
+  origin: 'http://localhost:3000' // Allow requests only from this origin
+}));
+
 // Express session middleware
 app.use(
   session({
-  secret: 'applePie', // Change this to your own secret key
-  resave: false,
-  saveUninitialized: false,
-  store: store, // Correct instantiation
-  cookie: { maxAge: 3 * 60 * 60 * 1000 } // Session expiration time (3 hours)
-}));
+    secret: 'applePie', // Change this to your own secret key
+    resave: false,
+    saveUninitialized: false,
+    store: store, // Correct instantiation
+    cookie: { maxAge: 3 * 60 * 60 * 1000 } // Session expiration time (3 hours)
+  })
+);
 
 // express middleware
 app.use(express.urlencoded({ extended: true }));
@@ -39,4 +45,3 @@ db.once('open', () => {
     console.log(`API server running on port ${PORT}!`);
   });
 });
-
