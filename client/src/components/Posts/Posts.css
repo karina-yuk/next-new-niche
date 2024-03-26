@@ -4,11 +4,13 @@
   color: rgb(109, 93, 93);
   padding: 4rem 0;
   height: 100%;
+  
 }
 
 .container {
   max-width: 900px;
   margin: 0 auto;
+  width: 100%;
   padding: 5px 15px;
 }
 
@@ -49,19 +51,22 @@
 }
 
 .card-container {
-  perspective: 1000px; /* Setup for the 3D effect on hover */
+  perspective: 1000px; 
+  
 }
 .container .card {
   position: relative;
   cursor: pointer;
   height: 500px;
-  width: 80%;
+  width: 95%;
   margin: 2 auto; /* Center the card container */
   overflow: hidden;
+  margin: auto;
+  
 }
 .card {
   height: 330px;
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -102,11 +107,17 @@
   background-size: cover; 
   position: relative;
   max-height: 100%;
+  object-fit: cover;
 }
 
 .card-content p,
 .face2 p {
   font-style: italic;
+  color: white;
+  margin-top: 2rem !important;
+  margin-bottom: 7rem !important;
+  margin-left: 2rem !important;
+  margin-right: 2rem !important;
 }
 
 .post-name, .face1 h5 {
@@ -116,9 +127,8 @@
 .card-title,
 .face1 h6 {
   font-size: 1rem;
-  color: #aaa;
+  color: white;
 }
-
 
 .face.face1 {
   height: 350px;
@@ -186,11 +196,20 @@
   .card-container:hover {
     height: auto; /* Height adjusts to content on hover */
   }
+  .text-24 {
+    font-size: 2rem; /* Smaller for mobile devices */
+  }
+  
+  .text-9 {
+    font-size: 0.8rem;
+   
+  }
 }
 
 /* Leave a Comment Button */
 .btn {
   font-size: 1rem !important;
+  color: white;
 }
 
 .btn-primary {
@@ -224,6 +243,7 @@
   border-radius: 50%;
   content: "•";
   font-size: 15px;
+  margin-top: 2rem !important;
 }
 
 .slick-dots li.slick-active button:before {
@@ -237,11 +257,17 @@
   font-size: 24px;
 }
 
-/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .card-container {
+    width: 95%; /* Slightly larger on tablets */
+  }
+}
+
 @media (max-width: 768px) {
-  .testimonial-item {
-    flex-basis: 100%;
-    width: 90%;
-    margin: 1rem auto;
+  .card-container {
+    width: 100%; /* Full width on mobile devices */
+  }
+  .face1, .face2 {
+    width: 100%; /* Ensure cards are fully responsive */
   }
 }

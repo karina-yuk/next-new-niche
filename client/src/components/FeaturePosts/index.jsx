@@ -222,7 +222,7 @@ const FeaturePosts = () => {
           {/* Heading */}
           <div className="position-relative d-flex text-center mb-5">
             <h2 className="text-24 fw-600 w-100 mb-0 text-light opacity-4">
-              Currated Corcks
+              Currated Corks
             </h2>
             <p className="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">
               FEATURED POSTS
