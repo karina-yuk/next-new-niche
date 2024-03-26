@@ -25,8 +25,7 @@ const Events = ({ Header, darkTheme }) => {
         "https://facts.net/wp-content/uploads/2023/07/15-facts-about-charleston-wine-food-festival-1690069801.jpg",
       url: "https://charlestonwineandfood.com/",
       title: "Charleston Wine & Food Festival",
-      description:
-        "The Charleston Wine & Food Festival: where chefs, painters, and musicians swap their tools for aprons and corkscrews. It's not just a feast for your taste buds; it's a banquet for your soul. Here, fine dining meets fine art, all served with a side of Southern charm. Forget ordinary festivals—this is where gastronomy and gallery walk hand in hand, proving Charleston knows how to throw a party with palette and palate!",
+      description: "Where chefs, painters, and musicians swap their tools for aprons and corkscrews. It's not just a feast for your taste buds; it's a banquet for your soul. Here, fine dining meets fine art, all served with a side of Southern charm. Forget ordinary festivals—this is where gastronomy and gallery walk hand in hand, proving Charleston knows how to throw a party with palette and palate!"
     },
     {
       imageUrl:
@@ -143,14 +142,19 @@ const Events = ({ Header, darkTheme }) => {
         <div className="wrapper" ref={wrapperRef}>
           <div className="items">
             {events.map((event, index) => (
-              <div
-                key={index}
-                className="item2"
-                tabIndex="0"
-                onClick={() => handleClick(index)}
-                style={{ backgroundImage: `url(${event.imageUrl})` }}
-              >
-                {/* Conditionally render item-content based on activeItem */}
+              <div key={index} 
+              className="item" 
+              tabIndex="0" 
+              onClick={() => handleClick(index)}  
+              style={{ 
+                backgroundImage: `
+                  linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 20%),
+                  linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 35%),
+                  url(${event.imageUrl})
+                `,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}>
                 {activeItem === index && (
                   <div className="item-content">
                     <a

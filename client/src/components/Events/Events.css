@@ -83,23 +83,37 @@
   height: 60vh;
 }
 
+.event-title {
+  color: white; 
+  text-decoration: none;
+}
+
 .event-description {
+ 
   font-size: 0.7rem;
   text-align: center;
-  text-shadow: 2px 2px 10px rgb(2, 7, 14);
-  margin-top: 40%;
-  margin-left: 3%;
-  margin-right: 3%;
+    margin-top: 50%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 2%;   
 }
-.items {
+
+.items{
   display: flex;
   gap: 0.4rem;
   perspective: calc(var(--index) * 35);
 }
 
-.item2 {
+.item-content {
+  position: absolute;
+  z-index: 3; /* Above the overlay */
+  /* Ensure high contrast text color */
+  padding: 1rem; /* Optional: for padding around the text */
+}
+.item{
+  
   width: calc(var(--index) * 3);
-  height: calc(var(--index) * 12);
+  height: calc(var(--index) * 14);
   background-color: #222;
   background-size: cover;
   background-position: center;
@@ -108,7 +122,7 @@
   transition: transform 1.25s var(--transition), filter 3s var(--transition),
     width 1.25s var(--transition);
   will-change: transform, filter, rotateY, width;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+ 
 }
 
 .item2:before,
@@ -122,6 +136,8 @@
 
 .item2:after {
   left: calc(var(--index) * -1);
+  backdrop-filter: blur(2px); /* This will blur the part of the image behind the text */
+  
 }
 
 .items .item2:hover {
