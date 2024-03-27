@@ -1,12 +1,15 @@
 
+<img width="1277" alt="Screen 1" src="https://github.com/Olivia-the-G/next-new-niche/assets/137020431/3f8ce2d3-eec0-463e-ba73-a2636f311459">
+
 # Whine About Wine
 
 ## Description
-..............
-.....................
-............................
-.................................
-......................................
+"Whine About Wine" is a comprehensive web-based platform designed to enhance wine discovery and appreciation through the integration of advanced web technologies. Built using React, this single-page application delivers a responsive and interactive user experience, adapting seamlessly across various devices. The backend architecture relies on Node.js and Express.js for efficient server-side processing, coupled with MongoDB for a scalable and flexible database solution capable of handling complex data structures related to wines, user profiles, and reviews.
+
+Key features include user authentication implemented via bcrypt for secure login processes, and a dynamic content presentation enabled by isotope-layout for filtering projects and slick carousel for smooth slider transitions. The platform utilizes Typewriter Effect for engaging animations, and Bootstrap Modal for streamlined, user-friendly dialogues. "Whine About Wine" stands out by offering a platform where users can explore wines, share insights, and participate in a community, backed by a robust technical framework that ensures reliability, performance, and ease of use.
+
+
+
 
 
 # Table of Contents
