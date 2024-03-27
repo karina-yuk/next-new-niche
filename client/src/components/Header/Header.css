@@ -7,8 +7,9 @@
 }
 
 .h2 {
-  font-size: 2rem;
-  font-weight: 500 !important;
+  font-size: calc(1.325rem + 0.1vw);
+  font-weight: 700;
+  text-align: center;
 }
 /* Sticky Header */
 .sticky {
@@ -94,25 +95,28 @@
   }
 }
 
-.nav-link {
-  
-  color: white;
-  margin: 0.5rem 0;
-  transition: color 0.2s ease;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 18px !important;
-  
+
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 3rem;
+  list-style: none;
+  margin-top: 7rem;
 }
 
 .nav-link {
+  
   color: white;
-  margin: 0.2rem 0;
+  margin: 0.1rem 0;
   transition: color 0.2s ease;
   text-align: center;
-  padding: 3px 0;
+  padding: 0.5px 0;
   font-size: 18px !important;
 }
+
+
 
 .nav-link:hover {
   color:  #64ffd8;
