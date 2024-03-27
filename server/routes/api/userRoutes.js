@@ -35,6 +35,6 @@ router
 // /api/users/logout
 router
   .route('/logout')
-  .get(logoutUser);
+  .post(logoutUser);
 
 module.exports = router;

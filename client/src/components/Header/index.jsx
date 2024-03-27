@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import "./Header.css";
 
 
-const Header = ({ isLoggedIn, handleNavClick, handleLogout }) => {      
+const Header = ({ isLoggedIn, handleNavClick }) => {      
   const [isSticky, setIsSticky] = useState(false);
   const [isNavModalOpen, setIsNavModalOpen] = useState(false);
   const [selectedTab, setSelectedTab] = useState("home");
@@ -25,12 +25,6 @@ const Header = ({ isLoggedIn, handleNavClick, handleLogout }) => {
     window.addEventListener("scroll", checkScrollTop);
     return () => window.removeEventListener("scroll", checkScrollTop);
   }, []);
-
-  const handleLogoutClick = () => {
-    handleLogout(); // Call the handleLogout function passed as a prop
-    };
-
-  isLoggedIn = localStorage.getItem("isLoggedIn");
 
   return (
     <header
