@@ -2,16 +2,23 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import Modal from 'react-bootstrap/Modal';
+import LoginForm from '../Login/LoginForm';
+import SignUpForm from '../Login/SignUpForm';
 import "./Header.css";
 
-
-const Header = ({ isLoggedIn, handleNavClick }) => {      
+const Header = ({ isLoggedIn, handleNavClick }) => {
   const [isSticky, setIsSticky] = useState(false);
-  const [isNavModalOpen, setIsNavModalOpen] = useState(false);
   const [selectedTab, setSelectedTab] = useState("events");
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showSignUpModal, setShowSignUpModal] = useState(false);
 
-  // This function will toggle the visibility of the navigation modal in mobile view
-  const toggleNav = () => setIsNavModalOpen(!isNavModalOpen);
+  const handleLoginClose = () => setShowLoginModal(false);
+  const handleLoginShow = () => setShowLoginModal(true);
+
+  const handleSignUpClose = () => setShowSignUpModal(false);
+  const handleSignUpShow = () => setShowSignUpModal(true);
+  const [isNavModalOpen, setIsNavModalOpen] = useState(false);
 
   useEffect(() => {
     const checkScrollTop = () => {
@@ -84,7 +91,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
           Blog Post
         </Link>
 
-        <Link
+        <Link 
           className={`nav-link ${selectedTab === "events" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
@@ -98,7 +105,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
           Events
         </Link>
 
-        <Link
+        <Link 
           className={`nav-link ${selectedTab === "featurepost" ? "active" : ""
             }`}
           style={{ cursor: "pointer" }}
@@ -158,39 +165,32 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
           </Link>
         ) : (
           <Link
-            className={`nav-link ${selectedTab === "LoginForm" ? "active" : ""}`}
-            style={{ cursor: "pointer" }}
-            spy={true}
-            smooth={true}
-            duration={500}
-            onClick={() => {
-              setSelectedTab("LoginForm");
-              handleNavClick("LoginForm");
-            }}
-          >
-            Log In
-          </Link>
+          to="#login"
+          style={{ cursor: "pointer" }}
+          className={`nav-link ${selectedTab === "LoginForm" ? "active" : ""}`}
+          onClick={(e) => {
+            e.preventDefault();
+            handleLoginShow();
+          }}
+        >
+          Log In
+        </Link>
         )}
         {!isLoggedIn && (
-          <Link
-            className={`nav-link ${selectedTab === "SignUpForm" ? "active" : ""}`}
-            style={{ cursor: "pointer" }}
-            spy={true}
-            smooth={true}
-            duration={500}
-            onClick={() => {
-              setSelectedTab("SignUpForm");
-              handleNavClick("SignUpForm");
-            }}
-          >
-            Sign Up
-          </Link>
+        <Link
+        to="#signup"
+        style={{ cursor: "pointer" }}
+        className={`nav-link ${selectedTab === "SignUpForm" ? "active" : ""}`}
+        onClick={(e) => {
+          e.preventDefault();
+          handleSignUpShow();
+        }}
+      >
+        Sign Up
+      </Link>
         )}
 
-
-
       </nav>
-
       <div className="social-links">
         <a
           href="https://linkedin.com"
@@ -233,6 +233,25 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
           <i className="fab fa-instagram"></i>
         </a>
       </div>
+       {/* Login Modal */}
+       <Modal show={showLoginModal} onHide={handleLoginClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Log In</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <LoginForm />
+        </Modal.Body>
+      </Modal>
+
+      {/* Sign Up Modal */}
+      <Modal show={showSignUpModal} onHide={handleSignUpClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Sign Up</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <SignUpForm />
+        </Modal.Body>
+      </Modal>
     </header>
   );
 };
