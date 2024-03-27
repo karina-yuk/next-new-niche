@@ -234,7 +234,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
         </a>
       </div>
        {/* Login Modal */}
-       <Modal show={showLoginModal} onHide={handleLoginClose}>
+       <Modal show={showLoginModal} onHide={handleLoginClose} onSubmit={handleLoginClose}>
         <Modal.Header closeButton>
           <Modal.Title>Log In</Modal.Title>
         </Modal.Header>
