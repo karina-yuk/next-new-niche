@@ -4,7 +4,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import "./Header.css";
 
-const Header = ({ isLoggedIn, handleNavClick, handleLogout }) => {
+
+const Header = ({ isLoggedIn, handleNavClick, handleLogout }) => {      
   const [isSticky, setIsSticky] = useState(false);
   const [isNavModalOpen, setIsNavModalOpen] = useState(false);
   const [selectedTab, setSelectedTab] = useState("home");
@@ -29,7 +30,8 @@ const Header = ({ isLoggedIn, handleNavClick, handleLogout }) => {
     handleLogout(); // Call the handleLogout function passed as a prop
     };
 
-    console.log("isLoggedIn:" + isLoggedIn);
+  isLoggedIn = localStorage.getItem("isLoggedIn");
+
   return (
     <header
       className={`header bg-dark text-white vh-100 fix-to-left ${isSticky ? "sticky" : ""
@@ -143,7 +145,6 @@ const Header = ({ isLoggedIn, handleNavClick, handleLogout }) => {
           Subscribe
         </Link>
         
-        
         {isLoggedIn ? (
           <Link
             className={`nav-link ${selectedTab === "Home" ? "active" : ""}`}
@@ -154,7 +155,7 @@ const Header = ({ isLoggedIn, handleNavClick, handleLogout }) => {
             onClick={() => {
               setSelectedTab("Home");
               handleNavClick("Home");
-              handleLogoutClick("Home");
+              handleLogoutClick();
             }}
           >Log Out
           </Link>

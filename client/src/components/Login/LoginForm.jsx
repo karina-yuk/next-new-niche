@@ -22,7 +22,8 @@ const Login = () => {
         },
         body: JSON.stringify(formData),
       });
-      console.log("responseOK: " + response.ok);
+      console.log("loginResponse: " + response.ok);
+      localStorage.setItem("isLoggedIn", response.ok);
       if (!response.ok) {
         throw new Error("Login failed");
       }
@@ -44,6 +45,8 @@ const Login = () => {
         },
         body: JSON.stringify({ isLoggedIn: true }),
       });
+      console.log("sessionResponse: " + response.ok);
+      localStorage.setItem("sessionRes", response.ok);
 
       if (!sessionResponse.ok) {
         throw new Error("Failed to update session");
