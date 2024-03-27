@@ -22,6 +22,10 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  confirmPassword: {
+    type: String,
+    default: this.password,
+  },
   subscribed: {
     type: Boolean,
     default: false,

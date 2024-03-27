@@ -60,13 +60,13 @@ async loginUser(req, res) {
  // create a user
 async createUser(req, res) {
   try {
-    const { username, email, password } = req.body;
+    const { username, email, password, confirmPassword } = req.body;
     
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10); // 10 is the salt rounds
     
     // Create user with hashed password
-    const user = await User.create({ username, email, password: hashedPassword });
+    const user = await User.create({ username, email, password: hashedPassword, confirmPassword});
     
     res.json({ message: 'New user created', user });
   } catch (err) {
