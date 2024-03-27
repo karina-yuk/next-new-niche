@@ -14,14 +14,21 @@ const SignUpForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/users/signup", {
-        // Changed endpoint to /api/signup
+      const response = await fetch("http://localhost:3001/api/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
+
+      // Clear form data
+      setFormData({
+        username: "",
+        email: "",
+        password: "",
+      });
+
       const data = await response.json();
       // Handle success or error response
     } catch (error) {
