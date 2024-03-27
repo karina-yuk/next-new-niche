@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 
+
 const SignUpForm = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -42,39 +43,51 @@ const SignUpForm = () => {
   };
 
   return (
-    <form className="Signup-form" onSubmit={handleSubmit}>
+    <form className="signup-form" onSubmit={handleSubmit}>
+    {/* Email Field */}
+    <div className="mb-3">
       <input
         type="email"
         name="email"
+        className="form-control"
         value={formData.email}
         onChange={handleChange}
         placeholder="Email"
         required
       />
-      <div className="password-input-container">
-        <input
-          // type={showPassword ? "text" : "password"}
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          placeholder="Password"
-          required
-        />
-      
-      </div>
-      <div className="password-input-container">
-        <input
-          // type={showConfirmPassword ? "text" : "password"}
-          name="confirmPassword"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-          placeholder="Confirm Password"
-          required
-        />
-     
-      </div>
-      <button type="submit">Sign Up</button>
-    </form>
+    </div>
+  
+    {/* Password Field */}
+    <div className="mb-3">
+      <input
+        type="password"
+        name="password"
+        className="form-control"
+        value={formData.password}
+        onChange={handleChange}
+        placeholder="Password"
+        required
+      />
+    </div>
+  
+    {/* Confirm Password Field */}
+    <div className="mb-3">
+      <input
+        type="password"
+        name="confirmPassword"
+        className="form-control"
+        value={formData.confirmPassword}
+        onChange={handleChange}
+        placeholder="Confirm Password"
+        required
+      />
+    </div>
+  
+    {/* Submit Button */}
+    <div className="text-center">
+      <button type="submit" className="btn btn-primary">Sign Up</button>
+    </div>
+  </form>
   );
 };
 
