@@ -6,18 +6,10 @@ const MongoStore = require('connect-mongodb-session')(session);
 const db = require('./config/connection');
 const path = require('path');
 const cors = require('cors');
-
-const bodyParser = require("body-parser");
+const routes = require('./routes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-app.use(bodyParser.json());
-
-const users = [];
-
-app.post("/api/signup", (req, res) => {
-  const { email, password, confirmPassword } = req.body;
 
 const store = new MongoStore({
   uri: process.env.DB_URI,
