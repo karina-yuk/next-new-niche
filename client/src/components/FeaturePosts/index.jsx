@@ -175,11 +175,13 @@ const FeaturePosts = () => {
       industry: "Art & Design",
       date: "November 14, 2019",
       thumbImage: "../src/img/store-wine1.png",
-      sliderImages: ["../src/store-wine.jpeg", "../src/img/store-wine-2.jpeg"],
+      sliderImages: [
+        "../src/img/Wine_Storage.jpeg",
+        "../src/img/store-wine-2.jpeg",
+      ],
       categories: ["*", filters.OTHER],
     },
   ];
-
 
   // initialize an Isotope object with configs
   useEffect(() => {
