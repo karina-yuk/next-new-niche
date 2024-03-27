@@ -14,7 +14,7 @@ const FeaturePosts = () => {
   const filters = {
     FOODWINE: "Food and Wine Pairing",
     CHEESEWINE: "Cheese and Wine Pairing",
-    OTHER: "Random Articles",
+    OTHER: "Wines Specials",
   };
 
   const projectsData = [
@@ -167,7 +167,7 @@ const FeaturePosts = () => {
 
     {
       id: 19,
-      title: " How to store your wine properly",
+      title: "How to store your wine",
       projectInfo:
         "The golden rule of storing wine, whether it’s for next month or next decade, is to keep it somewhere (1) cool, (2) dark, and (3) away from temperature fluctuations, and (4) away from vibrations. Pro Tip: Wine bottles with corks in them should be stored on their side so that the cork can remain moist and sealed. Wines with screw caps can be stored upright.",
       client: "Admin",
