@@ -91,7 +91,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
           Blog Post
         </Link>
 
-        <Link
+        <Link 
           className={`nav-link ${selectedTab === "events" ? "active" : ""}`}
           style={{ cursor: "pointer" }}
           spy={true}
@@ -105,7 +105,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
           Events
         </Link>
 
-        <Link
+        <Link 
           className={`nav-link ${selectedTab === "featurepost" ? "active" : ""
             }`}
           style={{ cursor: "pointer" }}
@@ -166,6 +166,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
         ) : (
           <Link
           to="#login"
+          style={{ cursor: "pointer" }}
           className={`nav-link ${selectedTab === "LoginForm" ? "active" : ""}`}
           onClick={(e) => {
             e.preventDefault();
@@ -178,6 +179,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
         {!isLoggedIn && (
         <Link
         to="#signup"
+        style={{ cursor: "pointer" }}
         className={`nav-link ${selectedTab === "SignUpForm" ? "active" : ""}`}
         onClick={(e) => {
           e.preventDefault();
