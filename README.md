@@ -1,14 +1,12 @@
 
 <img width="1277" alt="Screen 1" src="https://github.com/Olivia-the-G/next-new-niche/assets/137020431/3f8ce2d3-eec0-463e-ba73-a2636f311459">
 
-# Whine About Wine
+# Whine About Wine [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square&link=https%3A%2F%2Fopensource.org%2Flicense%2Fmit%2F)](https://opensource.org/license/mit/)
 
 ## Description
 "Whine About Wine" is a comprehensive web-based platform designed to enhance wine discovery and appreciation through the integration of advanced web technologies. Built using React, this single-page application delivers a responsive and interactive user experience, adapting seamlessly across various devices. The backend architecture relies on Node.js and Express.js for efficient server-side processing, coupled with MongoDB for a scalable and flexible database solution capable of handling complex data structures related to wines, user profiles, and reviews.
 
 Key features include user authentication implemented via bcrypt for secure login processes, and a dynamic content presentation enabled by isotope-layout for filtering projects and slick carousel for smooth slider transitions. The platform utilizes Typewriter Effect for engaging animations, and Bootstrap Modal for streamlined, user-friendly dialogues. "Whine About Wine" stands out by offering a platform where users can explore wines, share insights, and participate in a community, backed by a robust technical framework that ensures reliability, performance, and ease of use.
-
-
 
 
 
@@ -97,7 +95,7 @@ Key features include user authentication implemented via bcrypt for secure login
 
 ## Deployment
 
-- Heroku URL: https://..................herokuapp.com/
+- Render URL: https://..................herokuapp.com/
 
 - GitHub URL: https://github.com/Olivia-the-G/next-new-niche
 
@@ -118,46 +116,44 @@ Key features include user authentication implemented via bcrypt for secure login
 
 ## Contributing
 
-- Contributions to Whine About Wine are highly appreciated. If you have suggestions for improvement or have found any issues, please open an issue or submit a pull request with your proposed changes. Code contributions should follow the established patterns and come with meaningful commit messages.
+Contributions to Whine About Wine are highly appreciated. If you have suggestions for improvement or have found any issues, please open an issue or submit a pull request with your proposed changes. Code contributions should follow the established patterns and come with meaningful commit messages.
 
 
 ## Authors
 
-- Developed by a group of passionate developers committed to creating efficient and user-friendly software solutions.
+Developed by a group of passionate developers committed to creating efficient and user-friendly software solutions.
  - Sam Gostanian
  - Harry MacMillan
  - Olivia Gowan
  - Stanislav Morozan
  - Karina Li
 
-
-
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - [See Here](https://opensource.org/license/mit/)
 
 
 ## Contacts
 
-- Email: ......@gmail.com
+### Karina Li
+- Email: karina.yukting.li@gmail.com
 - GitHub: https://github.com/karina-yuk
-- LinkedIn: https://www.linkedin.com/in/......../
 
+### Sam Gostanian
 - Email: .....@gmail.com
 - GitHub: https://github.com/Samm1911
-- LinkedIn: https://www.linkedin.com/in/......../
 
-- Email: .....@gmail.com
+### Olivia Gowan
+- Email: olivia.a.gowan@gmail.com
 - GitHub: https://github.com/Olivia-the-G
-- LinkedIn: https://www.linkedin.com/in/......../
 
+### Harry MacMillian
 - Email: .....@gmail.com
 - GitHub: https://github.com/harrymac1972
-- LinkedIn: https://www.linkedin.com/in/......../
 
-- Email: .....@gmail.com
+### Stanislav Morozan
+- Email: stanislav.morozan@gmail.com
 - GitHub: https://github.com/Stas-Cell-Max
-- LinkedIn: https://www.linkedin.com/in/......../
 
 ## Acknowledgments
 
