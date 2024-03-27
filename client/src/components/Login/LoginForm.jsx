@@ -39,6 +39,8 @@ const Login = () => {
         password: "",
       });
 
+      // handleLoginClose();
+
       const data = await response.json();
 
       

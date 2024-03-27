@@ -4,6 +4,7 @@ import React, { useState } from "react";
 
 const SignUpForm = () => {
   const [formData, setFormData] = useState({
+    username: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -20,7 +21,7 @@ const SignUpForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3001/api/users/login", {
+      const response = await fetch("http://localhost:3001/api/users/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,6 +34,7 @@ const SignUpForm = () => {
         username: "",
         email: "",
         password: "",
+        confirmPassword: "",
       });
 
       const data = await response.json();
@@ -44,6 +46,19 @@ const SignUpForm = () => {
 
   return (
     <form className="signup-form" onSubmit={handleSubmit}>
+    {/* Username Field */}
+    <div className="mb-3">
+      <input
+        type="username"
+        name="username"
+        className="form-control"
+        value={formData.username}
+        onChange={handleChange}
+        placeholder="Username"
+        required
+      />
+    </div>
+    
     {/* Email Field */}
     <div className="mb-3">
       <input
