@@ -29,6 +29,7 @@ const Header = ({ isLoggedIn, handleNavClick, handleLogout }) => {
     handleLogout(); // Call the handleLogout function passed as a prop
     };
 
+    console.log("isLoggedIn:" + isLoggedIn);
   return (
     <header
       className={`header bg-dark text-white vh-100 fix-to-left ${isSticky ? "sticky" : ""
@@ -141,7 +142,8 @@ const Header = ({ isLoggedIn, handleNavClick, handleLogout }) => {
         >
           Subscribe
         </Link>
-
+        
+        
         {isLoggedIn ? (
           <Link
             className={`nav-link ${selectedTab === "Home" ? "active" : ""}`}

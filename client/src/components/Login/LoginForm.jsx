@@ -22,7 +22,7 @@ const Login = () => {
         },
         body: JSON.stringify(formData),
       });
-
+      console.log("responseOK: " + response.ok);
       if (!response.ok) {
         throw new Error("Login failed");
       }
