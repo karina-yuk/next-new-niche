@@ -18,7 +18,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(54, 65, 65, 0.7); /* Dark overlay; adjust opacity as needed */
+ /* Dark overlay; adjust opacity as needed */
   z-index: 0;
 }
 
