@@ -9,7 +9,7 @@ import "./Header.css";
 
 const Header = ({ isLoggedIn, handleNavClick }) => {
   const [isSticky, setIsSticky] = useState(false);
-  const [selectedTab, setSelectedTab] = useState("events");
+  const [selectedTab, setSelectedTab] = useState("home");
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSignUpModal, setShowSignUpModal] = useState(false);
 

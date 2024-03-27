@@ -42,7 +42,6 @@ Key features include user authentication implemented via bcrypt for secure login
 - **Interactive Sliders**: Slider functionality for a dynamic way to display content.
 - **Contact Form**: An interactive form that allows potential employers or clients to reach out directly through the website.
 - **User Authentication**
--
 
 ## Technologies Used
 
@@ -50,9 +49,6 @@ Key features include user authentication implemented via bcrypt for secure login
 - Backend: [ Node.js, Express.js, JavaScript]
 - Database: [MongoDB, Mongoose]
 - Additional: [bcrypt, Typewriter Effect,React-scroll, Isotope-layout, Slick Carousel Slider, Bootstrap Modal ]
-- 
-- 
-- 
 
 # Getting Started
 
