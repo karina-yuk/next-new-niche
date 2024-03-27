@@ -161,3 +161,8 @@ This project is licensed under the MIT License - [See Here](https://opensource.o
 - Appreciation for the open-source community for providing the tools and libraries that made this project possible.
 - Gratitude to the team members for their hard work, innovative ideas, and collaborative spirit that drove the project to success.
 - Thanks to the early users who tested the application and provided constructive feedback, helping us to improve user experience and functionality.
+
+  
+<img width="1262" alt="Screen 2" src="https://github.com/Olivia-the-G/next-new-niche/assets/137020431/93027596-c014-45c5-914c-aff658071dff">
+
+
