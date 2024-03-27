@@ -140,7 +140,7 @@ This project is licensed under the MIT License - [See Here](https://opensource.o
 - GitHub: https://github.com/karina-yuk
 
 ### Sam Gostanian
-- Email: .....@gmail.com
+- Email: s_gostanian@hotmail.com
 - GitHub: https://github.com/Samm1911
 
 ### Olivia Gowan
