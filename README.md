@@ -140,23 +140,23 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Contacts
 
 - Email: ......@gmail.com
-- GitHub: https://github.com/Karina
+- GitHub: https://github.com/karina-yuk
 - LinkedIn: https://www.linkedin.com/in/......../
 
 - Email: .....@gmail.com
-- GitHub: https://github.com/Sam
+- GitHub: https://github.com/Samm1911
 - LinkedIn: https://www.linkedin.com/in/......../
 
 - Email: .....@gmail.com
-- GitHub: https://github.com/Olivia
+- GitHub: https://github.com/Olivia-the-G
 - LinkedIn: https://www.linkedin.com/in/......../
 
 - Email: .....@gmail.com
-- GitHub: https://github.com/Harry
+- GitHub: https://github.com/harrymac1972
 - LinkedIn: https://www.linkedin.com/in/......../
 
 - Email: .....@gmail.com
-- GitHub: https://github.com/Stas
+- GitHub: https://github.com/Stas-Cell-Max
 - LinkedIn: https://www.linkedin.com/in/......../
 
 ## Acknowledgments
