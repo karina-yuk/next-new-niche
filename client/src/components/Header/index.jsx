@@ -32,12 +32,15 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
         }`}
     >
       <div className="profile-container">
+      <div className="shadow"> 
         <img
           src="https://i.pinimg.com/564x/7f/4b/77/7f4b77922662e577a5202aea3d70592a.jpg"
           alt="Profile"
           className="profile-image"
         />
-        <h2>Olivia's Five</h2>
+        <p className="fw-bold fs-4">Whine About Wine</p>
+
+        </div>
       </div>
       <nav className={`nav flex-column ${!isNavModalOpen ? "" : "open"}`}>
         <Link
@@ -107,7 +110,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
             handleNavClick("featurepost");
           }}
         >
-          Feature Blog Post
+          Feature Post
         </Link>
 
         <Link
@@ -190,7 +193,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
 
       <div className="social-links">
         <a
-          href="https://linkedin.com/in/stanislavmorozan"
+          href="https://linkedin.com"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
@@ -198,7 +201,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
           <i className="fab fa-linkedin-in"></i>
         </a>
         <a
-          href="https://github.com/Stas-Cell-Max"
+          href="https://github.com"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
@@ -206,7 +209,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
           <i className="fab fa-github"></i>
         </a>
         <a
-          href="https://facebook.com/stas.moozan"
+          href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
@@ -214,7 +217,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
           <i className="fab fa-facebook-f"></i>
         </a>
         <a
-          href="https://twitter.com/yourusername"
+          href="https://twitter.com"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
@@ -222,7 +225,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
           <i className="fab fa-twitter"></i>
         </a>
         <a
-          href="https://instagram.com/stas_moozan"
+          href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"
