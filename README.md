@@ -1,4 +1,6 @@
 
+<img width="1277" alt="Screen 1" src="https://github.com/Olivia-the-G/next-new-niche/assets/137020431/3f8ce2d3-eec0-463e-ba73-a2636f311459">
+
 # Whine About Wine
 
 ## Description
@@ -7,6 +9,9 @@
 ............................
 .................................
 ......................................
+
+
+
 
 
 # Table of Contents
