@@ -31,12 +31,12 @@ module.exports = {
 // Login route
 async loginUser(req, res) {
   try {
-    const { email, password } = req.body; // Extract email and password from request body
+    const { username, email, password } = req.body; // Extract email and password from request body
 
     // Check if user exists
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ username, email });
     if (!user) {
-      return res.status(400).json({ msg: 'Invalid email' });
+      return res.status(400).json({ msg: 'Invalid username or email' });
     }
 
     // Validate password
@@ -75,22 +75,33 @@ async createUser(req, res) {
 },
 
 
-  // update a user
-  async updateUser(req, res) {
-    try {
-      const user = await User.findOneAndUpdate({ _id: req.params.userId }, req.body, {
-        new: true,
-        runValidators: true,
-      });
-
-      if (!user) {
-        return res.status(404).json({ message: 'User not found' });
-      }
-      res.json({ message: 'User updated', user});
-    } catch (err) {
-      res.status(500).json(err);
+// update a user
+async updateUser(req, res) {
+  try {
+    // Check if there's a password in the request body
+    if (req.body.password) {
+      // Hash the password
+      req.body.password = await bcrypt.hash(req.body.password, 10);
     }
-  },
+
+    // Update the user in the database
+    const user = await User.findOneAndUpdate({ _id: req.params.userId }, req.body, {
+      new: true,
+      runValidators: true,
+    });
+
+    // Check if the user exists
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Send the updated user object in the response
+    res.json({ message: 'User updated', user});
+  } catch (err) {
+    res.status(500).json(err);
+  }
+},
+
 
   // delete a user and their blogposts
   async deleteUser(req, res) {
