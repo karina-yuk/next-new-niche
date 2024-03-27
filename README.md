@@ -165,4 +165,12 @@ This project is licensed under the MIT License - [See Here](https://opensource.o
   
 <img width="1262" alt="Screen 2" src="https://github.com/Olivia-the-G/next-new-niche/assets/137020431/93027596-c014-45c5-914c-aff658071dff">
 
+<img width="1271" alt="Screen 5" src="https://github.com/Olivia-the-G/next-new-niche/assets/137020431/1a471ea6-20db-4981-93cc-aee125c7db4b">
+
+<img width="1270" alt="Screen 4" src="https://github.com/Olivia-the-G/next-new-niche/assets/137020431/937f684f-b121-4d81-b1dd-55dc38439ae1">
+
+<img width="1265" alt="Screen 3" src="https://github.com/Olivia-the-G/next-new-niche/assets/137020431/8938107c-c683-4d66-aa1e-7925f160a7ee">
+
+<img width="1175" alt="1A" src="https://github.com/Olivia-the-G/next-new-niche/assets/137020431/3c8be7c0-1689-4bbe-96e0-30b9bf590384">
+
 
