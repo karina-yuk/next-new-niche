@@ -1,17 +1,28 @@
 
 // authMiddleware.js
+const session = require('express-session');
 
-function requireAuth(req, res, next) {
-    if (req.session && req.session.user) {
-        // User is authenticated, proceed to next middleware/route handler
-        next();
-    } else {
-        // User is not authenticated, redirect to login page or send unauthorized response
-        res.status(401).send('Unauthorized');
+async function requireAuth(req, res, next) {
+    try {
+        const isAuthenticated = await checkUserAuthentication(req);
+        
+        if (isAuthenticated) {
+            // User is authenticated, proceed to next middleware/route handler
+            next();
+        } else {
+            res.status(401).send('Unauthorized');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).send('Internal Server Error');
     }
+};
+
+async function checkUserAuthentication(req) {
+    return req.session && req.session.user ? true : false;
 }
 
-module.exports = requireAuth;
+module.exports = { requireAuth };
 
 
 // **************************************

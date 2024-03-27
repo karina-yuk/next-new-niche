@@ -1,24 +1,37 @@
+
 const express = require('express');
 const session = require('express-session');
 const mongoose = require('mongoose');
-// new MongoStore = require('connect-mongo')(session);
+const MongoStore = require('connect-mongodb-session')(session);
 const db = require('./config/connection');
 const path = require('path');
-
+const cors = require('cors');
 const routes = require('./routes');
 
-// port
-const PORT = process.env.PORT || 3001;
 const app = express();
+const PORT = process.env.PORT || 3001;
+
+const store = new MongoStore({
+  uri: process.env.DB_URI,
+  databaseName: 'niche',
+  collection: 'sessions',
+});
+
+// Enable CORS middleware
+app.use(cors({
+  origin: 'http://localhost:3000' // Allow requests only from this origin
+}));
 
 // Express session middleware
-app.use(session({
-    secret: 'your_secret_key', // Change this to your own secret key
+app.use(
+  session({
+    secret: 'applePie', // Change this to your own secret key
     resave: false,
     saveUninitialized: false,
-    // store: new MongoStore({ mongooseConnection: mongoose.connection }),
-    cookie: { maxAge: 3 * 60 * 60 * 1000 } // Session expiration time (3 hour)
-}));
+    store: store, // Correct instantiation
+    cookie: { maxAge: 3 * 60 * 60 * 1000 } // Session expiration time (3 hours)
+  })
+);
 
 // express middleware
 app.use(express.urlencoded({ extended: true }));

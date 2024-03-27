@@ -1,4 +1,5 @@
 const { User, Blogpost } = require('../models');
+const { requireAuth } = require('../utils/authMiddleware');
 
 module.exports = {
   // get all blogposts
@@ -12,19 +13,19 @@ module.exports = {
   },
 
   // get all blogposts by a user
-  async getUserBlogposts(req, res) {
-    try {
-      const user = await User.findOne({ _id: req.params.userId });
-      if (!user) {
-        return res.status(404).json({ message: 'User not found' });
-      }
+  // async getUserBlogposts(req, res) {
+  //   try {
+  //     const user = await User.findOne({ _id: req.params.userId });
+  //     if (!user) {
+  //       return res.status(404).json({ message: 'User not found' });
+  //     }
 
-      const blogposts = await Blogpost.find({ userId: req.params.userId });
-      res.json(blogposts);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  },
+  //     const blogposts = await Blogpost.find({ userId: req.params.userId });
+  //     res.json(blogposts);
+  //   } catch (err) {
+  //     res.status(500).json(err);
+  //   }
+  // },
 
   // get single blogpost
   async getSingleBlogpost(req, res) {
@@ -45,8 +46,7 @@ module.exports = {
 // create a blogpost
 async createBlogpost(req, res) {
   try {
-    const user = await User.findOne({ _id: req.body.userId });
-    const blogpost = await Blogpost.create({...req.body, username: user.username});
+    const blogpost = await Blogpost.create({...req.body});
     res.json({ message: 'New blogpost created', blogpost });
   } catch (err) {
     console.log('Error:', err);

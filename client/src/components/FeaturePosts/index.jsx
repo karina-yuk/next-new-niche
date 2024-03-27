@@ -14,7 +14,7 @@ const FeaturePosts = () => {
   const filters = {
     FOODWINE: "Food and Wine Pairing",
     CHEESEWINE: "Cheese and Wine Pairing",
-    OTHER: "Random Articles",
+    OTHER: "Wines Specials",
   };
 
   const projectsData = [
@@ -167,7 +167,7 @@ const FeaturePosts = () => {
 
     {
       id: 19,
-      title: " How to store your wine properly",
+      title: "How to store your wine",
       projectInfo:
         "The golden rule of storing wine, whether it’s for next month or next decade, is to keep it somewhere (1) cool, (2) dark, and (3) away from temperature fluctuations, and (4) away from vibrations. Pro Tip: Wine bottles with corks in them should be stored on their side so that the cork can remain moist and sealed. Wines with screw caps can be stored upright.",
       client: "Admin",
@@ -175,11 +175,11 @@ const FeaturePosts = () => {
       industry: "Art & Design",
       date: "November 14, 2019",
       thumbImage: "../src/img/store-wine1.png",
-      sliderImages: ["../src/store-wine.jpeg", "../src/img/store-wine-2.jpeg"],
+      sliderImages: ["../src/img/Wine_Storage.jpeg", "../src/img/store-wine-2.jpeg",
+      ],
       categories: ["*", filters.OTHER],
     },
   ];
-
 
   // initialize an Isotope object with configs
   useEffect(() => {
@@ -222,7 +222,7 @@ const FeaturePosts = () => {
           {/* Heading */}
           <div className="position-relative d-flex text-center mb-5">
             <h2 className="text-24 fw-600 w-100 mb-0 text-light opacity-4">
-              Currated Corcks
+              Currated Corks
             </h2>
             <p className="text-9 text-dark fw-600 position-absolute w-100 align-self-center lh-base mb-0">
               FEATURED POSTS
