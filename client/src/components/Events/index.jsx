@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./Events.css";
+import React, { useState, useEffect, useRef } from 'react';
+import './Events.css';
 
 const Events = ({ Header, darkTheme }) => {
   const [activeItem, setActiveItem] = useState(null);
@@ -111,29 +111,21 @@ const Events = ({ Header, darkTheme }) => {
     };
 
     // Add event listener for clicks
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
       // Clean up the event listener
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [wrapperRef]);
-
+ 
   return (
     <section id="events" className={`section ${darkTheme ? "bg-dark-1" : ""}`}>
       <div className={`container ${Header ? "" : "px-lg-5"}`}>
         <div className="position-relative d-flex text-center mb-5">
-          <h2
-            className={`text-24 fw-600 w-100 mb-0 ${
-              darkTheme ? "text-muted opacity-1" : "text-light opacity-4"
-            }`}
-          >
+          <h2 className={`text-24 fw-600 w-100 mb-0 ${darkTheme ? "text-muted opacity-1" : "text-light opacity-4"}`}>
             Grape Gatherings
           </h2>
-          <p
-            className={`text-9 text-dark fw-700 position-absolute w-100 align-self-center lh-base mb-0 ${
-              darkTheme ? "text-white" : "text-dark"
-            }`}
-          >
+          <p className={`text-9 text-dark fw-700 position-absolute w-100 align-self-center lh-base mb-0 ${darkTheme ? "text-white" : "text-dark"}`}>
             WINE EVENTS
             <span className="heading-separator-line d-block mx-auto"></span>
           </p>
@@ -142,29 +134,23 @@ const Events = ({ Header, darkTheme }) => {
         <div className="wrapper" ref={wrapperRef}>
           <div className="items">
             {events.map((event, index) => (
-              <div key={index} 
-              className="item" 
-              tabIndex="0" 
-              onClick={() => handleClick(index)}  
-              style={{ 
+              <div key={index}
+               className="item" 
+               tabIndex="0" 
+               onClick={() => handleClick(index)} 
+               style={{ 
                 backgroundImage: `
-                  linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 20%),
-                  linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 35%),
+                  linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 15%),
+                  linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 35%),
                   url(${event.imageUrl})
                 `,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}>
+                {/* Conditionally render item-content based on activeItem */}
                 {activeItem === index && (
                   <div className="item-content">
-                    <a
-                      href={event.url}
-                      className="event-title"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {event.title}
-                    </a>
+                    <a href={event.url} className="event-title" target="_blank" rel="noopener noreferrer">{event.title}</a>
                     <p className="event-description">{event.description}</p>
                   </div>
                 )}
@@ -177,4 +163,8 @@ const Events = ({ Header, darkTheme }) => {
   );
 };
 
+
 export default Events;
+
+
+
