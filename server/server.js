@@ -1,39 +1,47 @@
-// server.js
 
-const express = require("express");
-const bodyParser = require("body-parser");
+const express = require('express');
+const session = require('express-session');
+const mongoose = require('mongoose');
+const MongoStore = require('connect-mongodb-session')(session);
+const db = require('./config/connection');
+const path = require('path');
+const cors = require('cors');
+const routes = require('./routes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(bodyParser.json());
-
-const users = [];
-
-app.post("/api/signup", (req, res) => {
-  const { email, password, confirmPassword } = req.body;
-
-  // Validate email format (you might want to use a library for more thorough validation)
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    return res.status(400).json({ error: "Invalid email format" });
-  }
-
-  const existingUser = users.find((user) => user.email === email);
-  if (existingUser) {
-    return res.status(400).json({ error: "Email already exists" });
-  }
-
-  if (password !== confirmPassword) {
-    return res.status(400).json({ error: "Passwords do not match" });
-  }
-
-  const newUser = { email, password };
-  users.push(newUser);
-
-  res.json({ message: "Sign up successful" });
+const store = new MongoStore({
+  uri: process.env.DB_URI,
+  databaseName: 'niche',
+  collection: 'sessions',
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+// Enable CORS middleware
+app.use(cors({
+  origin: 'http://localhost:3000' // Allow requests only from this origin
+}));
+
+// Express session middleware
+app.use(
+  session({
+    secret: 'applePie', // Change this to your own secret key
+    resave: false,
+    saveUninitialized: false,
+    store: store, // Correct instantiation
+    cookie: { maxAge: 3 * 60 * 60 * 1000 } // Session expiration time (3 hours)
+  })
+);
+
+// express middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(routes);
+
+// start database server
+db.once('open', () => {
+  app.listen(PORT, () => {
+    console.log(`API server running on port ${PORT}!`);
+  });
 });
+

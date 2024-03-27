@@ -13,7 +13,7 @@ router.post('/login', (req, res) => {
 });
 
 // Logout route
-router.get('/logout', (req, res) => {
+router.post('/logout', (req, res) => {
     // Destroy session on logout
     req.session.destroy((err) => {
         if (err) {
