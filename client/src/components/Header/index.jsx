@@ -38,7 +38,8 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
           alt="Profile"
           className="profile-image"
         />
-        <h2>Whine About Wine</h2>
+        <p className="fw-bold fs-4">Whine About Wine</p>
+
         </div>
       </div>
       <nav className={`nav flex-column ${!isNavModalOpen ? "" : "open"}`}>
@@ -109,7 +110,7 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
             handleNavClick("featurepost");
           }}
         >
-          Feature Blog Post
+          Feature Post
         </Link>
 
         <Link

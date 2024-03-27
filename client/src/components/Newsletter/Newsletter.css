@@ -124,7 +124,8 @@
   display: flex;
   justify-content: center;
   gap: 15px;
-  padding-top: 0.5px;
+  padding-top: 0.1px;
+  padding-bottom: 0.5px;
 }
 
 .icon-link {
