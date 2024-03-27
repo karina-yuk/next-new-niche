@@ -143,7 +143,7 @@ const Events = ({ Header, darkTheme }) => {
           <div className="items">
             {events.map((event, index) => (
               <div key={index} 
-              className="item" 
+              className="item2" 
               tabIndex="0" 
               onClick={() => handleClick(index)}  
               style={{ 
@@ -156,7 +156,7 @@ const Events = ({ Header, darkTheme }) => {
                 backgroundPosition: 'center'
               }}>
                 {activeItem === index && (
-                  <div className="item-content">
+                  <div className="item2-content">
                     <a
                       href={event.url}
                       className="event-title"

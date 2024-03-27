@@ -32,12 +32,14 @@ const Header = ({ isLoggedIn, handleNavClick }) => {
         }`}
     >
       <div className="profile-container">
+      <div class="shadow"> 
         <img
           src="https://i.pinimg.com/564x/7f/4b/77/7f4b77922662e577a5202aea3d70592a.jpg"
           alt="Profile"
           className="profile-image"
         />
         <h2>Olivia's Five</h2>
+        </div>
       </div>
       <nav className={`nav flex-column ${!isNavModalOpen ? "" : "open"}`}>
         <Link

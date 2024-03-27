@@ -43,6 +43,68 @@
   border: 6px solid #343a40; /* Optional */
 }
 
+.shadow{
+  position: relative;
+  margin-bottom: 1rem;
+  width: 170px; /* Adjust as needed */
+  height: 170px;
+  background: linear-gradient(0deg, #000, #262626);
+  border-radius: 50%;
+}
+
+.shadow:before, .shadow:after{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(45deg, #7a2f5a, #25256c,#306a30,#7e7e2f,#722c2c, #833862, #29296e,#2f612f,#5b2929);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: animate 20s linear infinite;
+  border-radius: 50%;
+}
+
+.shadow:after{
+  filter: blur(20px);
+}
+
+
+
+@-webkit-keyframes hue {
+  from {
+      -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+      -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+
+@keyframes animate {
+  0%{
+      background-position: 0 0;
+  }
+  50%{
+      background-position: 300% 0;
+  }
+  100%{
+      background-position: 0 0;
+  }
+}
+
+.nav-link {
+  
+  color: white;
+  margin: 0.5rem 0;
+  transition: color 0.2s ease;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 18px !important;
+  
+}
+
 .nav-link {
   color: white;
   margin: 0.2rem 0;
