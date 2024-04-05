@@ -1,7 +1,5 @@
 /* src/components/Home/Home.css */
 
-
-
 .home-section{
   content: '';
   position: absolute;
@@ -12,6 +10,11 @@
   background: rgba(123, 121, 121, 0.5); /* Black with opacity for the overlay */
 }
 
+.home-section img {
+  max-width: 100%;
+  height: auto;
+}
+ckout
 #home {
   background-color: transparent;;
     background-size: cover;
@@ -98,4 +101,25 @@
   
 .btn {
   font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .text-7 {
+    font-size: 2rem; /* Smaller size for mobile devices */
+  }
+  
+  .text-16 {
+    font-size: 3.5rem; /* Adjusted size for the main heading on mobile devices */
+  }
+  
+  .text-5 {
+    font-size: 1rem; /* Adjusted size for additional text on mobile devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 2rem; /* Increase font size for better readability on mobile */
+    padding: 1rem 1.5rem; /* Increase padding for a larger touch target */
+  }
 }
